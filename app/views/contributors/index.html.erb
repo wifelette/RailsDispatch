@@ -1,0 +1,116 @@
+<% content_for :page_nav do %>
+<nav>
+  <ul id="tab_nav">
+  
+    <li class="active">
+      <a href="#">
+        <span class="title">Contributors</span>
+        <span class="details">Meet the team</span>
+      </a>
+    </li>
+  
+    <li class="inactive">
+      <a href="#">
+        <span class="title">Questions</span>
+        <span class="details">Ask and vote for questions...</span>
+      </a>
+    </li>
+  
+    <li class="inactive">
+      <a href="#">
+        <span class="title">Something Else</span>
+        <span class="details">lorem ipsum dolor sit</span>
+      </a>
+    </li>
+  </ul>
+  
+  <ul id="sidebar_more">
+    <li><a class="ask_question" href="#">Ask a Question!</a></li>
+    <li><a class="follow_ey" href="#">Engine Yard on Twitter</a></li>
+    <li><a class="follow_fb" href="#">Engine Yard on Facebook</a></li>
+    
+    <li class="newsletter">
+      <span class="mail_icon"></span>
+      <form action="#" method="#" accept-charset="utf-8">
+        <input type="text" name="some_name" value="" id="newsletter_input">
+        <label class="inline-hints">Receive our Newsletter</label>
+      </form>
+    </li>
+    
+  </ul>
+  
+</nav>
+<% end %>
+
+<div id="page_additional">
+  <h3>Choose a contributor from below</h3>
+  <h4>Read about their contributions to Rails &amp; ask them questions</h4>
+</div>
+
+<div id="person_bio">
+  
+  <div id="contributor_details">
+    <a href="#" class="person_thumb large">
+      <img src="images/people/yehuda-katz.png" width="143" height="143" alt="Yehuda Katz">
+      <span class="person_mask"></span>
+    </a>
+    
+    <ul class="contributor_bio_info">
+      <li class="contributor_name">full_name</li>
+      <li>lorem ipsum</li>
+    </ul>
+
+    <p>bio</p>
+    
+  </div>
+ </div>
+
+ <!-- <a class="person_thumb small" href="/contributors/2" rel="tipsy" title="Yehuda Katz">
+   <img alt="Yehuda Katz" height="79" src="images/people/yehuda-katz.png" width="79" />
+   <span class="person_mask"></span>
+ </a>
+
+ <a class="person_thumb small" href="/contributors/3" rel="tipsy" title="Carl Lerche">
+   <img alt="Carl Lerche" height="79" src="images/people/carl-lerche.png" width="79" />
+   <span class="person_mask"></span>
+ </a>
+
+ <a class="person_thumb small" href="/contributors/3" rel="tipsy" title="Bryan Helmkamp">
+   <img alt="Bryan Helmkamp" height="79" src="images/people/Bryan-Helmkamp.jpg" width="79" />
+   <span class="person_mask"></span>
+ </a>
+
+ <a class="person_thumb small" href="/contributors/3" rel="tipsy" title="Abheek Anand">
+   <img alt="Abheek Anand" height="79" src="images/people/abheek-anand.jpg" width="79" />
+   <span class="person_mask"></span>
+ </a>
+
+ <a class="person_thumb small" href="/contributors/3" rel="tipsy" title="Evan Phoenix">
+   <img alt="Evan Phoenix" height="79" src="images/people/Evan-Phoenix.jpg" width="79" />
+   <span class="person_mask"></span>
+ </a>
+
+ <a class="person_thumb small" href="/contributors/3" rel="tipsy" title="Gregg Pollack">
+   <img alt="Gregg Pollack" height="79" src="images/people/Gregg-Pollack.jpg" width="79" />
+   <span class="person_mask"></span>
+ </a>
+
+ <a class="person_thumb small last_in_row" href="/contributors/3" rel="tipsy" title="Jeremy McAnally">
+   <img alt="Jeremy McAnally" height="79" src="images/people/Jeremy-McAnally.jpg" width="79" />
+   <span class="person_mask"></span>
+ </a>
+
+ <a class="person_thumb small" href="/contributors/3" rel="tipsy" title="Thomas Enebo">
+   <img alt="Thomas Enebo" height="79" src="images/people/thomas-enebo.jpg" width="79" />
+   <span class="person_mask"></span>
+ </a>
+
+ <a class="person_thumb small" href="/contributors/3" rel="tipsy" title="Tyler Bird">
+   <img alt="Tyler Bird" height="79" src="images/people/Tyler-Bird.jpg" width="79" />
+   <span class="person_mask"></span>
+ </a>  -->
+
+
+<%= render @contributors %> 
+
+<%#= link_to "New Contributor", new_contributor_path %>

@@ -1,0 +1,35 @@
+<% content_for :page_nav do %>
+<nav>
+  <ul id="tab_nav">
+    <li class="inactive">
+      <%= link_to admin_posts_path do %>
+        <span class="title">Go back to all users</span>
+        <span class="details">you&rsquo;ll lose these changes</span>
+      <% end %>
+    </li>
+  </ul>
+</nav>
+<% end %>
+
+<%= form_for ([:admin, @user]) do |form| %>
+  <ol>
+    <li class="field">
+      <label>Email Address</label>
+      <%= form.text_field :email %>
+    </li>
+    
+    <li class="field">
+      <label>Password</label>
+      <%= form.password_field :password %>
+    </li>
+    
+    <li class="field">
+      <label>Password confirmation</label>
+      <%= form.password_field :password_confirmation %>
+    </li>
+        
+    <li class="submit">
+      <%= submit_tag "Create" %>
+    </li>
+  </ol>
+<% end %>

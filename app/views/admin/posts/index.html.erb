@@ -1,0 +1,70 @@
+<% content_for :page_nav do %>
+<nav>
+  <ul id="tab_nav">
+    
+    <li class="inactive">
+      <a href="/admin/users">
+        <span class="title">Users</span>
+        <span class="details">add, edit, remove users</span>
+      </a>
+    </li>
+  
+    <li class="active">
+      <a href="/admin/posts">
+        <span class="title">Posts</span>
+        <span class="details">add, edit, remove posts</span>
+      </a>
+    </li>
+  
+    <li class="inactive">
+      <a href="/admin/contributors">
+        <span class="title">Contributors</span>
+        <span class="details">add, edit, remove contributors</span>
+      </a>
+    </li>
+  
+    <li class="inactive">
+      <a href="/admin/community">
+        <span class="title">Community</span>
+        <span class="details">add, edit, remove feeds</span>
+      </a>
+    </li>
+  
+  </ul>
+
+</nav>
+<% end %>
+
+<div id="page_additional">
+  <h3>Posts</h3>  
+  <h4>add, edit, remove posts</h4>  
+</div>
+
+<ul class="admin_nav">
+  <li>
+    <%= link_to new_admin_post_path, :class => "simple_button" do %>
+      <span>Create new post</span>
+    <% end %>
+  </li>
+</ul>
+
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+  <th>Contributor</th>
+  <th>Title</th>
+  <th>Body</th>
+  <th>Publish Date</th>
+  <th></th>
+  <th></th>
+</tr>
+<% @posts.each_with_index do |post, i| %>
+<tr>
+  <td><%= post.contributor.full_name %></td>
+  <td><%= post.title %></td>
+  <td><%= post.body %></td>
+  <td><%= post.publish_date %></td>
+  <td><%= link_to "edit", edit_admin_post_url(post) %></td>
+</tr>
+<% end %>
+</table>

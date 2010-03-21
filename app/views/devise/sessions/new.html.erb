@@ -1,0 +1,44 @@
+<% content_for :page_nav do %>
+<nav>
+  <ul id="tab_nav">
+    <li class="inactive">
+      <%= link_to admin_posts_path do %>
+        <span class="title">Go back to the homepage</span>
+        <span class="details">and cancel logging in</span>
+      <% end %>
+    </li>
+  </ul>
+</nav>
+<% end %>
+
+<div id="page_additional">
+  <h3>Login</h3>
+  <h4>If you are an administrator or publisher, login with you credentials.</h4>
+</div>
+
+<%= form_for(resource_name, resource, :url => session_path(resource_name)) do |form| %>
+  <ol>
+    <li class="field">
+      <label>Email Address</label>
+      <%= form.text_field :email %>
+    </li>
+    
+    <li class="field">
+      <label>Password</label>
+      <%= form.password_field :password %>
+    </li>
+
+    <% if devise_mapping.rememberable? -%>
+    <li class="field">
+      <label>Remember me?</label>
+      <%= form.check_box :remember_me %> 
+    </li>
+    <% end -%>
+        
+    <li class="submit">
+      <%= submit_tag "login" %>
+    </li>
+  </ol>
+<% end %>
+
+<%= render :partial => "devise/shared/links" %>

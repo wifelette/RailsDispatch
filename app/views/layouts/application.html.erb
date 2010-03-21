@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Rails Dispatch | Presented by Engine Yard </title>
+
+  <!--[if lte IE 8]><script src="/javascripts/html5.js"></script><![endif]-->
+
+  <%= javascript_include_tag "jquery-1.4.2.min", "tipsy", "application" %>
+  <%= stylesheet_link_tag "uniform.default", "application" %>
+  
+
+  <!--[if lte IE 6]><link rel="stylesheet" href="/stylesheets/main.ie6.css" type="text/css" media="screen" charset="utf-8"><![endif]-->
+  <!--[if IE 7]><link rel="stylesheet" href="/stylesheets/main.ie7.css" type="text/css" media="screen" charset="utf-8"><![endif]-->
+
+  <%= csrf_meta_tag %>
+  
+</head>
+<body>
+
+  <% if flash[:notice] %>
+    <div class="alert"><span><%= flash[:notice] %></span></div>
+  <% else %>
+    <div class="alert">
+      <span>Rails 3.0.0 beta is out! Read the <a href="#">guide to upgrading your Rails app</a> to 3.0 or <a href="#">go see what has changed</a>. <a href="#" class="close_alert"></a></span>
+    </div>
+  <% end %>
+  
+  <%#= debug params %>
+
+  <header>
+    <h1><%= link_to_unless_current "Rails Dispatch", root_path -%></h1>
+    <h2>Rails news delivered fresh</h2>
+
+    <h3>Presented by Engine Yard</h3>
+
+    <nav>
+      <ul>
+        <li><a href="/">New Rails 3 Features</a></li>
+        <li><a href="/contributors">Contributors</a></li>
+        <li><a href="/community">Rails Community</a></li>
+      </ul>  
+    </nav>
+  </header>
+
+  <section>
+
+    <%= content_tag :nav, yield(:page_nav) -%>  
+
+    <%= content_tag :article, yield -%>  
+
+  </section>
+
+  <footer>
+    <div id="footer_contents">
+      <div id="engineyard_photo">
+        <img src="/images/engineyard.png" width="165" height="128" alt="Engineyard">
+        <h6>Our office</h6>
+      </div>
+
+      <div id="engineyard">
+        <h3>About Engine Yard</h3>
+        <p>This is our hometown: San Francisco, California, USA.</p>
+        <p>Most of us are around San Francisco, but some of us are in places like Washington State, Missouri, Minneapolis, Israel, Australia and the UK.</p>
+        <p>&copy;2010 Engine Yard, Inc. </p>
+      </div>
+
+      <nav>
+        <ul>
+          <li class="active"><a href="#">New Rails 3 Features</a></li>
+          <li><a href="#">The Rails Core Team</a></li>
+          <li><a href="#">Rails Community</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+  </footer>
+
+</body>
+</html>
