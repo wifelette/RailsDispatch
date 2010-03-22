@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100322062113) do
+ActiveRecord::Schema.define(:version => 20100322183932) do
 
   create_table "contributors", :force => true do |t|
     t.string   "firstname"
@@ -34,6 +34,16 @@ ActiveRecord::Schema.define(:version => 20100322062113) do
     t.string   "url"
     t.datetime "published_at"
     t.string   "guid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "feeds", :force => true do |t|
+    t.string   "site_url"
+    t.string   "feed_url"
+    t.integer  "contributor_id"
+    t.boolean  "active"
+    t.boolean  "featured"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

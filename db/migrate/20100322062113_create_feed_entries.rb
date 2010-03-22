@@ -6,6 +6,7 @@ class CreateFeedEntries < ActiveRecord::Migration
       t.string :url
       t.timestamp :published_at      
       t.string :guid
+      t.integer :feed_id
       t.timestamps
     end
   end

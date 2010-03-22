@@ -13,3 +13,4 @@ class AddPhotoToContributor < ActiveRecord::Migration
     remove_column :contributors, :photo_updated_at
   end
 end
+

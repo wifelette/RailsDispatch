@@ -1,6 +1,5 @@
 RailsDispatch::Application.routes.draw do |map|
 
-
   root :to => "posts#index"
   devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout' }
 
@@ -12,6 +11,10 @@ RailsDispatch::Application.routes.draw do |map|
     resources :users
     resources :posts
     resources :contributors
+    namespace :community do
+      root :to => "admin/community#index"
+      resources :feeds
+    end
   end
 
   # The priority is based upon order of creation:
