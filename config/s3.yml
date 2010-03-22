@@ -1,0 +1,9 @@
+# S3 Buckets:
+#  railsdispatch
+#  railsdispatch.static
+#  railsdispatch.cache
+
+development:
+  access_key_id: 'AKIAJ6PDVL2FSF3GG4PA'
+  secret_access_key: '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'
+
