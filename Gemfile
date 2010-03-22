@@ -10,6 +10,10 @@ gem 'mysql'
 
 gem "devise", :git => "git://github.com/plataformatec/devise.git"
 gem 'paperclip', :git => 'git://github.com/JasonKing/paperclip.git', :ref => '9c9082814f628a618f625158fc8507ef1578dacc'
+gem 'right_aws'
+gem 'aws-s3', :require => 'aws/s3'
+gem 'feedzirra', :git => 'git://github.com/pauldix/feedzirra.git'
+# gem 'loofah', :git => 'git://github.com/jpsilvashy/loofah.git'
 
 # Use unicorn as the web server
 # gem 'unicorn'

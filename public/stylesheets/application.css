@@ -289,8 +289,8 @@ ul.admin_nav li {float:left; margin-right:20px;}
 
 /* simple buttons */
 a.simple_button {background:url('/images/simple_buttons_bg.png') ; height:27px; float:left; border:none; text-align:center; line-height:26px; color:#333; text-shadow:0px 1px 0px white; font-size:13px; margin:0 0 1em 2px; -webkit-text-stroke:1px transparent; text-decoration:none; border:0; }
-a.simple_button span {background:url('/images/simple_buttons_ends.png') no-repeat top right; width:auto; padding:0 25px 0 32px; height:27px; margin-left:-23px; display:block; position:relative; right:-15px; font-weight:bold;}
-a.simple_button {margin:3px 0 9px 0;}
+a.simple_button span {background:url('/images/simple_buttons_ends.png') no-repeat top right; width:auto; padding:0 25px 0 32px; height:27px; margin-left:-23px; display:block; position:relative; right:-15px; font-weight:bold; cursor:pointer;}
+a.simple_button {margin:3px 0 9px 0; cursor:pointer;}
 
 a.simple_button:hover {font-weight:normal; cursor:pointer;}
 

@@ -2,10 +2,20 @@ class Contributor < ActiveRecord::Base
 
   has_many :posts, :dependent => :destroy 
 
-  # validates_presence_of :firstname, :lastname
+  validates_presence_of :firstname, :lastname
   
-  has_attached_file :photo, :styles => { :medium => "300x300>", :thumb => "100x100>" }
-
+  has_attached_file :photo,
+    :styles => {
+      :tiny => "35x35#",
+      :thumb => "79x79#",
+      :large => "300x300#"
+    }, 
+    :storage => :s3,
+    :s3_credentials => "#{Rails.root}/config/s3.yml",
+    :path => ":attachment/:id/:style.:extension",
+    :bucket => 'railsdispatch'
+    
+    
   def full_name
     [firstname, lastname].join(' ')
   end
