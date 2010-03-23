@@ -72,7 +72,7 @@
 <tr>
   <th>Contributor</th>
   <th>Title</th>
-  <th>Body</th>
+  <!-- <th>Body</th> -->
   <th>Publish Date</th>
   <th></th>
   <th></th>
@@ -81,7 +81,7 @@
 <tr class="actionable">
   <td><%= post.contributor.full_name %></td>
   <td><%= post.title %></td>
-  <td><%= post.body %></td>
+  <!-- <td><%= truncate(post.body, 20) %></td> -->
   <td><%= post.publish_date.strftime("%c") %></td>
 
   <td class="actions">

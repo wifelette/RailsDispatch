@@ -1,2 +1,15 @@
-<%= feed_entry.feed.contributor.full_name %>
-<%= feed_entry.summary %>  
+<div class="popular_post">
+  <% content_tag :a, :href => url_for(feed_entry.feed.contributor), :title => feed_entry.feed.contributor.full_name, :class => "person_thumb small", :rel => 'tipsy' do -%>
+    <%= image_tag feed_entry.feed.contributor.photo.url(:thumb), :alt => feed_entry.feed.contributor.full_name %>
+    <%= content_tag(:span, "", :class => 'person_mask') %>
+  <% end -%>
+
+  <div class="post_abstract">
+    <div class="post_meta_title">
+      <h4><%= link_to raw(feed_entry.title), feed_entry.url %></h4>  
+      <h5>posted about 4 weeks ago on <%= feed_entry.feed.site_url %> by <%= feed_entry.feed.contributor.full_name %></h5>
+    </div>
+    <%= raw feed_entry.summary %>
+  </div>
+
+</div>

@@ -3,8 +3,8 @@
   <ul id="tab_nav">
     <li class="inactive">
       <%= link_to admin_contributors_path do %>
-        <span class="title">Go back to all contributors</span>
-        <span class="details">you&rsquo;ll lose these changes</span>
+      <span class="title">Go back to all contributors</span>
+      <span class="details">you&rsquo;ll lose these changes</span>
       <% end %>
     </li>
   </ul>
@@ -12,41 +12,51 @@
 <% end %>
 
 <%= form_for ([:admin, @contributor], :html => {:multipart => true }) do |form| %>
-  <ol>
-    <li class="field">
-      <label>Firstname</label>
-      <%= form.text_field :firstname %>
-    </li>
-    
-    <li class="field">
-      <label>Lastname</label>
-      <%= form.text_field :lastname %>
-    </li>
-    
-    <li class="field">
-      <label>Bio</label>
-      <%= form.text_area :bio %>
-    </li>
-    
-    <li class="field">
-      <label>Twitter username</label>
-      <%= form.text_field :twitter_username %>
-    </li>
-    
-    <li class="field">
-      <label>Github username</label>
-      <%= form.text_field :github_username %>
-    </li>
-        
-    <li class="field">
-      <label>Photo</label>
-      <%= form.file_field :photo %>
-    </li>
-        
-    <li class="submit">
-      <%= submit_tag "Save" %>
-    </li>
-  </ol>
+<ol>
+  <li class="field">
+    <label>Firstname</label>
+    <%= form.text_field :firstname %>
+  </li>
+
+  <li class="field">
+    <label>Lastname</label>
+    <%= form.text_field :lastname %>
+  </li>
+
+  <li class="field">
+    <label>Bio</label>
+    <%= form.text_area :bio %>
+  </li>
+
+  <li class="field">
+    <label>Twitter username</label>
+    <%= form.text_field :twitter_username %>
+  </li>
+
+  <li class="field">
+    <label>Github username</label>
+    <%= form.text_field :github_username %>
+  </li>
+
+  <li class="field">
+    <label>Photo</label>
+    <%= form.file_field :photo %>
+  </li>
+
+  <li class="field">
+    <label>Show on contributor page?</label>
+    <%= form.check_box :on_contributor_page %> 
+  </li>
+
+  <li class="field">
+    <label></label>
+    <%= form.text_field :github_username %>
+  </li>
+
+  <li class="submit">
+    <%= submit_tag "Save" %>
+  </li>
+</ol>
 <% end %>
 
 

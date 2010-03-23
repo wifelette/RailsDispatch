@@ -18,8 +18,7 @@ ActiveRecord::Schema.define(:version => 20100323025631) do
     t.boolean  "author"
     t.string   "twitter_username"
     t.string   "github_username"
-    t.string   "blog_url"
-    t.boolean  "aggregate_blog"
+    t.boolean  "on_contributor_page", :default => true, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo_file_name"

@@ -8,8 +8,7 @@ class CreateContributors < ActiveRecord::Migration
 
       t.string :twitter_username
       t.string :github_username
-      t.string :blog_url
-      t.boolean :aggregate_blog
+      t.boolean :on_contributor_page, :null => false, :default => 1 
       
       t.timestamps
     end

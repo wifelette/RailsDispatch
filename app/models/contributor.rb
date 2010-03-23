@@ -1,5 +1,6 @@
 class Contributor < ActiveRecord::Base
-
+  scope :visible, where("on_contributor_page != ?", false)
+  
   has_many :posts, :dependent => :destroy 
 
   validates_presence_of :firstname, :lastname

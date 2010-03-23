@@ -1,7 +1,12 @@
 class CommunityController < ApplicationController
   def index
-    @feeds = Feed.all
-    @feed_entries = FeedEntry.all
+    
+    if defined? params[:page]
+      @feed_entries = FeedEntry.find(:all, :offset => (params[:page].to_i * 5), :limit => 5)
+      # @feed_entries = FeedEntry.where().limit(5)
+    else
+      @feed_entries = FeedEntry.find(:all, :limit => 5)
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -9,4 +14,3 @@ class CommunityController < ApplicationController
     end
   end
 end
-

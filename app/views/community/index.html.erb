@@ -1,14 +1,12 @@
 <% content_for :page_nav do %>
 <nav>
   <ul id="tab_nav">
-
     <li class="active">
       <a href="#">
-        <span class="title">Feeds</span>
-        <span class="details">The latest from popular Rails blogs</span>
+        <span class="title">Blogs</span>
+        <span class="details">Posts and articles</span>
       </a>
     </li>
-
   </ul>
 
   <ul id="sidebar_more">
@@ -23,10 +21,14 @@
         <label class="inline-hints">Receive our Newsletter</label>
       </form>
     </li>
-
   </ul>
 
 </nav>
 <% end %>
+
+<div id="page_additional">
+  <h3>Blog postings</h3>
+  <h4>by popular Rails developers</h4>
+</div>
 
 <%= render :partial => "feed_entry", :collection => @feed_entries %>
