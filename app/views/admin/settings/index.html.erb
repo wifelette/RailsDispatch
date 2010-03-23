@@ -9,7 +9,7 @@
       </a>
     </li>
   
-    <li class="active">
+    <li class="inactive">
       <a href="/admin/posts">
         <span class="title">Posts</span>
         <span class="details">add, edit, remove posts</span>
@@ -29,7 +29,7 @@
         <span class="details">add, edit, remove feeds</span>
       </a>
     </li>
-
+  
     <li class="inactive">
       <a href="/admin/notifications">
         <span class="title">Notifications</span>
@@ -37,7 +37,7 @@
       </a>
     </li>
 
-    <li class="inactive">
+    <li class="active">
       <a href="/admin/settings">
         <span class="title">Settings</span>
         <span class="details">manage various app settings</span>
@@ -50,8 +50,8 @@
 <% end %>
 
 <div id="page_additional">
-  <h3>Posts</h3>  
-  <h4>add, edit, remove posts</h4>  
+  <h3>Settings</h3>  
+  <h4>various app settings, logs, and tools</h4>  
 </div>
 
 <ul class="admin_nav">
@@ -61,40 +61,38 @@
     <% end %>
   </li>
   <li>
-    <%= link_to new_admin_post_path, :class => "simple_button" do %>
-      <span>Create new post</span>
+    <%= link_to "#", :class => "simple_button" do %>
+      <span>App logs</span>
+    <% end %>
+  </li>
+  <li>
+    <%= link_to "#", :class => "simple_button" do %>
+      <span>Server logs</span>
+    <% end %>
+  </li>
+  <li>
+    <%= link_to "#", :class => "simple_button" do %>
+      <span>Restart webserver</span>
     <% end %>
   </li>
 </ul>
 
+<% form_tag set_admin_settings_path, :method => :put do %>
+  <ol>
+  <% for setting in @settings %>
+    <li class="field">
+      <label><%= setting.setting_name.humanize %></label>
+      <%= text_field_tag "[setting_value][]", setting.setting_value %>
+    </li>
+  <% end %>  
+    <li class="submit">
+      <%= submit_tag "Update settings" %>
+    </li>
+  </ol>
 
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-  <th>Contributor</th>
-  <th>Title</th>
-  <th>Body</th>
-  <th>Publish Date</th>
-  <th></th>
-  <th></th>
-</tr>
-<% @posts.each_with_index do |post, i| %>
-<tr class="actionable">
-  <td><%= post.contributor.full_name %></td>
-  <td><%= post.title %></td>
-  <td><%= post.body %></td>
-  <td><%= post.publish_date.strftime("%c") %></td>
 
-  <td class="actions">
-    <%= link_to edit_admin_post_url(post), :class => "simple_button" do %>
-      <span>Destroy</span>
-    <% end %>
 
-    <%= link_to edit_admin_post_url(post), :class => "simple_button" do %>
-      <span>Edit</span>
-    <% end %>    
-  </td>
-
-</tr>
 <% end %>
-</table>
+
+
 

@@ -17,9 +17,9 @@
     </li>
   
     <li class="inactive">
-      <a href="/admin/users">
+      <a href="/admin/contributors">
         <span class="title">Contributors</span>
-        <span class="details">add, edit, remove users</span>
+        <span class="details">add, edit, remove contributors</span>
       </a>
     </li>
   
@@ -29,18 +29,37 @@
         <span class="details">add, edit, remove feeds</span>
       </a>
     </li>
-  
+
+    <li class="inactive">
+      <a href="/admin/notifications">
+        <span class="title">Notifications</span>
+        <span class="details">manage notification messages</span>
+      </a>
+    </li>
+
+    <li class="inactive">
+      <a href="/admin/settings">
+        <span class="title">Settings</span>
+        <span class="details">manage various app settings</span>
+      </a>
+    </li>
+
   </ul>
 
 </nav>
 <% end %>
 
 <div id="page_additional">
-  <h3>Contributors</h3>  
+  <h3>Users</h3>  
   <h4>add, edit, remove users</h4>  
 </div>
 
 <ul class="admin_nav">
+  <li>
+    <%= link_to admin_root_path, :class => "simple_button" do %>
+      <span>&larr; Back to admin home</span>
+    <% end %>
+  </li>
   <li>
     <%= link_to new_admin_user_path, :class => "simple_button" do %>
       <span>Add another user</span>
@@ -56,9 +75,21 @@
   <th></th>
 </tr>
 <% @users.each_with_index do |user, i| %>
-<tr>
+<tr class="actionable">
   <td><%= user.email %></td>
-  <td><%= link_to "edit", edit_admin_user_url(user) %></td>
+
+  <td class="actions">
+    <%= link_to edit_admin_user_url(user), :class => "simple_button" do %>
+      <span>Destroy</span>
+    <% end %>
+
+    <%= link_to edit_admin_user_url(user), :class => "simple_button" do %>
+      <span>Edit</span>
+    <% end %>    
+  </td>
 </tr>
 <% end %>
 </table>
+
+
+

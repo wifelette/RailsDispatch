@@ -1,0 +1,69 @@
+<% content_for :page_nav do %>
+<nav>
+  <ul id="tab_nav">
+    
+    <li class="inactive">
+      <a href="/admin/users">
+        <span class="title">Users</span>
+        <span class="details">add, edit, remove users</span>
+      </a>
+    </li>
+  
+    <li class="inactive">
+      <a href="/admin/posts">
+        <span class="title">Posts</span>
+        <span class="details">add, edit, remove posts</span>
+      </a>
+    </li>
+  
+    <li class="inactive">
+      <a href="/admin/contributors">
+        <span class="title">Contributors</span>
+        <span class="details">add, edit, remove contributors</span>
+      </a>
+    </li>
+  
+    <li class="active">
+      <a href="/admin/community">
+        <span class="title">Community</span>
+        <span class="details">add, edit, remove feeds</span>
+      </a>
+    </li>
+
+    <li class="inactive">
+      <a href="/admin/notifications">
+        <span class="title">Notifications</span>
+        <span class="details">manage notification messages</span>
+      </a>
+    </li>
+
+    <li class="inactive">
+      <a href="/admin/settings">
+        <span class="title">Settings</span>
+        <span class="details">manage various app settings</span>
+      </a>
+    </li>
+  
+  </ul>
+
+</nav>
+<% end %>
+
+<div id="page_additional">
+  <h3>Community</h3>  
+  <h4>add, edit, remove feeds</h4>  
+</div>
+
+
+<ul class="admin_nav">
+  <li>
+    <%= link_to admin_root_path, :class => "simple_button" do %>
+      <span>&larr; Back to admin home</span>
+    <% end %>
+  </li>
+  <li>
+    <%= link_to admin_community_feeds_url, :class => "simple_button" do %>
+      <span>View Feeds</span>
+    <% end %>
+  </li>
+</ul>

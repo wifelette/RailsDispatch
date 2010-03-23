@@ -29,10 +29,71 @@
         <span class="details">add, edit, remove feeds</span>
       </a>
     </li>
+
+    <li class="inactive">
+      <a href="/admin/notifications">
+        <span class="title">Notifications</span>
+        <span class="details">manage notification messages</span>
+      </a>
+    </li>
+
+    <li class="inactive">
+      <a href="/admin/settings">
+        <span class="title">Settings</span>
+        <span class="details">manage various app settings</span>
+      </a>
+    </li>
   
   </ul>
 
 </nav>
 <% end %>
 
-feeds#index
+<div id="page_additional">
+  <h3>Feeds</h3>  
+  <h4>add, edit, remove feeds</h4>  
+</div>
+
+<ul class="admin_nav">
+  <li>
+    <%= link_to admin_community_root_path, :class => "simple_button" do %>
+      <span>&larr; Back to community home</span>
+    <% end %>
+  </li>
+  <li>
+    <%= link_to new_admin_community_feed_path, :class => "simple_button" do %>
+      <span>Add another feed</span>
+    <% end %>
+  </li>
+</ul>
+
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+  <th>Site url</th>
+  <th>Feed url</th>
+  <th>Contributor</th>
+  <th></th>
+</tr>
+<% @feeds.each_with_index do |feed, i| %>
+<tr class="actionable">
+  <td><%= feed.site_url %></td>
+  <td><%= feed.feed_url %></td>
+  <td><%= feed.contributor.full_name %></td>
+
+  <td class="actions">
+    <%= link_to edit_admin_community_feed_url(feed), :class => "simple_button" do %>
+      <span>Destroy</span>
+    <% end %>
+
+    <%= link_to edit_admin_community_feed_url(feed), :class => "simple_button" do %>
+      <span>Edit</span>
+    <% end %>    
+  </td>
+
+</tr>
+<% end %>
+</table>
+
+
+

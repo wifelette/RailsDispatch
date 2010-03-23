@@ -29,7 +29,21 @@
         <span class="details">add, edit, remove feeds</span>
       </a>
     </li>
-  
+
+    <li class="inactive">
+      <a href="/admin/notifications">
+        <span class="title">Notifications</span>
+        <span class="details">manage notification messages</span>
+      </a>
+    </li>
+
+    <li class="inactive">
+      <a href="/admin/settings">
+        <span class="title">Settings</span>
+        <span class="details">manage various app settings</span>
+      </a>
+    </li>
+
   </ul>
 
 </nav>
@@ -42,23 +56,36 @@
 
 <ul class="admin_nav">
   <li>
+    <%= link_to admin_root_path, :class => "simple_button" do %>
+      <span>&larr; Back to admin home</span>
+    <% end %>
+  </li>
+  <li>
     <%= link_to new_admin_contributor_path, :class => "simple_button" do %>
       <span>Add another contributor</span>
     <% end %>
   </li>
 </ul>
 
-
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
   <th>Full Name</th>
   <th></th>
-  <th></th>
 </tr>
 <% @contributors.each_with_index do |contributor, i| %>
-<tr>
+<tr class="actionable">
   <td><%= contributor.full_name %></td>
-  <td><%= link_to "edit", edit_admin_contributor_url(contributor) %></td>
+  
+  <td class="actions">
+    <%= link_to edit_admin_contributor_url(contributor), :class => "simple_button" do %>
+      <span>Destroy</span>
+    <% end %>
+
+    <%= link_to edit_admin_contributor_url(contributor), :class => "simple_button" do %>
+      <span>Edit</span>
+    <% end %>    
+  </td>
+
 </tr>
 <% end %>
 </table>

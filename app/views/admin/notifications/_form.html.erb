@@ -1,0 +1,35 @@
+<% content_for :page_nav do %>
+<nav>
+  <ul id="tab_nav">
+    <li class="field" class="inactive">
+      <%= link_to admin_notifications_path do %>
+      <span class="title">Go back to all notifications</span>
+      <span class="details">you&rsquo;ll lose these changes</span>
+      <% end %>
+    </li>
+  </ul>
+</nav>
+<% end %>
+
+<%= form_for ([:admin, @notification]) do |form| %>
+<ol>
+  <li class="field">
+    <label>Message</label>
+    <%= form.text_field :message %>
+  </li>
+
+  <li class="field time_select">
+    <label>Starts at</label>
+    <%= form.datetime_select :starts_at %>
+  </li>
+
+  <li class="field time_select">
+    <label>Ends at</label>
+    <%= form.datetime_select :ends_at %>
+  </li>
+
+  <li class="submit">
+    <%= submit_tag "Save" %>
+  </li>
+</ol>
+<% end %>

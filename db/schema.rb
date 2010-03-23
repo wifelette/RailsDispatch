@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100322183932) do
+ActiveRecord::Schema.define(:version => 20100323025631) do
 
   create_table "contributors", :force => true do |t|
     t.string   "firstname"
@@ -29,11 +29,12 @@ ActiveRecord::Schema.define(:version => 20100322183932) do
   end
 
   create_table "feed_entries", :force => true do |t|
-    t.string   "name"
+    t.string   "title"
     t.text     "summary"
     t.string   "url"
     t.datetime "published_at"
     t.string   "guid"
+    t.integer  "feed_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -48,6 +49,14 @@ ActiveRecord::Schema.define(:version => 20100322183932) do
     t.datetime "updated_at"
   end
 
+  create_table "notifications", :force => true do |t|
+    t.string   "message"
+    t.datetime "starts_at"
+    t.datetime "ends_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "posts", :force => true do |t|
     t.string   "title"
     t.string   "sidebar_title"
@@ -57,6 +66,13 @@ ActiveRecord::Schema.define(:version => 20100322183932) do
     t.text     "summary"
     t.text     "body"
     t.datetime "publish_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "settings", :force => true do |t|
+    t.string   "setting_name"
+    t.string   "setting_value"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

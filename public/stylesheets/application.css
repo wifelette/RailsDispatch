@@ -65,6 +65,9 @@ div.alert span a:hover {color:white;}
 div.alert span a.close_alert {background:url('../images/alert_close.png') left 0px no-repeat; text-decoration:none; border:none; width:15px; height:16px; display:block; position:absolute; right:0; top:9px; z-index:99999;}
 div.alert span a:hover.close_alert {background-position:left -20px;}
 
+div.alert.notice {background:rgba(51, 73, 25, .5);}
+div.alert.notice span {color:white;}
+
 /* header */
 header {height:180px; width:955px; margin:0 auto; position:relative; margin-bottom:10px; padding-top:52px; padding-left:5px;}
 header h1 {background:url('/images/ruby_logo.png') left top no-repeat; height:141px; color:white; text-shadow:0 -1px 0 black; font:65px/1 "Museo Slab", "Helvetica", "Arial", sans-serif; padding:10px 0 0 140px; position:relative; left:-35px;}
@@ -226,6 +229,14 @@ li.field.time_select div.selector span {width:70px;}
 li.field.time_select div.selector select {width:108px;}
 #uniform-post_publish_date_4i {clear:left;}
 
+/* errors */
+div.errorExplanation {margin-bottom:1.4em; padding-bottom:1em; border-bottom:1px solid #ccc;}
+div.errorExplanation p {margin:0; padding:0;}
+section article div.errorExplanation p, section article div.errorExplanation ul {font:12px/1.5 Helvetica,Arial,sans-serif;}
+section article div.errorExplanation h2 {font:bold 13px/1.5 Helvetica,Arial,sans-serif; margin:0;}
+.fieldWithErrors input {}
+.fieldWithErrors {background:url('../images/icons/delete.png') right top no-repeat;}
+
 /* upcoming counter and item */
 #upcoming {display:block; margin:69px 0 0 6px; position:relative; z-index:90; background:url('/images/days_until.png') right 13px no-repeat; float:left; padding-right:102px; height:93px; width:80px;}
 
@@ -296,4 +307,10 @@ a.simple_button:hover {font-weight:normal; cursor:pointer;}
 
 a.simple_button:active {font-weight:normal; cursor:pointer; background-position:left -28px;}
 a.simple_button:active span {color:#4F4F4F; background-position:right -28px;}
+
+tr.actionable td {vertical-align:middle;}
+td.actions {}
+td.actions a.simple_button {float:right; margin:0 10px 0 10px; position:relative; top:0px;}
+td.actions a.simple_button {visibility:hidden;}
+tr.actionable:hover td.actions a.simple_button {visibility:visible;}
 

@@ -5,18 +5,33 @@ RailsDispatch::Application.routes.draw do |map|
 
   resources :posts, :only => [:index, :show]
   resources :contributors, :only => [:index, :show]
+
+  match 'community' => 'community#index'
+  
+  resources :feeds do
+    resources :feed_entries, :only => [:index, :show]
+  end  
   
   namespace :admin do
     root :to => "admin#index"
     resources :users
     resources :posts
     resources :contributors
-    namespace :community do
-      root :to => "admin/community#index"
-      resources :feeds
-    end
-  end
+    resources :notifications
 
+    namespace :community do 
+      root :to => "admin/community#index"
+      resources :feeds do
+        resources :feed_entries
+      end
+    end
+    resources :settings do
+      collection do
+        put :set
+      end
+    end
+
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

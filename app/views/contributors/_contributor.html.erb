@@ -1,4 +1,4 @@
 <% content_tag :a, :href => url_for(contributor), :title => contributor.full_name, :class => "person_thumb small", :rel => 'tipsy' do -%>
-  <%= tag("img", { :src => "images/people/#", :height => '79', :width => '79', :alt => contributor.full_name }) %>
+  <%= image_tag contributor.photo.url(:thumb), :alt => contributor.full_name %>
   <%= content_tag(:span, "", :class => 'person_mask') %>
 <% end -%>

@@ -13,7 +13,7 @@ gem 'paperclip', :git => 'git://github.com/JasonKing/paperclip.git', :ref => '9c
 gem 'right_aws'
 gem 'aws-s3', :require => 'aws/s3'
 gem 'feedzirra', :git => 'git://github.com/pauldix/feedzirra.git'
-# gem 'loofah', :git => 'git://github.com/jpsilvashy/loofah.git'
+gem "loofah", "0.4.7", :git => 'git://github.com/jpsilvashy/loofah.git'
 
 # Use unicorn as the web server
 # gem 'unicorn'

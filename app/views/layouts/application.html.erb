@@ -19,14 +19,18 @@
 <body>
 
   <% if flash[:notice] %>
-    <div class="alert"><span><%= flash[:notice] %></span></div>
+    <div class="alert notice"><span><%= flash[:notice] %></span></div>
   <% else %>
+    <% for notification in Notification.current_notifications %>
     <div class="alert">
-      <span>Rails 3.0.0 beta is out! Read the <a href="#">guide to upgrading your Rails app</a> to 3.0 or <a href="#">go see what has changed</a>. <a href="#" class="close_alert"></a></span>
+      <span><%= notification.message %> <a href="#" class="close_alert"></a></span>
     </div>
+    <% end %>
   <% end %>
   
-  <%#= debug params %>
+  <!-- <div class="alert">
+    <span>Rails 3.0.0 beta is out! Read the <a href="#">guide to upgrading your Rails app</a> to 3.0 or <a href="#">go see what has changed</a>. <a href="#" class="close_alert"></a></span>
+  </div> -->
 
   <header>
     <h1><%= link_to_unless_current "Rails Dispatch", root_path -%></h1>

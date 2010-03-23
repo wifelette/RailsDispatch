@@ -13,7 +13,7 @@ class Admin::Community::FeedsController < ApplicationController
     @feed = Feed.new(params[:feed])
     if @feed.save
       flash[:notice] = "Successfully created feed."
-      redirect_to admin_feeds_url
+      redirect_to admin_community_feeds_url
     else
       render :action => 'new'
     end
@@ -27,7 +27,7 @@ class Admin::Community::FeedsController < ApplicationController
     @feed = Feed.find(params[:id])
     if @feed.update_attributes(params[:feed])
       flash[:notice] = "Successfully updated feed."
-      redirect_to admin_feeds_url
+      redirect_to admin_community_feeds_url
     else
       render :action => 'edit'
     end
@@ -37,7 +37,7 @@ class Admin::Community::FeedsController < ApplicationController
     @feed = Feed.find(params[:id])
     @feed.destroy
     flash[:notice] = "Successfully destroyed feed."
-    redirect_to admin_url
+    redirect_to admin_community_feeds_url
   end
   
 end
