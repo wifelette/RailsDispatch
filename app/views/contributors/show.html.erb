@@ -1,18 +1,1 @@
-<div id="page_additional">
-  <h3>Choose a contributor from below</h3>
-  <h4>Read about their contributions to Rails 3 &amp; ask them questions</h4>
-</div>
-
-<p>
-  <strong>Firstname:</strong>
-  <%=h @contributor.firstname %>
-</p>
-<p>
-  <strong>Lastname:</strong>
-  <%=h @contributor.lastname %>
-</p>
-
-<p>
-  <%= link_to "Edit", edit_contributor_path(@contributor) %> |
-  <%= link_to "View All", contributors_path %>
-</p>
+<%= render "contributor_bio" %>

@@ -31,4 +31,12 @@
   <h4>by popular Rails developers</h4>
 </div>
 
-<%= render :partial => "feed_entry", :collection => @feed_entries %>
+<div id="feed_container">
+  <%= render :partial => "feed_entry", :collection => @feed_entries %>
+</div>
+
+<% if defined? params[:page] %>
+<div id="feed_pagination">
+  <%= render "feed_pagination" %>  
+</div>
+<% end %>

@@ -9,7 +9,7 @@ class Contributor < ActiveRecord::Base
     :styles => {
       :tiny => "35x35#",
       :thumb => "79x79#",
-      :large => "300x300#"
+      :large => "143x143#"
     }, 
     :storage => :s3,
     :s3_credentials => "#{Rails.root}/config/s3.yml",

@@ -7,5 +7,14 @@ class ContributorsController < ApplicationController
       format.xml  { render :xml => @contributors }
     end
   end
+  
+  def show
+    @contributor = Contributor.find(params[:id])
+    
+    respond_to do |format|
+      format.js
+    end
+  end
+  
 end
 

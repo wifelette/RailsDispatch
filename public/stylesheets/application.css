@@ -175,7 +175,9 @@ a.person_thumb.loading img {opacity:.3;}
 
 
 .person_thumb.large {height:143px; width:143px; margin:0 20px 0 0;}
+.person_thumb.large img {height:143px; width:143px;}
 .person_thumb.large span.person_mask {height:143px; width:143px; background:url('/images/user_mask_large.png');}
+
 #contributor_details {height:144px; padding:20px 0;}
 ul.contributor_bio_info {float:left; width:506px; margin-bottom:10px;}
 ul.contributor_bio_info li {font:italic 14px/1.1em georgia, serif; border-bottom:1px solid #F5F5F5; height:28px; line-height:30px;  color:#414141;}
@@ -265,6 +267,16 @@ div.counter_section_mask {background:url('/images/counter/small/counter_mask.png
 
 .popular_post .post_meta_title h4 a {color:#780000; text-decoration:none;}
 .popular_post .post_meta_title h5 {font:italic 13px/.8em georgia, serif; margin-bottom:12px; color:#595959;}
+
+#feed_pagination {}
+a#load_more {width:100%; text-align:center; display:block; display:block; background:url('/images/load_more.png') left top no-repeat; height:55px;}
+a#load_more:hover {background-position:0 -66px;}
+a#load_more:active {background-position:0 -132px;}
+
+a#load_more span {width:120px; text-align:center; display:block; background:none; margin:0 auto; height:55px; line-height:58px;}
+a#load_more.loading span {background:url('/images/small_loader.gif') right center no-repeat;}
+
+a#load_more {font:bold 14px/58px Helvetica, Arial, sans-serif; -webkit-text-stroke:1px transparent; text-shadow:0 1px 0 white; color:#333; text-decoration:none;}
 
 
 /* REFACTOR THIS */

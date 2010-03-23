@@ -17,20 +17,20 @@ function initialize() {
 }
 
 $.fn.load_bio = function(options) {  
-  $(".person_thumb").click(function(event) {
+  $(".person_thumb").live("click", function(event) {
+    $(this).removeClass("active");
     $(this).addClass("loading");
     $(this).prepend("<span class='bio_loader'></span>")
-    
-    $.ajax({
-      url: this.href,
-      dataType: 'json',
-      success: function(html){
-        $("#person_bio").append(html);
-        $("#person_bio").addClass("active");
-        $(".person_thumb").removeClass("loading");
-      }
-    });
-    
+    $.getScript(this.href);
+    event.preventDefault();
+  });
+};
+
+$.fn.load_more = function(options) {  
+  $("#load_more").live("click", function(event) {
+    $(this).addClass("loading")
+    $("#load_more span").html("Loading...")
+    $.getScript(this.href);
     event.preventDefault();
   });
 };
@@ -62,7 +62,6 @@ $.fn.helper = function(helperText) {
       };
     });
     
-    
   });
 };
 })(jQuery);
@@ -77,10 +76,15 @@ $(document).ready(function () {
 
   $("a.close_alert").click(function(event) {
     $("div.alert").fadeOut("fast");
-  })
-
-
+  });
+  
   // load bio
   $(".person_thumb").load_bio();
+  
+  // load more style pagination
+  $("#load_more").load_more();
 
+  $.ajaxSetup({
+    'beforeSend' : function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
+  });
 });
