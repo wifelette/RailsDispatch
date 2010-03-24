@@ -16,7 +16,7 @@ gem 'feedzirra', :git => 'git://github.com/pauldix/feedzirra.git'
 gem "loofah", "0.4.7", :git => 'git://github.com/jpsilvashy/loofah.git'
 
 # gem 'will_paginate', :git => 'git://github.com/mislav/will_paginate.git', :branch => 'rails3'
-gem 'will_paginate', :git => 'git://github.com/kaichen/will_paginate.git', :branch => 'rails3_namespace_fix'
+# gem 'will_paginate', :git => 'git://github.com/kaichen/will_paginate.git', :branch => 'rails3_namespace_fix'
 gem "bluecloth"
 
 # Use unicorn as the web server

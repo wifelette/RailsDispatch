@@ -1,0 +1,14 @@
+<div id="contributor_details">
+  <% content_tag :a, :href => url_for(@contributor), :title => @contributor.full_name, :class => "person_thumb large", :rel => 'tipsy' do -%>
+    <%= image_tag @contributor.photo.url(:large), :alt => @contributor.full_name %>
+    <%= content_tag(:span, "", :class => 'person_mask') %>
+  <% end -%>
+
+  <ul class="contributor_bio_info">
+    <li class="contributor_name"><%= @contributor.full_name %></li>
+    <li>lorem ipsum</li>
+  </ul>
+
+  <p>bio</p>
+
+</div>
