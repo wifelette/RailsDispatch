@@ -22,7 +22,7 @@
   <% else %>
     <% for notification in Notification.current_notifications %>
     <div class="alert">
-      <span><%= notification.message %> <a href="#" class="close_alert"></a></span>
+      <span><%= raw notification.message %> <a href="#" class="close_alert"></a></span>
     </div>
     <% end %>
   <% end %>
@@ -78,6 +78,12 @@
     </div>
     
   </footer>
-
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-764576-15']);
+    _gaq.push(['_trackPageview']);
+    (function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);})();
+  </script>
 </body>
 </html>
