@@ -1,1 +1,1 @@
-sudo "sudo -u #{user} -H \\\"cd #{release_path} && bundle install --without=test --without=development\\\""
+sudo "sudo -u #{user} -H \"cd #{release_path} && bundle install --without=test --without=development\""
