@@ -17,4 +17,4 @@
   
 </div>
 
-<%=raw markdown(post.body) %>
+<%= GitHub::Markup.render('README.markdown', "* One\n* Two") %>

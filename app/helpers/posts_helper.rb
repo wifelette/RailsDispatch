@@ -1,5 +1,7 @@
 module PostsHelper
   def post_nav
-    "test"
+    content_tag(:div) do
+      "#{post.title}"
+    end
   end
 end

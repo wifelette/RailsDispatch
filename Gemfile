@@ -19,6 +19,9 @@ gem "loofah", "0.4.7", :git => 'git://github.com/jpsilvashy/loofah.git'
 # gem 'will_paginate', :git => 'git://github.com/kaichen/will_paginate.git', :branch => 'rails3_namespace_fix'
 gem "bluecloth"
 
+gem 'github-markup', :require => 'github/markup'
+gem 'org-ruby'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
