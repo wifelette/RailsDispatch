@@ -17,4 +17,14 @@
   
 </div>
 
-<%= GitHub::Markup.render('README.markdown', "* One\n* Two") %>
+<%= raw markdown(post.summary) unless post.summary.length == 0 %>
+
+<% unless post.video_embed_link.length == 0 %>
+<div class="video_frame">
+  <div class="video">
+  <%= raw post.video_embed_link %>
+  </div>
+</div>
+<% end %>
+
+<%= raw markdown(post.body) %>
