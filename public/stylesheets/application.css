@@ -36,6 +36,8 @@ article, aside, audio, bb, canvas, datagrid, datalist, details, dialog, eventsou
 
 /* -------------------------------------------------------------------------------------- */
 
+p a:link, p a:hover, p a:visited, p a:active {border-bottom:1px solid #8FCBD3; text-decoration:none; color:#063A44; background:#F2F8F8;}
+
 /* tipsy */
 .tipsy { padding: 5px; font-size: 10px; filter: alpha(opacity=84); background-repeat: no-repeat; background-image: url(/images/tipsy.gif); text-shadow:0 -1px 0 black;}
   .tipsy-inner { padding: 5px 8px 4px 8px; background-color: black; color: white; max-width: 200px; text-align: center;}
@@ -55,14 +57,14 @@ article, aside, audio, bb, canvas, datagrid, datalist, details, dialog, eventsou
   src: url(/fonts/Museo_Slab_500.otf) format("opentype")
 }
 
-html {background:url('/images/main_background.jpg') -20% top repeat-x;}
+html {background:url('/images/main_background.jpg') -20% -23px repeat-x;}
 
 div.alert {height:32px; background:#168496; background:rgba(0, 0, 0, .12); position:absolute; width:100%; z-index:9999;}
 div.alert span {width:937px; padding-right:22px; margin:0 auto; display:block; height:32px; position:relative; line-height:33px; text-align:right; color:#91CED5; text-shadow:0 -1px 0 #003B45;}
 div.alert span a {color:#D1F3F6; text-decoration:none; border-bottom:1px solid #34A1B6; font-weight:bold;}
 div.alert span a:hover {color:white;}
 
-div.alert span a.close_alert {background:url('../images/alert_close.png') left 0px no-repeat; text-decoration:none; border:none; width:15px; height:16px; display:block; position:absolute; right:0; top:9px; z-index:99999;}
+div.alert span a.close_alert {background:url('/images/alert_close.png') left 0px no-repeat; text-decoration:none; border:none; width:15px; height:16px; display:block; position:absolute; right:0; top:9px; z-index:99999;}
 div.alert span a:hover.close_alert {background-position:left -20px;}
 
 div.alert.notice {background:rgba(51, 73, 25, .5);}
@@ -72,7 +74,7 @@ div.alert.notice span {color:white;}
 header {height:180px; width:955px; margin:0 auto; position:relative; margin-bottom:10px; padding-top:52px; padding-left:5px;}
 header h1 {background:url('/images/ruby_logo.png') left top no-repeat; height:141px; color:white; text-shadow:0 -1px 0 black; font:65px/1 "Museo Slab", "Helvetica", "Arial", sans-serif; padding:10px 0 0 140px; position:relative; left:-58px;}
 header h1 a {color:white; text-decoration:none; text-shadow:0 -1px 0 black;}
-header h2 {font:26px/1.2 "Museo Sans", "Helvetica", "Arial", sans-serif; color:#004955; width:40%; text-shadow:0 1px 0 #84D0DA; margin-left:140px; position:relative; top:-76px; left:-35px;}
+header h2 {font:26px/1.2 "Museo Sans", "Helvetica", "Arial", sans-serif; color:#004955; width:40%; text-shadow:0 1px 0 #84D0DA; margin-left:140px; position:relative; top:-76px; left:-56px;}
 
 header nav {position:absolute; bottom:0; right:0; font: bold 13px/33px Helvetica, Arial, sans-serif;}
 header nav h3 {float:left; height:33px; line-height:35px; position:relative; right:-20px; color:#0B505B; text-shadow:0 1px 0 #D2DDDD; font: 13px/33px Helvetica, Arial, sans-serif;}
@@ -81,7 +83,7 @@ header nav ul li {float:left; height:33px; display:block; background:url('/image
 header nav ul li a, header nav ul li span {height:33px; color:#08343b; text-decoration:none; text-shadow:0 1px 0 #e0ebec; line-height:35px; display:block; background:url('/images/top_nav_buttons_ends.png') right top no-repeat; width:100%; padding-left:27px;}
 
 /* REFACTOR */
-header h3 {position:absolute; top:0px; right:0; margin-top:68px; background:url('/images/presented_by_engineyard_white.png'); height:42px; width:121px; text-indent:-9999px;}
+header a#enginyard_header {position:absolute; top:0px; right:0; margin-top:68px; background:url('/images/presented_by_engineyard_white.png'); height:42px; width:121px; text-indent:-9999px;}
 
 /* current page */
 header nav ul li.current {background-position:left -37px;}
@@ -92,7 +94,7 @@ section {width:960px; margin:0 auto; position:relative;}
 section nav {position:absolute; top:5px; left:0; width:220px; z-index:10;}
 section article {background:url('/images/page_background.png') top left no-repeat; width:670px; min-height:623px; padding:26px; margin-left:238px;}
 
-section nav ul#tab_nav {margin-top:130px; position:relative; left:-10px;}
+section nav ul#tab_nav {margin-top:145px; position:relative; left:-10px;}
 section nav ul#tab_nav li {}
 section nav ul#tab_nav li a {margin-bottom:8px; z-index:9999; width:235px; height:41px; display:block; padding:10px 16px 8px 16px; text-decoration:none; color:white; font-size:17px; font-weight:bold; opacity:.96; -webkit-text-stroke:1px transparent;}
 
@@ -102,7 +104,7 @@ section nav ul#tab_nav li a span.details {float:left; clear:left; font-weight:no
 
 section nav ul#tab_nav li.active a {display:block; background:url('/images/red_arrow.png') left top no-repeat; width:267px; height:61px; margin-bottom:8px; z-index:9999; width:235px; height:41px; display:block; padding:10px 16px 8px 16px; text-decoration:none; color:white; text-shadow:0 -1px 0 #270100; font-size:17px; font-weight:bold; opacity:.96; -webkit-text-stroke:1px transparent;}
 section nav ul#tab_nav li.active a span.title {color:white;}
-section nav ul#tab_nav li.active a span.details {color:#250000; text-shadow:0 1px 0 #ff7575;}
+section nav ul#tab_nav li.active a span.details {color:#FFD9DB; text-shadow:0 -1px 0 #221011;}
 
 section nav ul#tab_nav li.future a {background:url('/images/tabs/future_tab.png') left top no-repeat;}
 section nav ul#tab_nav li.future a span {color:#BABABA;}
@@ -124,7 +126,7 @@ ul#sidebar_more li a.follow_fb {background:url('/images/facebook.png') right 10p
 
 ul#sidebar_more li.newsletter {position:relative; border-top:1px solid #efefef; padding:10px 42px 8px 7px; display:block; color:#08343B; text-decoration:none; font-weight:bold;}
 ul#sidebar_more li.newsletter span {margin-bottom:10px; display:block;}
-ul#sidebar_more li.newsletter form {background:url('../images/newsletter_signup.png') left top no-repeat; width:222px; height:25px; padding:4px 0 0 11px; position:relative; left:-11px;}
+ul#sidebar_more li.newsletter form {background:url('/images/newsletter_signup.png') left top no-repeat; width:222px; height:25px; padding:4px 0 0 11px; position:relative; left:-11px;}
 ul#sidebar_more li.newsletter form input {background:none; border:none; width:215px;}
 
 ul#sidebar_more li.newsletter span.mail_icon {margin:0; position:absolute; right:0; top:15px; z-index:999; background:url('/images/mail_input.png') right top no-repeat; width:20px; height:20px;}
@@ -196,11 +198,11 @@ ul.contributor_bio_info li.contributor_name {font:18px/1.1em "Museo Sans", sans-
 .contributor_details {display:block;}
 
 #page_additional .contributor_social_links li a {height:20px; width:20px; display:block; margin:8px 6px; text-indent:-9999px;}
-#page_additional .contributor_social_links li a.twitter_social {background:url('../images/twitter.gif') top left no-repeat;}
-#page_additional .contributor_social_links li a.github_social {background:url('../images/ask_question.gif') top left no-repeat;}
-#page_additional .contributor_social_links li a.ask_contributor_question {background:url('../images/ask_question.gif') top left no-repeat;}
+#page_additional .contributor_social_links li a.twitter_social {background:url('/images/twitter.gif') top left no-repeat;}
+#page_additional .contributor_social_links li a.github_social {background:url('/images/ask_question.gif') top left no-repeat;}
+#page_additional .contributor_social_links li a.ask_contributor_question {background:url('/images/ask_question.gif') top left no-repeat;}
 
-#person_bio p {font-size:13px;}
+#person_bio p {font-size:12px;}
 
 /* forms */
 fieldset.inputs li {width:100%;}
@@ -237,10 +239,10 @@ div.errorExplanation p {margin:0; padding:0;}
 section article div.errorExplanation p, section article div.errorExplanation ul {font:12px/1.5 Helvetica,Arial,sans-serif;}
 section article div.errorExplanation h2 {font:bold 13px/1.5 Helvetica,Arial,sans-serif; margin:0;}
 .fieldWithErrors input {}
-.fieldWithErrors {background:url('../images/icons/delete.png') right top no-repeat;}
+.fieldWithErrors {background:url('/images/icons/delete.png') right top no-repeat;}
 
 /* upcoming counter and item */
-#upcoming {display:block; margin:69px 0 0 0; position:relative; left:-8px; z-index:90; background:url('/images/days_until.png') right 13px no-repeat; float:left; padding-right:102px; height:93px; width:80px;}
+#upcoming {display:block; margin:86px 0 0 0; position:relative; left:-8px; z-index:90; background:url('/images/days_until.png') right 13px no-repeat; float:left; padding-right:102px; height:93px; width:80px;}
 
 /* =========== */
 /* = Counter = */

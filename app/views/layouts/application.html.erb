@@ -15,7 +15,7 @@
   <%= csrf_meta_tag %>
   
 </head>
-<body>
+<body id="<%= controller.controller_name %>_page">
 
   <% if flash[:notice] %>
     <div class="alert notice"><span><%= flash[:notice] %></span></div>
@@ -35,13 +35,23 @@
     <h1><%= link_to_unless_current "Rails Dispatch", root_path -%></h1>
     <h2>Rails news delivered fresh</h2>
 
-    <h3>Presented by Engine Yard</h3>
-
+    <a id="enginyard_header" href="http://engineyard.com">Presented by Engine Yard</a>
+    
     <nav>
       <ul>
-        <li><a href="/">New Rails 3 Features</a></li>
-        <li><a href="/contributors">Contributors</a></li>
-        <li><a href="/community">Rails Community</a></li>
+        
+        <% content_tag :li, :class => controller.controller_name == "posts" ? "current" : nil do %>
+          <%= link_to "Posts", root_path %>
+        <% end %>
+        
+        <% content_tag :li, :class => controller.controller_name == "contributors" ? "current" : nil do %>
+          <%= link_to "Contributors", contributors_path %>
+        <% end %>
+        
+        <% content_tag :li, :class => controller.controller_name == "community" ? "current" : nil do %>
+          <%= link_to "Rails Community", '/community' %>
+        <% end %>
+        
       </ul>  
     </nav>
   </header>
@@ -70,9 +80,11 @@
 
       <nav>
         <ul>
-          <li class="active"><a href="#">New Rails 3 Features</a></li>
-          <li><a href="#">The Rails Core Team</a></li>
-          <li><a href="#">Rails Community</a></li>
+          <li><%= link_to "Posts", root_path %></li>
+          <li><%= link_to "Contributors", contributors_path %></li>
+          <li><%= link_to "Rails Community", '/community' %></li>
+          <li><a href="#">About Rails Dispatch</a></li>
+          <li><a href="#">About Engine Yard</a></li>
         </ul>
       </nav>
     </div>

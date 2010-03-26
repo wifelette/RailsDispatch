@@ -6,9 +6,9 @@
 
   <ul class="contributor_bio_info">
     <li class="contributor_name"><%= @contributor.full_name %></li>
-    <li>lorem ipsum</li>
+    <!-- <li>lorem ipsum</li> -->
   </ul>
 
-  <p>bio</p>
+  <p><%= raw markdown(@contributor.bio) %></p>
 
 </div>

@@ -9,19 +9,7 @@
     </li>
   </ul>
 
-  <ul id="sidebar_more">
-    <li><a class="ask_question" href="#">Ask a Question!</a></li>
-    <li><a class="follow_ey" href="#">Engine Yard on Twitter</a></li>
-    <li><a class="follow_fb" href="#">Engine Yard on Facebook</a></li>
-
-    <li class="newsletter">
-      <span class="mail_icon"></span>
-      <form action="#" method="#" accept-charset="utf-8">
-        <input type="text" name="some_name" value="" id="newsletter_input">
-        <label class="inline-hints">Receive our Newsletter</label>
-      </form>
-    </li>
-  </ul>
+  <%= render "layouts/shared/sidebar_social_links" %>
 
 </nav>
 <% end %>

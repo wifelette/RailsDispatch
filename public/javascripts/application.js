@@ -17,7 +17,7 @@ function initialize() {
 }
 
 $.fn.load_bio = function(options) {  
-  $(".person_thumb").live("click", function(event) {
+  $("#contributors_page .person_thumb").live("click", function(event) {
     $(this).removeClass("active");
     $(this).addClass("loading");
     $(this).prepend("<span class='bio_loader'></span>")

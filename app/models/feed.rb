@@ -5,7 +5,7 @@ class Feed < ActiveRecord::Base
 
   validates_presence_of :site_url, :feed_url, :contributor
 
-  after_save :update_feed_entries 
+  after_save :update_feed_entries
 
   protected
 
