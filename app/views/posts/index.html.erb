@@ -24,40 +24,23 @@
       </a>
     </li>
     
-    <%#= post_nav %>
-  
-    <li class="active">
-      <a href="#">
-        <span class="title">Rails 3 Routing: Rack it Up</span>
-        <span class="details">This week</span>
-      </a>
-    </li>
-  
-    <li class="inactive">
-      <a href="#">
-        <span class="title">Generic Actions in Rails 3</span>
-        <span class="details">Last week</span>
-      </a>
-    </li>
-  
-    <li class="inactive">
-      <a href="#">
-        <span class="title">Gem Bundler</span>
-        <span class="details">Two weeks ago</span>
-      </a>
-    </li>
-  
-    <li class="inactive">
-      <a href="#">
-        <span class="title">Rails and Metaprogramming</span>
-        <span class="details">Three weeks ago</span>
-      </a>
-    </li>
+    
+  <% for post in @posts %>
+    <% content_tag :li, :class => current_page?(:id => post.id) ? "active" : "inactive" do %>
+      <%= link_to post do %>
+        <span class="title"><%= post.sidebar_title %></span>
+        <span class="details">post id: <%= post.id %></span>
+      <% end %>
+    <% end %>    
+  <% end %>
   </ul>
-  
   <%= render "layouts/shared/sidebar_social_links" %>
-
 </nav>
 <% end %>
 
+
 <%= render @posts[0] %>
+
+
+
+

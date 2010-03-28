@@ -1,51 +1,5 @@
 <% content_for :page_nav do %>
-<nav>
-  <ul id="tab_nav">
-    
-    <li class="inactive">
-      <a href="/admin/users">
-        <span class="title">Users</span>
-        <span class="details">add, edit, remove users</span>
-      </a>
-    </li>
-  
-    <li class="inactive">
-      <a href="/admin/posts">
-        <span class="title">Posts</span>
-        <span class="details">add, edit, remove posts</span>
-      </a>
-    </li>
-  
-    <li class="inactive">
-      <a href="/admin/contributors">
-        <span class="title">Contributors</span>
-        <span class="details">add, edit, remove contributors</span>
-      </a>
-    </li>
-  
-    <li class="inactive">
-      <a href="/admin/community">
-        <span class="title">Community</span>
-        <span class="details">add, edit, remove feeds</span>
-      </a>
-    </li>
-
-    <li class="inactive">
-      <a href="/admin/notifications">
-        <span class="title">Notifications</span>
-        <span class="details">manage notification messages</span>
-      </a>
-    </li>
-
-    <li class="inactive">
-      <a href="/admin/settings">
-        <span class="title">Settings</span>
-        <span class="details">manage various app settings</span>
-      </a>
-    </li>
-  
-  </ul>
-</nav>
+  <%= render "admin/shared/admin_nav"%>
 <% end %>
 
 <div id="page_additional">

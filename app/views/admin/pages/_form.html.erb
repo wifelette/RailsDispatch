@@ -1,0 +1,72 @@
+<% content_for :page_nav do %>
+<nav>
+  <ul id="tab_nav">
+    <li class="field" class="inactive">
+      <%= link_to admin_pages_path do %>
+        <span class="title">Go back to all pages</span>
+        <span class="details">you&rsquo;ll lose these changes</span>
+      <% end %>
+    </li>
+  </ul>
+</nav>
+<% end %>
+
+
+<%= form_for ([:admin, @page]) do |form| %>
+  <ol>
+    
+    <li class="field">
+      <label>Page title</label>
+      <%= form.text_field :page_title %>
+    </li>
+        
+    <li class="field">
+      <label>Page subtitle</label>
+      <%= form.text_field :page_subtitle %>
+    </li>
+        
+    <li class="field">
+      <label>Sidebar title</label>
+      <%= form.text_field :sidebar_title %>
+    </li>
+    
+    <li class="field">
+      <label>Sidebar subtitle</label>
+      <%= form.text_field :sidebar_subtitle %>
+    </li>
+    
+    <li class="field">
+      <label>Page URL slug</label>
+      <%= form.text_field :slug %>
+    </li>
+    
+    <li class="field">
+      <label>Contributor</label>
+      <%= form.select(:contributor_id, Contributor.all.collect {|p| [ p.full_name, p.id ] }, {:include_blank => true}) %>
+    </li>
+
+    <li class="field">
+      <label>Show contributor?</label>
+      <%= form.check_box :show_contributor %> 
+    </li>
+
+    <li class="field">
+      <label>Summary</label>
+      <%= form.text_field :summary %>
+    </li>
+    
+    <li class="field">
+      <label>Body</label>
+      <%= form.text_area :body %>
+    </li>
+    
+    <li class="field time_select">
+      <label>Publish date</label>
+      <%= form.datetime_select :publish_date %>
+    </li>
+        
+    <li class="submit">
+      <%= submit_tag "Save" %>
+    </li>
+  </ol>
+<% end %>

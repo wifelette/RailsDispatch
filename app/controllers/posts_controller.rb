@@ -7,5 +7,11 @@ class PostsController < ApplicationController
       format.xml  { render :xml => @posts }
     end
   end
+  
+  def show
+    @post = Post.find(params[:id])
+    @posts = Post.all
+  end
+  
 end
 

@@ -1,9 +1,35 @@
 # S3 Buckets:
-#  railsdispatch
-#  railsdispatch.static
-#  railsdispatch.cache
+#   development
+#     railsdispatch
+#     railsdispatch.static
+#     railsdispatch.cache
+#
+#   staging & production
+#     ey-railsdispatch
+#     ey-railsdispatch.cache
+#     ey-railsdispatch.static
+
 
 development:
   access_key_id: 'AKIAJ6PDVL2FSF3GG4PA'
   secret_access_key: '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'
+  default_bucket: 'railsdispatch'
+  static_bucket: 'railsdispatch.static'
+  cache_bucket: 'railsdispatch.cache'
+    
+
+staging:
+  access_key_id: '0CDRZJRRFPK5F1V3SW02'
+  secret_access_key: 'LcedFxucn2F5M5iiQ5sETseVkWT3JnNtlCE2mVsU'
+  default_bucket: 'ey-railsdispatch'
+  static_bucket: 'ey-railsdispatch.static'
+  cache_bucket: 'ey-railsdispatch.cache'
+
+production:
+  access_key_id: '0CDRZJRRFPK5F1V3SW02'
+  secret_access_key: 'LcedFxucn2F5M5iiQ5sETseVkWT3JnNtlCE2mVsU'
+  default_bucket: 'ey-railsdispatch'
+  static_bucket: 'ey-railsdispatch.static'
+  cache_bucket: 'ey-railsdispatch.cache'
+    
 

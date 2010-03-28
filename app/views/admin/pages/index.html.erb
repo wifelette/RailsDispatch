@@ -3,8 +3,8 @@
 <% end %>
 
 <div id="page_additional">
-  <h3>Posts</h3>  
-  <h4>add, edit, remove posts</h4>  
+  <h3>Pages</h3>  
+  <h4>add, edit, remove pages</h4>  
 </div>
 
 <ul class="admin_nav">
@@ -14,35 +14,33 @@
     <% end %>
   </li>
   <li>
-    <%= link_to new_admin_post_path, :class => "simple_button" do %>
-      <span>Create new post</span>
+    <%= link_to new_admin_page_path, :class => "simple_button" do %>
+      <span>Create new page</span>
     <% end %>
   </li>
 </ul>
 
-
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-  <th>Contributor</th>
-  <th>Title</th>
+  <th>Page title</th>
+  <th>Slug</th>
   <!-- <th>Body</th> -->
   <th>Publish Date</th>
   <th></th>
   <th></th>
 </tr>
-<% @posts.each_with_index do |post, i| %>
+<% @pages.each_with_index do |page, i| %>
 <tr class="actionable">
-  <td><%= post.contributor.full_name %></td>
-  <td><%= post.title %></td>
-  <!-- <td><%= truncate(post.body, 20) %></td> -->
-  <td><%= post.publish_date.strftime("%c") %></td>
+  <td><%= page.page_title %></td>
+  <td><%= page.slug %></td>
+  <td><%= page.publish_date.strftime("%c") %></td>
 
   <td class="actions">
-    <%= link_to edit_admin_post_url(post), :class => "simple_button" do %>
+    <%= link_to edit_admin_page_url(page), :class => "simple_button" do %>
       <span>Destroy</span>
     <% end %>
 
-    <%= link_to edit_admin_post_url(post), :class => "simple_button" do %>
+    <%= link_to edit_admin_page_url(page), :class => "simple_button" do %>
       <span>Edit</span>
     <% end %>    
   </td>

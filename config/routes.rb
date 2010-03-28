@@ -5,6 +5,7 @@ RailsDispatch::Application.routes.draw do |map|
 
   resources :posts, :only => [:index, :show]
   resources :contributors, :only => [:index, :show]
+  resources :pages, :only => [:show]
 
   match 'community' => 'community#index'
   
@@ -18,6 +19,7 @@ RailsDispatch::Application.routes.draw do |map|
     resources :posts
     resources :contributors
     resources :notifications
+    resources :pages
 
     namespace :community do 
       root :to => "admin/community#index"

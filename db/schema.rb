@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100326184650) do
+ActiveRecord::Schema.define(:version => 20100328032751) do
 
   create_table "contributors", :force => true do |t|
     t.string   "firstname"
@@ -54,6 +54,22 @@ ActiveRecord::Schema.define(:version => 20100326184650) do
     t.string   "message"
     t.datetime "starts_at"
     t.datetime "ends_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pages", :force => true do |t|
+    t.string   "title"
+    t.string   "sidebar_title"
+    t.string   "sidebar_subtitle"
+    t.integer  "slug"
+    t.string   "page_title"
+    t.string   "page_subtitle"
+    t.text     "summary"
+    t.text     "body"
+    t.string   "contributor_id"
+    t.boolean  "show_contributor"
+    t.datetime "publish_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

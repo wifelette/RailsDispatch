@@ -1,7 +1,7 @@
 class Contributor < ActiveRecord::Base
   scope :visible, where("on_contributor_page != ?", false)
   
-  has_many :posts, :dependent => :destroy 
+  has_many :posts
 
   validates_presence_of :firstname, :lastname
   
@@ -14,7 +14,7 @@ class Contributor < ActiveRecord::Base
     :storage => :s3,
     :s3_credentials => "#{Rails.root}/config/s3.yml",
     :path => ":attachment/:id/:style.:extension",
-    :bucket => 'railsdispatch'
+    :bucket => S3_CONFIG[Rails.env]['static_bucket']
     
     
   def full_name

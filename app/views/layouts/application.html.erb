@@ -83,8 +83,11 @@
           <li><%= link_to "Posts", root_path %></li>
           <li><%= link_to "Contributors", contributors_path %></li>
           <li><%= link_to "Rails Community", '/community' %></li>
-          <li><a href="#">About Rails Dispatch</a></li>
-          <li><a href="#">About Engine Yard</a></li>
+          
+          <% for page in Page.all %>
+          <li><%= link_to page.page_title, page %></li>
+          <% end %>
+          
         </ul>
       </nav>
     </div>

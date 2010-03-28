@@ -1,0 +1,18 @@
+<% content_for :page_nav do %>
+<nav>
+  <ul id="tab_nav">
+  <% for post in @posts %>
+    <% content_tag :li, :class => current_page?(:id => post.id) ? "active" : "inactive" do %>
+      <%= link_to post do %>
+        <span class="title"><%= post.sidebar_title %></span>
+        <span class="details"></span>
+      <% end %>
+    <% end %>    
+  <% end %>
+  </ul>
+  <%= render "layouts/shared/sidebar_social_links" %>
+</nav>
+<% end %>
+
+<%= render @post %>
+
