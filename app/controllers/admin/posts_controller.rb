@@ -1,21 +1,27 @@
 class Admin::PostsController < ApplicationController
   before_filter :authenticate_user!
   
+  respond_to :html, :xml, :js
+  
   def index
     @posts = Post.all
   end
   
+  def show
+    @post = Post.find(params[:id])
+  end
+
   def new
     @post = Post.new
   end
   
   def create
-    @post = Post.new(params[:post])
+    @post = Post.new(params[:post])    
     if @post.save
-      flash[:notice] = "Successfully created post."
-      redirect_to admin_posts_url
-    else
-      render :action => 'new'
+        flash[:notice] = "Successfully updated post."
+        redirect_to admin_posts_url
+      else
+        render :action => 'edit'
     end
   end
   
@@ -26,18 +32,13 @@ class Admin::PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update_attributes(params[:post])
-      flash[:notice] = "Successfully updated post."
-      redirect_to admin_posts_url
-    else
-      render :action => 'edit'
+      respond_with(@post, :location => admin_posts_url)
     end
   end
   
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    flash[:notice] = "Successfully destroyed post."
-    redirect_to admin_url
+    respond_with(@post, :location => admin_posts_url)
   end
-
 end

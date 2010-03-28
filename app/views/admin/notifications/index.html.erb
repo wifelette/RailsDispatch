@@ -30,14 +30,14 @@
   <th></th>
 </tr>
 <% @notifications.each_with_index do |notification, i| %>
-  <tr class="actionable">
+  <tr class="actionable" id="<%= controller.controller_name %>_<%= notification.id %>">
     <td><%= notification.message %></td>
     <td><%= notification.starts_at.strftime("%c") %></td>
     <td><%= notification.ends_at.strftime("%c") %></td>
     <td>About <%= ((notification.ends_at - notification.starts_at)/86400).to_i %> days</td>
 
     <td class="actions">
-      <%= link_to edit_admin_notification_url(notification), :class => "simple_button" do %>
+      <%= link_to admin_notification_path(notification), :method => :delete, :remote => true, :class => "simple_button" do %>
         <span>Destroy</span>
       <% end %>
 

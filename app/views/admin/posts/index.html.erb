@@ -30,24 +30,7 @@
   <th></th>
   <th></th>
 </tr>
-<% @posts.each_with_index do |post, i| %>
-<tr class="actionable">
-  <td><%= post.contributor.full_name %></td>
-  <td><%= post.title %></td>
-  <!-- <td><%= truncate(post.body, 20) %></td> -->
-  <td><%= post.publish_date.strftime("%c") %></td>
-
-  <td class="actions">
-    <%= link_to edit_admin_post_url(post), :class => "simple_button" do %>
-      <span>Destroy</span>
-    <% end %>
-
-    <%= link_to edit_admin_post_url(post), :class => "simple_button" do %>
-      <span>Edit</span>
-    <% end %>    
-  </td>
-
-</tr>
-<% end %>
+<%= render @posts %>
 </table>
+
 

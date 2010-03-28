@@ -28,7 +28,7 @@
   <th></th>
 </tr>
 <% @users.each_with_index do |user, i| %>
-<tr class="actionable">
+<tr class="actionable" id="<%= controller.controller_name %>_<%= user.id %>">
   <td><%= user.email %></td>
 
   <td>

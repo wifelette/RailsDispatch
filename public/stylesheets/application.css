@@ -322,6 +322,11 @@ a.simple_button:hover {font-weight:normal; cursor:pointer;}
 a.simple_button:active {font-weight:normal; cursor:pointer; background-position:left -28px;}
 a.simple_button:active span {color:#4F4F4F; background-position:right -28px;}
 
+a.simple_button.warning {background-image:url("/images/simple_buttons_bg_warn.png")}
+a.simple_button.warning span {color:white; text-shadow:0 -1px 0 #270100; opacity:.96; -webkit-text-stroke:1px transparent; background-image:url("/images/simple_buttons_ends_warn.png")}
+
+
+
 tr.actionable td {vertical-align:middle;}
 td.actions {}
 td.actions a.simple_button {float:right; margin:0 10px 0 10px; position:relative; top:0px;}

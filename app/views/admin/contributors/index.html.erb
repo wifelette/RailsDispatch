@@ -26,11 +26,11 @@
   <th></th>
 </tr>
 <% @contributors.each_with_index do |contributor, i| %>
-<tr class="actionable">
+<tr class="actionable" id="<%= controller.controller_name %>_<%= contributor.id %>">
   <td><%= contributor.full_name %></td>
   
   <td class="actions">
-    <%= link_to contributor_path(contributor), :method => :delete, :confirm => "Are you sure you want to delete this?", :class => "simple_button" do %>
+    <%= link_to admin_contributor_path(contributor), :method => :delete, :remote => true, :class => "simple_button" do %>
       <span>Destroy</span>
     <% end %>
 

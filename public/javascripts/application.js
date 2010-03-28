@@ -39,7 +39,7 @@ $.fn.load_more = function(options) {
 (function($){
 $.fn.helper = function(helperText) {
   return this.each(function() {
-
+    
     var tag = this.tagName
     
     if (jQuery(this).val() != "") {
@@ -66,8 +66,40 @@ $.fn.helper = function(helperText) {
 };
 })(jQuery);
 
+(function($){
+$.fn.confirm_with = function(message) {
+  return this.each(function() {
+    
+    $(this).hide();
+    
+    var original_message = $(this).html()
+    var confirmation_message = message
+    
+    var button = document.createElement('a');
+    var span = document.createElement('span');
+
+    $(button).addClass("simple_button");
+    $(button).html(original_message);
+    
+    $(button).prependTo($(this).parent())
+    
+    var confirmation_button = this
+    
+    $(button).bind("click", function() {
+      $(button).hide();
+      $(confirmation_button).addClass("warning").html("<span>" + confirmation_message + "</span>").show();
+    });
+
+  });
+};
+})(jQuery);
+
 
 $(document).ready(function () {
+  
+  // confirm delete buttons
+  $("a[data-method='delete'][data-remote='true']").confirm_with("Are you sure?");
+  
   // $("select, input, textarea").uniform();
   
   $('#newsletter_input').helper('inactive_class');

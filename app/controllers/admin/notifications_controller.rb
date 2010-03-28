@@ -1,6 +1,8 @@
 class Admin::NotificationsController < ApplicationController
   before_filter :authenticate_user!
   
+  respond_to :html, :xml, :js
+  
   def index
     @notifications = Notification.all
   end

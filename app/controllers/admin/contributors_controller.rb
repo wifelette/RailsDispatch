@@ -1,6 +1,8 @@
 class Admin::ContributorsController < ApplicationController
   before_filter :authenticate_user!
   
+  respond_to :html, :xml, :js
+  
   def index
     @contributors = Contributor.all
   end
@@ -36,8 +38,7 @@ class Admin::ContributorsController < ApplicationController
   def destroy
     @contributor = Contributor.find(params[:id])
     @contributor.destroy
-    flash[:notice] = "Successfully destroyed contributor."
-    redirect_to admin_url
+    respond_with(@contributor, :location => admin_contributors_url)
   end
   
 end

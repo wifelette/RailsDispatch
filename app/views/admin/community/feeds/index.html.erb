@@ -29,13 +29,13 @@
   <th></th>
 </tr>
 <% @feeds.each_with_index do |feed, i| %>
-<tr class="actionable">
+<tr class="actionable" id="<%= controller.controller_name %>_<%= feed.id %>">
   <td><%= feed.site_url %></td>
   <td><%= feed.feed_url %></td>
   <td><%= feed.contributor.full_name %></td>
 
   <td class="actions">
-    <%= link_to edit_admin_community_feed_url(feed), :class => "simple_button" do %>
+    <%= link_to admin_community_feed_path(feed), :method => :delete, :remote => true, :class => "simple_button" do %>
       <span>Destroy</span>
     <% end %>
 

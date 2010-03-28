@@ -1,6 +1,8 @@
 class Admin::Community::FeedsController < ApplicationController
   before_filter :authenticate_user!
   
+  respond_to :html, :xml, :js
+  
   def index
     @feeds = Feed.all
   end

@@ -30,13 +30,13 @@
   <th></th>
 </tr>
 <% @pages.each_with_index do |page, i| %>
-<tr class="actionable">
+<tr class="actionable" id="<%= controller.controller_name %>_<%= page.id %>">
   <td><%= page.page_title %></td>
   <td><%= page.slug %></td>
   <td><%= page.publish_date.strftime("%c") %></td>
 
   <td class="actions">
-    <%= link_to edit_admin_page_url(page), :class => "simple_button" do %>
+    <%= link_to admin_page_path(page), :method => :delete, :remote => true, :class => "simple_button" do %>
       <span>Destroy</span>
     <% end %>
 

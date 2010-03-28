@@ -1,6 +1,8 @@
 class Admin::UsersController < ApplicationController
   before_filter :authenticate_user!
   
+  respond_to :html, :xml, :js
+  
   def index
     @users = User.all
   end
@@ -36,8 +38,7 @@ class Admin::UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    flash[:notice] = "Successfully destroyed user."
-    redirect_to admin_url
+    respond_with(@user, :location => admin_users_url)
   end
 
 end

@@ -1,6 +1,8 @@
 class Admin::PagesController < ApplicationController
   before_filter :authenticate_user!
   
+  respond_to :html, :xml, :js
+  
   def index
     @pages = Page.all
   end
@@ -36,8 +38,7 @@ class Admin::PagesController < ApplicationController
   def destroy
     @page = Page.find(params[:id])
     @page.destroy
-    flash[:notice] = "Successfully destroyed page."
-    redirect_to admin_url
+    respond_with(@page, :location => admin_pages_url)
   end
 
 end
