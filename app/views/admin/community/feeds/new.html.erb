@@ -3,5 +3,9 @@
   <h4>add, edit, remove contributors</h4>  
 </div>
 
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
 <%= render :partial => 'form' %>
 

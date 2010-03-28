@@ -3,4 +3,8 @@
   <h4>You are editing a contributors, they&rsquo;ll will appear in the contributors section.</h4>
 </div>
 
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
 <%= render :partial => 'form' %>

@@ -7,6 +7,10 @@
   <h4>add, edit, remove users</h4>  
 </div>
 
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
 <ul class="admin_nav">
   <li>
     <%= link_to admin_root_path, :class => "simple_button" do %>

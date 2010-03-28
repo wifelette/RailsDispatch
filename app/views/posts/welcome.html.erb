@@ -26,19 +26,21 @@
     
     
   <% @posts.each_with_index do |post, i| %>
-    <% while i <= 4 %>
-      <% content_tag :li, :class => current_page?(:id => post.id) ? "active" : "inactive" do %>
-        <%= link_to post do %>
+    <% content_tag :li, :class => current_page?(:id => post.id) ? "active" : "inactive" do %>
+      <%= link_to post do %>
         <span class="title"><%= post.sidebar_title %></span>
         <span class="details">post id: <%= post.id %></span>
-        <% end %>
       <% end %>
-    <% end %>
+    <% end %>    
   <% end %>
   </ul>
   <%= render "layouts/shared/sidebar_social_links" %>
 </nav>
 <% end %>
 
-<%= render @posts %>
+
+<%= render @posts[0] %>
+
+
+
 

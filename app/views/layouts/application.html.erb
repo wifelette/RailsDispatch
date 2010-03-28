@@ -16,14 +16,10 @@
 </head>
 <body id="<%= controller.controller_name %>_page">
 
-  <% if flash[:notice] %>
-    <div class="alert notice"><span><%= flash[:notice] %></span></div>
-  <% else %>
-    <% for notification in Notification.current_notifications %>
-    <div class="alert">
-      <span><%= raw notification.message %> <a href="#" class="close_alert"></a></span>
-    </div>
-    <% end %>
+  <% for notification in Notification.current_notifications %>
+  <div class="alert">
+    <span><%= raw notification.message %> <a href="#" class="close_alert"></a></span>
+  </div>
   <% end %>
   
   <!-- <div class="alert">

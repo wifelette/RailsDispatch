@@ -36,10 +36,10 @@ class Admin::Community::FeedsController < ApplicationController
   end
   
   def destroy
-    @feed = Feed.find(params[:id])
-    @feed.destroy
-    flash[:notice] = "Successfully destroyed feed."
-    redirect_to admin_community_feeds_url
+    @contributor = Contributor.find(params[:id])
+    @contributor.destroy
+    respond_with(@contributor, :location => admin_community_feeds_url)
   end
+  
   
 end

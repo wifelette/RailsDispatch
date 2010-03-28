@@ -94,6 +94,20 @@ $.fn.confirm_with = function(message) {
 };
 })(jQuery);
 
+(function($){
+$.fn.confirmRemoteDestroy = function(message) {
+  return this.each(function() {
+
+    $(this).fadeOut('fast', function() {
+      $(this).remove();
+    });
+
+  });
+};
+})(jQuery);
+
+
+
 
 $(document).ready(function () {
   

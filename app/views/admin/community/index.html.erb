@@ -7,6 +7,9 @@
   <h4>add, edit, remove feeds</h4>  
 </div>
 
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
 
 <ul class="admin_nav">
   <li>
