@@ -28,7 +28,7 @@
     </li> -->
 
 <% if @upcoming %>
-  <% for post in @upcoming %>
+  <% @upcoming.each do |post| %>
     <% content_tag :li, :class => "future" do %>
       <%= link_to post do %>
       <span class="title"><%= post.sidebar_title %></span>

@@ -7,7 +7,7 @@ class Admin::PostsController < ApplicationController
     # @posts = Post.all
     # @future_posts = @posts.future
 
-    @future_posts = Post.future.order("publish_date desc")
+    @future_posts = Post.future.order("publish_date desc").reverse
     @past_posts = Post.past.order("publish_date desc")
   end
   
