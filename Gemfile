@@ -1,12 +1,15 @@
 source 'http://rubygems.org'
 
 # gem 'rails', '3.0.0.beta1'
-gem "rails", "3.0.0.beta1"
+gem "rails", :git => "git://github.com/rails/rails.git"
+gem "arel", :git => "git://github.com/rails/arel.git"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql'
+
+gem 'engineyard', '0.2.7.pre'
 
 gem "devise", :git => "git://github.com/plataformatec/devise.git"
 gem 'paperclip', :git => 'git://github.com/JasonKing/paperclip.git', :ref => '9c9082814f628a618f625158fc8507ef1578dacc'
@@ -23,8 +26,8 @@ gem 'github-markup', :require => 'github/markup'
 gem 'org-ruby'
 gem 'hirb'
 
-gem 'coderay', :source => 'http://gemcutter.org'
-# gem 'RedCloth', :require => 'RedCloth'
+gem 'coderay'
+gem 'RedCloth', :require => 'RedCloth'
 
 # Use unicorn as the web server
 # gem 'unicorn'

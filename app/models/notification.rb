@@ -1,5 +1,3 @@
 class Notification < ActiveRecord::Base
-  def self.current_notifications
-    find(:all, :conditions => "starts_at <= now() AND ends_at >= now()", :limit => 1)
-  end
+  scope :current_notifications, where("starts_at <= ?", Time.now).where("ends_at >= ?", Time.now).limit(1)
 end

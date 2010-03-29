@@ -27,4 +27,5 @@
 </div>
 <% end %>
 
-<%= coderay(post.body) %>
+<%#= raw coderay(post.body) %>
+<%= raw textilize(coderay(post.body)) %>

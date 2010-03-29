@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   def welcome
     @posts = Post.published.order('publish_date desc').limit(4)
     @upcoming = Post.future.order("publish_date desc").first
+    @upcoming.to_a
 
     respond_to do |format|
       format.html # index.html.erb
