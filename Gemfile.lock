@@ -46,6 +46,10 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
+  bundler: 
+    group: 
+    - :default
+    version: = 0.9.13
   org-ruby: 
     group: 
     - :default
@@ -188,7 +192,7 @@ specs:
     version: 1.2.4
 - right_aws: 
     version: 1.10.0
-hash: 9f6f0526c732c7d0c6e125615cffc6b41b2b9373
+hash: 1be344af215a0a2adc4fda8861103c08f6520bce
 sources: 
 - Git: 
     name: loofah
@@ -207,7 +211,7 @@ sources:
 - Git: 
     uri: git://github.com/plataformatec/devise.git
     git: git://github.com/plataformatec/devise.git
-    ref: 0d704c02cac612264b02a0771c242abc5e7a5a7c
+    ref: e038d82410ffa83d077fd891fe9e25da7663f4b9
 - Git: 
     uri: git://github.com/rails/arel.git
     git: git://github.com/rails/arel.git
@@ -215,6 +219,6 @@ sources:
 - Git: 
     uri: git://github.com/rails/rails.git
     git: git://github.com/rails/rails.git
-    ref: 74efe4c2532bf4680e7d03c5ea43cd07d4b4d403
+    ref: 1b9777e84f569c6abde2435d66882170e263fc90
 - Rubygems: 
     uri: http://rubygems.org
