@@ -1,24 +1,20 @@
 --- 
 dependencies: 
-  feedzirra: 
-    group: 
-    - :default
-    version: ">= 0"
   github-markup: 
     group: 
     - :default
     version: ">= 0"
     require: 
     - github/markup
-  rails: 
+  feedzirra: 
     group: 
     - :default
-    version: = 3.0.0.beta1
+    version: ">= 0"
   loofah: 
     group: 
     - :default
     version: = 0.4.7
-  bluecloth: 
+  rails: 
     group: 
     - :default
     version: ">= 0"
@@ -26,15 +22,7 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
-  right_aws: 
-    group: 
-    - :default
-    version: ">= 0"
-  devise: 
-    group: 
-    - :default
-    version: ">= 0"
-  paperclip: 
+  bluecloth: 
     group: 
     - :default
     version: ">= 0"
@@ -42,23 +30,51 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
+  paperclip: 
+    group: 
+    - :default
+    version: ">= 0"
+  arel: 
+    group: 
+    - :default
+    version: ">= 0"
+  devise: 
+    group: 
+    - :default
+    version: ">= 0"
+  right_aws: 
+    group: 
+    - :default
+    version: ">= 0"
   org-ruby: 
     group: 
     - :default
     version: ">= 0"
-  coderay: 
+  engineyard: 
+    group: 
+    - :default
+    version: = 0.2.7.pre
+  RedCloth: 
     group: 
     - :default
     version: ">= 0"
+    require: 
+    - RedCloth
   aws-s3: 
     group: 
     - :default
     version: ">= 0"
     require: 
     - aws/s3
+  coderay: 
+    group: 
+    - :default
+    version: ">= 0"
 specs: 
 - rake: 
     version: 0.8.7
+- RedCloth: 
+    version: 4.2.3
 - abstract: 
     version: 1.0.0
 - builder: 
@@ -71,8 +87,10 @@ specs:
     version: 0.3.17
 - activesupport: 
     version: 3.0.0.beta1
+    source: 5
 - activemodel: 
     version: 3.0.0.beta1
+    source: 5
 - erubis: 
     version: 2.6.5
 - rack: 
@@ -83,6 +101,7 @@ specs:
     version: 0.5.3
 - actionpack: 
     version: 3.0.0.beta1
+    source: 5
 - mime-types: 
     version: "1.16"
 - polyglot: 
@@ -97,12 +116,16 @@ specs:
     version: 1.0.0
 - actionmailer: 
     version: 3.0.0.beta1
+    source: 5
 - arel: 
     version: 0.3.3
+    source: 4
 - activerecord: 
     version: 3.0.0.beta1
+    source: 5
 - activeresource: 
     version: 3.0.0.beta1
+    source: 5
 - xml-simple: 
     version: 1.0.12
 - aws-s3: 
@@ -120,6 +143,16 @@ specs:
 - devise: 
     version: 1.1.pre4
     source: 3
+- highline: 
+    version: 1.5.2
+- json: 
+    version: 1.2.3
+- rest-client: 
+    version: 1.4.2
+- termios: 
+    version: 0.9.4
+- engineyard: 
+    version: 0.2.7.pre
 - loofah: 
     version: 0.4.7
     source: 0
@@ -147,13 +180,15 @@ specs:
     version: 0.13.4
 - railties: 
     version: 3.0.0.beta1
+    source: 5
 - rails: 
     version: 3.0.0.beta1
+    source: 5
 - right_http_connection: 
     version: 1.2.4
 - right_aws: 
     version: 1.10.0
-hash: 65820af151261222d3ac31d1eaf1bf9db1cb7f4c
+hash: 9f6f0526c732c7d0c6e125615cffc6b41b2b9373
 sources: 
 - Git: 
     name: loofah
@@ -173,5 +208,13 @@ sources:
     uri: git://github.com/plataformatec/devise.git
     git: git://github.com/plataformatec/devise.git
     ref: 0d704c02cac612264b02a0771c242abc5e7a5a7c
+- Git: 
+    uri: git://github.com/rails/arel.git
+    git: git://github.com/rails/arel.git
+    ref: 233ee77f4511255ff2ff7c0b0ebf1cee13e7fc10
+- Git: 
+    uri: git://github.com/rails/rails.git
+    git: git://github.com/rails/rails.git
+    ref: 74efe4c2532bf4680e7d03c5ea43cd07d4b4d403
 - Rubygems: 
     uri: http://rubygems.org
