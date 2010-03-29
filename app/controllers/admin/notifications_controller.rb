@@ -38,8 +38,7 @@ class Admin::NotificationsController < ApplicationController
   def destroy
     @notification = Notification.find(params[:id])
     @notification.destroy
-    flash[:notice] = "Successfully destroyed notification."
-    redirect_to admin_url
+    respond_with(@notification, :location => admin_notifications_url)
   end
 
 end

@@ -34,8 +34,8 @@
 </tr>
 <% @feeds.each_with_index do |feed, i| %>
 <tr class="actionable" id="<%= controller.controller_name %>_<%= feed.id %>">
-  <td><%= feed.site_url %></td>
-  <td><%= feed.feed_url %></td>
+  <td><%= truncate(feed.site_url, 30) %></td>
+  <td><%= truncate(feed.feed_url, 30) %></td>
   <td><%= feed.contributor.full_name %></td>
 
   <td class="actions">

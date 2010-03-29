@@ -12,8 +12,14 @@ function initialize() {
   }
 
   application = {
-    authenticity_token: $('meta[name=authenticity_token]').attr('content')
+    authenticity_token: $('meta[name=csrf-token]').attr('content')
   }
+  
+  // prep headers for ajax
+  $.ajaxSetup({
+    'beforeSend' : function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
+  });
+  
 }
 
 $.fn.load_bio = function(options) {  
@@ -67,7 +73,7 @@ $.fn.helper = function(helperText) {
 })(jQuery);
 
 (function($){
-$.fn.confirm_with = function(message) {
+$.fn.confirmWith = function(message) {
   return this.each(function() {
     
     $(this).hide();
@@ -89,7 +95,6 @@ $.fn.confirm_with = function(message) {
       $(button).hide();
       $(confirmation_button).addClass("warning").html("<span>" + confirmation_message + "</span>").show();
     });
-
   });
 };
 })(jQuery);
@@ -97,28 +102,25 @@ $.fn.confirm_with = function(message) {
 (function($){
 $.fn.confirmRemoteDestroy = function(message) {
   return this.each(function() {
-
+    
+    
     $(this).fadeOut('fast', function() {
       $(this).remove();
     });
-
   });
 };
 })(jQuery);
 
 
-
-
 $(document).ready(function () {
   
   // confirm delete buttons
-  $("a[data-method='delete'][data-remote='true']").confirm_with("Are you sure?");
-  
-  // $("select, input, textarea").uniform();
+  $("a[data-method='delete'][data-remote='true']").confirmWith("Are you sure?");
   
   $('#newsletter_input').helper('inactive_class');
-
-  $('a[rel=tipsy]').tipsy({gravity: 's'});
+  
+  // tipsy tool tips
+  $('[rel=tipsy]').tipsy({gravity: 's'});
 
   $("a.close_alert").click(function(event) {
     $("div.alert").fadeOut("fast");
@@ -130,7 +132,4 @@ $(document).ready(function () {
   // load more style pagination
   $("#load_more").load_more();
 
-  $.ajaxSetup({
-    'beforeSend' : function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
-  });
 });

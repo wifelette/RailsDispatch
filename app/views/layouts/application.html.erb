@@ -35,15 +35,15 @@
     <nav>
       <ul>
         
-        <% content_tag :li, :class => controller.controller_name == "posts" ? "current" : nil do %>
+        <%= content_tag :li, :class => controller.controller_name == "posts" ? "current" : nil do %>
           <%= link_to "Posts", root_path %>
         <% end %>
         
-        <% content_tag :li, :class => controller.controller_name == "contributors" ? "current" : nil do %>
+        <%= content_tag :li, :class => controller.controller_name == "contributors" ? "current" : nil do %>
           <%= link_to "Contributors", contributors_path %>
         <% end %>
         
-        <% content_tag :li, :class => controller.controller_name == "community" ? "current" : nil do %>
+        <%= content_tag :li, :class => controller.controller_name == "community" ? "current" : nil do %>
           <%= link_to "Rails Community", '/community' %>
         <% end %>
         

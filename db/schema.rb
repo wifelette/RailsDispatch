@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100328032751) do
+ActiveRecord::Schema.define(:version => 20100328213757) do
 
   create_table "contributors", :force => true do |t|
     t.string   "firstname"
@@ -86,6 +86,7 @@ ActiveRecord::Schema.define(:version => 20100328032751) do
     t.datetime "publish_date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "published",        :default => true
   end
 
   create_table "settings", :force => true do |t|
@@ -96,16 +97,16 @@ ActiveRecord::Schema.define(:version => 20100328032751) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                              :null => false
-    t.string   "encrypted_password",   :limit => 40, :null => false
-    t.string   "password_salt",                      :null => false
+    t.string   "email",                                             :null => false
+    t.string   "encrypted_password",   :limit => 40,                :null => false
+    t.string   "password_salt",                                     :null => false
     t.string   "confirmation_token",   :limit => 20
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "reset_password_token", :limit => 20
     t.string   "remember_token",       :limit => 20
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count"
+    t.integer  "sign_in_count",                      :default => 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"

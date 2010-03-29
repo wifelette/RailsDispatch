@@ -25,16 +25,64 @@
 </ul>
 
 
+<h3 class="section_header">Future Posts</h3>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-  <th>Contributor</th>
-  <th>Title</th>
-  <!-- <th>Body</th> -->
-  <th>Publish Date</th>
-  <th></th>
+  <th style="width:140px;" colspan="2">Contributor</th>
+  <th style="width:220px;">Title</th>
+  <th style="width:100px;">Publish Date</th>
   <th></th>
 </tr>
-<%= render @posts %>
+
+<% @future_posts.each_with_index do |post, i| %>
+<tr class="actionable" id="<%= controller.controller_name %>_<%= post.id %>">
+  <td><%= content_tag(:span, "", :class => "status_icon", :title => "appears as future content", :rel => 'tipsy') if Post.upcoming.published.include?(post) %></td>
+  <td><%= post.contributor.full_name %></td>
+  <td><%= truncate(post.title, 35) %></td>
+  <td><%= post.publish_date.strftime("%m/%d/%Y") %></td>
+
+  <td class="actions">
+    <%= link_to  admin_post_path(post), :method => :delete, :remote => true, :class => "simple_button" do %>
+      <span>Destroy</span>
+    <% end %>
+
+    <%= link_to edit_admin_post_url(post), :class => "simple_button" do %>
+      <span>Edit</span>
+    <% end %>   
+  </td>
+  
+</tr>
+<% end %>
+
+</table>
+
+<h3 class="section_header">Published Posts</h3>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+  <th style="width:140px;" colspan="2">Contributor</th>
+  <th style="width:220px;">Title</th>
+  <th style="width:100px;">Publish Date</th>
+  <th></th>
+</tr>
+<% @past_posts.each_with_index do |post, i| %>
+<tr class="actionable" id="<%= controller.controller_name %>_<%= post.id %>">
+  <td><%= content_tag(:span, "", :class => "status_icon", :title => "published", :rel => 'tipsy') if Post.menu.include?(post) %></td>
+  <td><%= post.contributor.full_name %></td>
+  <td><%= truncate(post.title, 35) %></td>
+  <td><%= post.publish_date.strftime("%m/%d/%Y") %></td>
+
+  <td class="actions">
+    <%= link_to  admin_post_path(post), :method => :delete, :remote => true, :class => "simple_button" do %>
+      <span>Destroy</span>
+    <% end %>
+
+    <%= link_to edit_admin_post_url(post), :class => "simple_button" do %>
+      <span>Edit</span>
+    <% end %>   
+  </td>
+  
+</tr>
+<% end %>
 </table>
 
 

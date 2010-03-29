@@ -42,7 +42,9 @@
     
     <li class="field">
       <label>Contributor</label>
-      <%= form.select(:contributor_id, Contributor.all.collect {|p| [ p.full_name, p.id ] }, {:include_blank => true}) %>
+      <% content_tag :select, :id => "page_contributor_id", :name => 'page[contributor_id]' do -%>
+        <%= raw grouped_options_for_select(Contributor.visibility_groups) %>
+      <% end %>
     </li>
 
     <li class="field">
@@ -63,6 +65,11 @@
     <li class="field time_select">
       <label>Publish date</label>
       <%= form.datetime_select :publish_date %>
+    </li>
+
+    <li class="field">
+      <label>Published?</label>
+      <%= form.check_box :published %> 
     </li>
         
     <li class="submit">

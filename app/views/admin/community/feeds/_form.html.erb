@@ -18,7 +18,9 @@
 <ol>
   <li class="field">
     <label>Contributor</label>
-    <%= form.select(:contributor_id, Contributor.all.collect {|p| [ p.full_name, p.id ] }, {:include_blank => true}) %>
+    <% content_tag :select, :id => "feed_contributor_id", :name => 'feed[contributor_id]' do -%>
+      <%= raw grouped_options_for_select(Contributor.visibility_groups) %>
+    <% end %>
   </li>
 
   <li class="field">

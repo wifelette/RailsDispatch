@@ -21,6 +21,10 @@ gem "bluecloth"
 
 gem 'github-markup', :require => 'github/markup'
 gem 'org-ruby'
+gem 'hirb'
+
+gem 'coderay', :source => 'http://gemcutter.org'
+# gem 'RedCloth', :require => 'RedCloth'
 
 # Use unicorn as the web server
 # gem 'unicorn'

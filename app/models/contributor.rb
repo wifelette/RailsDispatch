@@ -1,5 +1,6 @@
 class Contributor < ActiveRecord::Base
   scope :visible, where("on_contributor_page != ?", false)
+  scope :invisible, where("on_contributor_page != ?", true)
   
   has_many :posts
 
@@ -26,4 +27,12 @@ class Contributor < ActiveRecord::Base
     self.firstname = split.first
     self.lastname = split.last
   end
+  
+  def self.visibility_groups
+    {
+     'Visible on contributors page' => Contributor.visible.collect {|p| [ p.full_name, p.id ] },
+     'Hidden on contributors page' => Contributor.invisible.collect {|p| [ p.full_name, p.id ] }
+    }
+  end
+  
 end

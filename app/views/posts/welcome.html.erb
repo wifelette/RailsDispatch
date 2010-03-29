@@ -17,30 +17,33 @@
 <nav>
   <ul id="tab_nav">
     
-    <li class="future">
+    <!-- <li class="future">
       <a href="#">
         <span class="title">SafeBuffers and Rails 3</span>
         <span class="details">Up next</span>
       </a>
-    </li>
-    
-    
-  <% @posts.each_with_index do |post, i| %>
+    </li> -->
+
+  <% for post in @upcoming %>
+    <% content_tag :li, :class => "future" do %>
+      <%= link_to post do %>
+      <span class="title"><%= post.sidebar_title %></span>
+      <span class="details"><%= weeks_or_time_ago_in_words(post.publish_date) %></span>
+      <% end %>
+    <% end %>
+  <% end %>
+        
+  <% @posts.past.published.each_with_index do |post, i| %>
     <% content_tag :li, :class => current_page?(:id => post.id) ? "active" : "inactive" do %>
       <%= link_to post do %>
-        <span class="title"><%= post.sidebar_title %></span>
-        <span class="details">post id: <%= post.id %></span>
+      <span class="title"><%= post.sidebar_title %></span>
+      <span class="details"><%= weeks_or_time_ago_in_words(post.publish_date) %></span>
       <% end %>
-    <% end %>    
+    <% end %>
   <% end %>
   </ul>
   <%= render "layouts/shared/sidebar_social_links" %>
 </nav>
 <% end %>
 
-
 <%= render @posts[0] %>
-
-
-
-

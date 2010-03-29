@@ -1,6 +1,12 @@
 class Post < ActiveRecord::Base
-  cattr_reader :per_page
-  @@per_page = 10
+  scope :published, where("published != ?", false)# .where("published_date <= ?", Time.now)
+
+  scope :future, where("publish_date > ?", Time.now)
+  scope :past, where("publish_date < ?", Time.now)# .where("published_date <= ?", Time.now)  
+
+  scope :upcoming, published.where("publish_date > ?", Time.now).limit(1)
+
+  scope :menu, where("published != ?", false).limit(4)
 
   belongs_to :user
   belongs_to :contributor
