@@ -24,10 +24,8 @@
     </li>
     
     <li class="field">
-      <label>Contributor</label>      
-      <% content_tag :select, :id => "post_contributor_id", :name => 'post[contributor_id]' do -%>
-        <%= raw grouped_options_for_select(Contributor.visibility_groups) %>
-      <% end %>
+      <label>Contributor</label>
+      <%= form.select(:contributor_id, grouped_options_for_select(Contributor.visibility_groups, @post.contributor_id), { :include_blank => true }) %>
     </li>
     
     <li class="field">

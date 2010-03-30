@@ -42,9 +42,7 @@
     
     <li class="field">
       <label>Contributor</label>
-      <% content_tag :select, :id => "page_contributor_id", :name => 'page[contributor_id]' do -%>
-        <%= raw grouped_options_for_select(Contributor.visibility_groups) %>
-      <% end %>
+      <%= form.select(:contributor_id, grouped_options_for_select(Contributor.visibility_groups, @page.contributor_id), { :include_blank => true }) %>
     </li>
 
     <li class="field">

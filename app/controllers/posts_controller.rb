@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
   
   def welcome
-    @posts = Post.published.order('publish_date desc').limit(4)
-    @upcoming = Post.future.order("publish_date desc").limit(1)
+    @posts = Post.past.published.order('publish_date desc').limit(4)
+    @upcoming = Post.published.future.order("publish_date desc").limit(1)
     @upcoming.to_a
 
     respond_to do |format|
@@ -23,8 +23,8 @@ class PostsController < ApplicationController
   end
   
   def show
-    @post = Post.published.find(params[:id])
-    @posts = Post.published
+    @post = Post.past.published.find(params[:id])
+    @posts = Post.past.published
   end
   
 end
