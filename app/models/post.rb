@@ -12,4 +12,9 @@ class Post < ActiveRecord::Base
   belongs_to :contributor
 
   validates_presence_of :title, :body, :contributor
+    
+  def days_until
+    (self.publish_date.to_datetime - Date.today.to_datetime).to_i.to_s
+  end
+  
 end

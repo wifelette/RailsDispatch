@@ -244,7 +244,11 @@ section article div.errorExplanation h2 {font:bold 13px/1.5 Helvetica,Arial,sans
 .fieldWithErrors {background:url('/images/icons/delete.png') right top no-repeat;}
 
 /* upcoming counter and item */
-#upcoming {display:block; margin:86px 0 0 0; position:relative; left:-8px; z-index:90; background:url('/images/days_until.png') right 13px no-repeat; float:left; padding-right:102px; height:93px; width:80px;}
+/*#upcoming {display:block; margin:86px 0 0 0; position:relative; left:-8px; z-index:90; float:left; padding-right:102px; height:93px; width:80px;}*/
+#upcoming {display:block; position:absolute; left:-8px; top:86px; z-index:90;}
+#upcoming h4 {position:relative; top:-2px; float:left; margin:0 0 0 5px; height:93px; width:122px; background:url('/images/days_until.png') left 13px no-repeat; text-indent:-9999px;}
+/*#upcoming_container {}*/
+
 
 /* =========== */
 /* = Counter = */

@@ -1,45 +1,8 @@
 <% content_for :page_nav do %>
-
-<% if @upcoming %>
-<div id="upcoming">
-  <div class="counter">
-
-    <div class="counter_section">
-      <div class="counter_section_content">1</div>
-      <div class="counter_section_mask"></div>
-    </div>
-    <div class="counter_section">
-      <div class="counter_section_content">2</div>
-      <div class="counter_section_mask"></div>
-    </div>
-
-  </div>
-</div>
-<% end %>
+  <%= render "layouts/shared/days_until" %>
 
 <nav>
-  <ul id="tab_nav">
-
-<% if @upcoming %>
-  <% @upcoming.each do |post| %>
-    <% content_tag :li, :class => "future" do %>
-      <%= link_to post do %>
-      <span class="title"><%= post.sidebar_title %></span>
-      <span class="details"><%= weeks_or_time_ago_in_words(post.publish_date) %></span>
-      <% end %>
-    <% end %>
-  <% end %>
-<% end %>
-        
-  <% @posts.past.published.each_with_index do |post, i| %>
-    <% content_tag :li, :class => current_page?(:id => post.id) ? "active" : "inactive" do %>
-      <%= link_to post do %>
-      <span class="title"><%= post.sidebar_title %></span>
-      <span class="details"><%= weeks_or_time_ago_in_words(post.publish_date) %></span>
-      <% end %>
-    <% end %>
-  <% end %>
-  </ul>
+  <%= render "layouts/shared/posts_nav" %>
   <%= render "layouts/shared/sidebar_social_links" %>
 </nav>
 <% end %>
