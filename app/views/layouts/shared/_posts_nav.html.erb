@@ -2,7 +2,7 @@
 <% if @upcoming %>
   <% @upcoming.each do |post| %>
     <% content_tag :li, :class => "future" do %>
-      <%= link_to post do %>
+      <%= content_tag :span, :class => "upcoming_placeholder" do %>
       <span class="title"><%= post.sidebar_title %></span>
       <span class="details"><%= weeks_or_time_ago_in_words(post.publish_date) %></span>
       <% end %>
@@ -12,7 +12,7 @@
       
 <% @posts.past.published.each_with_index do |post, i| %>
   <% content_tag :li, :class => current_page?(:id => post.id) ? "active" : "inactive" do %>
-    <%= link_to post do %>
+    <%= link_to post_url(post.slug) do %>
     <span class="title"><%= post.sidebar_title %></span>
     <span class="details"><%= weeks_or_time_ago_in_words(post.publish_date) %></span>
     <% end %>

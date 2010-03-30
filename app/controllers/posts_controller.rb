@@ -22,7 +22,7 @@ class PostsController < ApplicationController
   end
   
   def show
-    @post = Post.past.published.find(params[:id])
+    @post = Post.past.published.first(:conditions => {:slug => params[:slug]})
     @posts = Post.past.published.order('publish_date desc').limit(4)
     @upcoming = Post.published.future.order("publish_date asc").limit(1)
   end

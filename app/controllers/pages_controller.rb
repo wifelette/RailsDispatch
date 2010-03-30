@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def show
-    @page = Page.find(params[:id])
+    @page = Page.first(:conditions => {:slug => params[:slug]})
     @pages = Page.all
     
     respond_to do |format|

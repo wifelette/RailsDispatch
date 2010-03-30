@@ -80,7 +80,7 @@
           <li><%= link_to "Rails Community", '/community' %></li>
           
           <% for page in Page.all %>
-          <li><%= link_to page.page_title, page %></li>
+          <li><%= link_to page.page_title, page_url(page.slug) %></li>
           <% end %>
           
         </ul>

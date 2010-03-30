@@ -3,9 +3,12 @@ RailsDispatch::Application.routes.draw do |map|
   root :to => "posts#welcome"
   devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout' }
 
-  resources :posts, :only => [:index, :show]
+  # resources :posts, :only => [:welcome, :index]
+  match "/posts" => "posts#welcome"
+  match "/posts/:slug" => "posts#show", :as => :post
+
   resources :contributors, :only => [:index, :show]
-  resources :pages, :only => [:show]
+  match "/pages/:slug" => "pages#show", :as => :page
 
   match 'community' => 'community#index'
   

@@ -4,9 +4,6 @@ class Admin::PostsController < ApplicationController
   respond_to :html, :xml, :js
   
   def index
-    # @posts = Post.all
-    # @future_posts = @posts.future
-
     @future_posts = Post.future.order("publish_date desc").reverse
     @past_posts = Post.past.order("publish_date desc")
   end

@@ -11,10 +11,20 @@ class Post < ActiveRecord::Base
   belongs_to :user
   belongs_to :contributor
 
-  validates_presence_of :title, :body, :contributor
+  validates_presence_of :title, :body, :contributor, :slug
     
   def days_until
     (self.publish_date.to_datetime - Date.today.to_datetime).to_i.to_s
+  end
+  
+  before_validation :write_slug
+  
+  def write_slug
+    self.slug = self.title if self.slug.blank?
+  end
+  
+  def slug=(text)
+    write_attribute(:slug, text.parameterize)
   end
   
 end
