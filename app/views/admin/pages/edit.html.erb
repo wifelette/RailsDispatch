@@ -9,4 +9,6 @@
 
 <%= render :partial => 'form' %>
 
-<p><%= link_to "Back to List", posts_path %></p>
+<%= link_to admin_pages_path, :class => "simple_button" do %>
+  <span>&larr; Back to all pages</span>
+<% end %>

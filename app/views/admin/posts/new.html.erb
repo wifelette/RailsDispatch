@@ -68,5 +68,10 @@
   </ol>
 <% end %>
 
-
-<p><%= link_to "Back to List", posts_path %></p>
+<ul class="admin_nav">
+  <li>
+    <%= link_to admin_posts_path, :class => "simple_button" do %>
+      <span>&larr; Back to all posts</span>
+    <% end %>
+  </li>
+</ul>
