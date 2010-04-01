@@ -1,15 +1,15 @@
 source 'http://rubygems.org'
 
 # gem 'rails', '3.0.0.beta1'
-gem "rails", :git => "git://github.com/rails/rails.git", :ref => '1b9777e84f569c6abde2435d66882170e263fc90'
-gem "arel", :git => "git://github.com/rails/arel.git"
+# gem "rails", :git => "git://github.com/rails/rails.git", :ref => '1b9777e84f569c6abde2435d66882170e263fc90'
+gem 'rails', '3.0.0.beta2'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql'
 
-gem 'bundler', '0.9.13'
+gem 'bundler', '0.9.14'
 
 gem 'engineyard', '0.2.7.pre'
 

@@ -17,7 +17,7 @@ dependencies:
   rails: 
     group: 
     - :default
-    version: ">= 0"
+    version: = 3.0.0.beta2
   mysql: 
     group: 
     - :default
@@ -34,10 +34,6 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
-  arel: 
-    group: 
-    - :default
-    version: ">= 0"
   devise: 
     group: 
     - :default
@@ -49,7 +45,7 @@ dependencies:
   bundler: 
     group: 
     - :default
-    version: = 0.9.13
+    version: = 0.9.14
   org-ruby: 
     group: 
     - :default
@@ -88,13 +84,11 @@ specs:
 - memcache-client: 
     version: 1.8.1
 - tzinfo: 
-    version: 0.3.17
+    version: 0.3.18
 - activesupport: 
-    version: 3.0.0.beta1
-    source: 5
+    version: 3.0.0.beta2
 - activemodel: 
-    version: 3.0.0.beta1
-    source: 5
+    version: 3.0.0.beta2
 - erubis: 
     version: 2.6.5
 - rack: 
@@ -104,8 +98,7 @@ specs:
 - rack-test: 
     version: 0.5.3
 - actionpack: 
-    version: 3.0.0.beta1
-    source: 5
+    version: 3.0.0.beta2
 - mime-types: 
     version: "1.16"
 - polyglot: 
@@ -119,17 +112,13 @@ specs:
 - text-format: 
     version: 1.0.0
 - actionmailer: 
-    version: 3.0.0.beta1
-    source: 5
+    version: 3.0.0.beta2
 - arel: 
     version: 0.3.3
-    source: 4
 - activerecord: 
-    version: 3.0.0.beta1
-    source: 5
+    version: 3.0.0.beta2
 - activeresource: 
-    version: 3.0.0.beta1
-    source: 5
+    version: 3.0.0.beta2
 - xml-simple: 
     version: 1.0.12
 - aws-s3: 
@@ -137,13 +126,13 @@ specs:
 - bluecloth: 
     version: 2.0.7
 - bundler: 
-    version: 0.9.13
+    version: 0.9.14
 - coderay: 
     version: 0.9.2
 - curb: 
     version: 0.6.7
 - warden: 
-    version: 0.10.2
+    version: 0.10.3
 - devise: 
     version: 1.1.pre4
     source: 3
@@ -168,7 +157,7 @@ specs:
     version: 0.0.23
     source: 1
 - github-markup: 
-    version: 0.3.2
+    version: 0.3.3
 - hirb: 
     version: 0.3.1
 - mysql: 
@@ -183,16 +172,14 @@ specs:
 - thor: 
     version: 0.13.4
 - railties: 
-    version: 3.0.0.beta1
-    source: 5
+    version: 3.0.0.beta2
 - rails: 
-    version: 3.0.0.beta1
-    source: 5
+    version: 3.0.0.beta2
 - right_http_connection: 
     version: 1.2.4
 - right_aws: 
     version: 1.10.0
-hash: 1be344af215a0a2adc4fda8861103c08f6520bce
+hash: 9915fb44bd94f71648e239db1ad5c88a3ca89d62
 sources: 
 - Git: 
     name: loofah
@@ -211,14 +198,6 @@ sources:
 - Git: 
     uri: git://github.com/plataformatec/devise.git
     git: git://github.com/plataformatec/devise.git
-    ref: e038d82410ffa83d077fd891fe9e25da7663f4b9
-- Git: 
-    uri: git://github.com/rails/arel.git
-    git: git://github.com/rails/arel.git
-    ref: 233ee77f4511255ff2ff7c0b0ebf1cee13e7fc10
-- Git: 
-    uri: git://github.com/rails/rails.git
-    git: git://github.com/rails/rails.git
-    ref: 1b9777e84f569c6abde2435d66882170e263fc90
+    ref: 1ba525a0e93abfc5ded780c004da4c0a310bdb43
 - Rubygems: 
     uri: http://rubygems.org
