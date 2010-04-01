@@ -1,4 +1,8 @@
 class Contributor < ActiveRecord::Base
+    
+  # attr_accessible :email, :password, :password_confirmation
+  # devise :authenticatable, :rememberable, :trackable, :recoverable, :confirmable
+    
   scope :visible, where("on_contributor_page != ?", false)
   scope :invisible, where("on_contributor_page != ?", true)
   

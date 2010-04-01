@@ -17,7 +17,16 @@
   
 </div>
 
-<%= raw markdown(post.summary) unless post.summary.length == 0 %>
+<% unless post.elements.nil? %>
+<ul class="element_list">
+  <li class="title"><span>In this post</span></li>
+  <% for element in post.elements %>
+    <li><%= element.title %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<%= raw markdown(post.summary) unless post.summary.nil? %>
 
 <% unless post.video_embed_link.length == 0 %>
 <div class="video_frame">
@@ -28,4 +37,5 @@
 <% end %>
 
 <%#= raw coderay(post.body) %>
-<%= raw textilize(coderay(post.body)) %>
+
+<%= raw textilize(coderay(post.body)) unless post.summary.nil? %>

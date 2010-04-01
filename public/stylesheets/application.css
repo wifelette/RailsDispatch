@@ -235,6 +235,8 @@ li.field.time_select div.selector span {width:70px;}
 li.field.time_select div.selector select {width:108px;}
 #uniform-post_publish_date_4i {clear:left;}
 
+.nested_fields {margin-bottom:2em;}
+
 /* errors */
 div.errorExplanation {margin-bottom:1.4em; padding-bottom:1em; border-bottom:1px solid #ccc;}
 div.errorExplanation p {margin:0; padding:0;}
@@ -243,17 +245,16 @@ section article div.errorExplanation h2 {font:bold 13px/1.5 Helvetica,Arial,sans
 .fieldWithErrors input {}
 .fieldWithErrors {background:url('/images/icons/delete.png') right top no-repeat;}
 
+.nested_form h4 {font:bold 18px/1.5 Helvetica,Arial,sans-serif; clear:both; color:#333333;}
+
+
 /* upcoming counter and item */
-/*#upcoming {display:block; margin:86px 0 0 0; position:relative; left:-8px; z-index:90; float:left; padding-right:102px; height:93px; width:80px;}*/
 #upcoming {display:block; position:absolute; left:-8px; top:86px; z-index:90;}
 #upcoming h4 {position:relative; top:-2px; float:left; margin:0 0 0 5px; height:93px; width:122px; background:url('/images/days_until.png') left 13px no-repeat; text-indent:-9999px;}
-/*#upcoming_container {}*/
-
 
 /* =========== */
 /* = Counter = */
 /* =========== */
-
 div.counter {position:relative; left:-1px; float:left; margin:8px 0 4px 0; overflow:visible; display:block;}
 div.counter_section {position:relative; float:left;}
 div.counter_section_content {background:url('/images/counter/small/counter_bg.png') left top no-repeat; text-align:center; font-size:33px; line-height:53px; height:48px; width:32px; color:white; text-shadow:0px -1px 0px black; opacity:.99; padding:0 0 0 2px;}
@@ -292,16 +293,16 @@ section article {line-height:1.6em; font-size:14px; color:#333; margin-bottom:26
 section article h2 {font:bold 17px/1.2em "Museo Sans", Helvetica, Arial, sans-serif; margin-top:1.4em; margin-bottom:.5em; display:block;}
 section article h3 {font:bold 24px/1.2em "Museo Sans", Helvetica, Arial, sans-serif;}
 section article h4 {font:italic 14px/1.1em georgia, serif; margin-bottom:12px; color:#595959;}
-div.video_frame {border:10px solid #DFEEF2; display:block; margin-bottom:18px; padding:3px;}
+div.video_frame {border:10px solid #DFEEF2; display:block; margin-bottom:18px; padding:3px; clear:right;}
 div.video {height:380px; background:black;}
 
 .welcome {position:relative;}
 .welcome_content {width:400px;}
-.welcome_list {width:235px; position:absolute; top:0; right:0;}
 
-.welcome_list li.title {margin:0 0 14px 0; background:url('/images/highlight.gif') left top no-repeat; padding:0;}
-.welcome_list li.title span {font:18px/1.1em "Museo Sans", sans-serif; text-shadow:0 1px 0 white; padding:0 20px; height:30px; line-height:30px; background:url('/images/highlight_end.gif') right top no-repeat; display:block;}
-.welcome_list li {padding:0 0 0 18px; margin:0 0 3px 20px; background:url('/images/bullet.gif') left 6px no-repeat;}
+.element_list {width:235px; float:right; margin:0 0 30px 20px;}
+.element_list li.title {margin:0 0 14px 0; background:url('/images/highlight.gif') left top no-repeat; padding:0;}
+.element_list li.title span {font:18px/1.1em "Museo Sans", sans-serif; text-shadow:0 1px 0 white; padding:0 20px; height:30px; line-height:30px; background:url('/images/highlight_end.gif') right top no-repeat; display:block;}
+.element_list li {padding:0 0 0 18px; margin:0 0 3px 20px; background:url('/images/bullet.gif') left 6px no-repeat;}
 
 section article code {white-space:pre;}
 

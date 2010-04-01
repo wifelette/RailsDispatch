@@ -1,5 +1,4 @@
 function initialize() {
-
   // logger
   window.log = function(){
     log.history = log.history || [];
@@ -22,6 +21,8 @@ function initialize() {
   
 }
 
+
+// load bio for contributor
 $.fn.load_bio = function(options) {  
   $("#contributors_page .person_thumb").live("click", function(event) {
     $(this).removeClass("active");
@@ -32,6 +33,7 @@ $.fn.load_bio = function(options) {
   });
 };
 
+// loadmore pagaination
 $.fn.load_more = function(options) {  
   $("#load_more").live("click", function(event) {
     $(this).addClass("loading")
@@ -56,7 +58,6 @@ $.fn.helper = function(helperText) {
       jQuery(this).prev(tag).focus();
       jQuery(this).hide();
     });
-    
     
     jQuery(this).focus(function () {
       jQuery(this).next().hide();
@@ -111,7 +112,6 @@ $.fn.confirmRemoteDestroy = function(message) {
 };
 })(jQuery);
 
-
 $(document).ready(function () {
   
   // confirm delete buttons
@@ -131,5 +131,31 @@ $(document).ready(function () {
   
   // load more style pagination
   $("#load_more").load_more();
+
+  // ============================
+  // = add/remove form elements =
+  // ============================   
+  $('.add_child').click(function() {
+    
+    
+    var association = $(this).attr('data-association');
+    var template = $('#' + association + '_fields_template').html();
+    var regexp = new RegExp('new_' + association, 'g');
+    var new_id = new Date().getTime();
+
+    console.log(association, template, regexp, new_id);
+
+    $(this).parent().before(template.replace(regexp, new_id));
+    return false;
+  });
+
+  $('.remove_child').live('click', function() {
+    var hidden_field = $(this).prev('input[type=hidden]')[0];
+    if(hidden_field) {
+      hidden_field.value = '1';
+    }
+    $(this).parents('.fields').hide();
+    return false;
+  });
 
 });

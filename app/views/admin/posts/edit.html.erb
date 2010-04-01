@@ -20,58 +20,7 @@
 </nav>
 <% end %>
 
-<%= form_for ([:admin, @post]) do |form| %>
-  <ol>
-    <li class="field">
-      <label>Title</label>
-      <%= form.text_field :title %>
-    </li>
-    
-    <li class="field">
-      <label>Page Slug</label>
-      <%= form.text_field :slug %>
-    </li>
-    
-    <li class="field">
-      <label>Sidebar title</label>
-      <%= form.text_field :sidebar_title %>
-    </li>
-    
-    <li class="field">
-      <label>Contributor</label>
-      <%= form.select(:contributor_id, grouped_options_for_select(Contributor.visibility_groups, @post.contributor_id), { :include_blank => true }) %>
-    </li>
-    
-    <li class="field">
-      <label>Video embed link</label>
-      <%= form.text_field :video_embed_link %>
-    </li>
-    
-    <li class="field">
-      <label>Summary</label>
-      <%= form.text_field :summary %>
-    </li>
-    
-    <li class="field">
-      <label>Body</label>
-      <%= form.text_area :body %>
-    </li>
-    
-    <li class="field time_select">
-      <label>Publish date</label>
-      <%= form.datetime_select :publish_date %>
-    </li>
-
-    <li class="field">
-      <label>Published?</label>
-      <%= form.check_box :published %> 
-    </li>
-                
-    <li class="submit">
-      <%= submit_tag "Save" %>
-    </li>
-  </ol>
-<% end %>
+<%= render :partial => 'form' %>
 
 <ul class="admin_nav">
   <li>

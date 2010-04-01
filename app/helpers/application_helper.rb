@@ -11,5 +11,5 @@ module ApplicationHelper
     weeks_ago = (to_time - from_time)/1.week
     ["this week", "last week", "two weeks ago", "three weeks ago", "four weeks ago", "one month ago"][weeks_ago] || distance_of_time_in_words(from_time, Time.now, include_seconds)
   end
-  
+
 end

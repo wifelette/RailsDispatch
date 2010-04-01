@@ -14,6 +14,7 @@ class Admin::PostsController < ApplicationController
 
   def new
     @post = Post.new
+    3.times {@post.elements.build}
   end
   
   def create

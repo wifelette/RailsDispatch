@@ -1,25 +1,27 @@
 module PostsHelper
-  # def wrap_each_char(string, &block)
-  #   string.each_char.map(&block).join
-  # end
-  
-  # def wrap_each_char(digits)
-  #   digits.split('').each do |digit|
-  #     content_tag(:div, :class => 'counter_section') do
-  #       content_tag(:div, digit, :class => 'counter_section_content')
-  #       content_tag(:div, "", :class => 'counter_section_mask')
-  #     end
-  #   end
-  # end
-  
+
   def wrap_each_char(string, &block)
     return string.each_char.map(&block)
   end
   
-  # <div class="counter_section">
-  #   <div class="counter_section_content"><%= digit %></div>
-  #   <div class="counter_section_mask"></div>
-  # </div>
-  
+  def remove_child_link(name, f)
+    f.hidden_field(:_destroy) + link_to(name, '#', :class => "remove_child")
+  end
+
+  def add_child_link(name, association)
+    link_to(name, '#', :class => "add_child", :"data-association" => association)
+  end
+
+  def new_child_fields_template(form_builder, association, options = {})
+    options[:object] ||= form_builder.object.class.reflect_on_association(association).klass.new
+    options[:partial] ||= association.to_s.singularize
+    options[:form_builder_local] ||= :f
+
+    content_tag(:div, :id => "#{association}_fields_template", :style => "display: none") do
+      form_builder.fields_for(association, options[:object], :child_index => "new_#{association}") do |f|
+        render(:partial => options[:partial], :locals => {options[:form_builder_local] => f})
+      end
+    end
+  end
   
 end
