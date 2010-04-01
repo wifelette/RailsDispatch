@@ -12,4 +12,10 @@ module ApplicationHelper
     ["this week", "last week", "two weeks ago", "three weeks ago", "four weeks ago", "one month ago"][weeks_ago] || distance_of_time_in_words(from_time, Time.now, include_seconds)
   end
 
+  def weeks_or_time_until_in_words(from_time, include_seconds = false)
+    to_time   = Time.now
+    weeks_ago = (to_time - from_time)/1.week
+    ["next week"][weeks_ago] || distance_of_time_in_words(from_time, Time.now, include_seconds)
+  end
+
 end
