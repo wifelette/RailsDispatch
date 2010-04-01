@@ -26,8 +26,6 @@
 </ul>
 <% end %>
 
-<%= raw markdown(post.summary) unless post.summary.nil? %>
-
 <% unless post.video_embed_link.length == 0 %>
 <div class="video_frame">
   <div class="video">

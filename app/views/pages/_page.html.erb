@@ -3,6 +3,4 @@
   <h4><%= @page.page_subtitle if @page.page_subtitle %></h4>
 </div>
 
-<%= raw markdown(@page.summary) if @page.summary %>
-
 <%= raw markdown(@page.body) if @page.body %>
