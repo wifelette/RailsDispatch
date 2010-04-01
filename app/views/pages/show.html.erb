@@ -1,6 +1,7 @@
 <% content_for :page_nav do %>
 <nav>
   <ul id="tab_nav">
+    <% if @pages %>
     <% @pages.each_with_index do |page, i| %>
       <% content_tag :li, :class => current_page?(:slug => page.slug) ? "active" : "inactive" do %>
         <%= link_to post_url(page.slug) do %>
@@ -8,6 +9,7 @@
         <span class="details"><%= page.sidebar_subtitle %></span>
         <% end %>
       <% end %>
+    <% end %>
     <% end %>
   </ul>
   <%= render "layouts/shared/sidebar_social_links" %>
