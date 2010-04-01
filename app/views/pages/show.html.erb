@@ -4,7 +4,7 @@
     <% if @pages %>
     <% @pages.each_with_index do |page, i| %>
       <% content_tag :li, :class => current_page?(:slug => page.slug) ? "active" : "inactive" do %>
-        <%= link_to post_url(page.slug) do %>
+        <%= link_to "/about/#{page.slug}" do %>
         <span class="title"><%= page.sidebar_title %></span>
         <span class="details"><%= page.sidebar_subtitle %></span>
         <% end %>
