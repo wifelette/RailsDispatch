@@ -34,11 +34,12 @@
   <th></th>
 </tr>
 
+<% if @future_posts %>
 <% @future_posts.each_with_index do |post, i| %>
 <tr class="actionable" id="<%= controller.controller_name %>_<%= post.id %>">
   <td><%= content_tag(:span, "", :class => "status_icon", :title => "appears as future content", :rel => 'tipsy') if Post.upcoming.published.include?(post) %></td>
-  <td><%= post.contributor.full_name %></td>
-  <td><%= truncate(post.title, 35) %></td>
+  <td><%= post.contributor.full_name if post.contributor %></td>
+  <td><%= truncate(post.title, 35) if post.title %></td>
   <td><%= post.publish_date.strftime("%m/%d/%Y") %></td>
 
   <td class="actions">
@@ -52,6 +53,7 @@
   </td>
   
 </tr>
+<% end %>
 <% end %>
 
 </table>
@@ -64,11 +66,13 @@
   <th style="width:70px;">Publish Date</th>
   <th></th>
 </tr>
+
+<% if @past_posts %>
 <% @past_posts.each_with_index do |post, i| %>
 <tr class="actionable" id="<%= controller.controller_name %>_<%= post.id %>">
   <td><%= content_tag(:span, "", :class => "status_icon", :title => "published", :rel => 'tipsy') if Post.menu.include?(post) %></td>
-  <td><%= post.contributor.full_name %></td>
-  <td><%= truncate(post.title, 35) %></td>
+  <td><%= post.contributor.full_name if post.contributor %></td>
+  <td><%= truncate(post.title, 35) if post.title %></td>
   <td><%= post.publish_date.strftime("%m/%d/%Y") %></td>
 
   <td class="actions">
@@ -83,6 +87,8 @@
   
 </tr>
 <% end %>
+<% end %>
+
 </table>
 
 
