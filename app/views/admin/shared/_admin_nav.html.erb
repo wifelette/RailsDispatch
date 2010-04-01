@@ -41,6 +41,13 @@
       <span class="details">manage content on custom pages</span>
       <% end %>
     <% end %>
+
+    <%= content_tag :li, :class => controller.controller_name == "questions" ? "active" : "inactive" do %>
+      <%= link_to admin_questions_path do %>
+      <span class="title">Questions</span>
+      <span class="details">View questions, answer them</span>
+      <% end %>
+    <% end %>
   
     <%= content_tag :li, :class => controller.controller_name == "settings" ? "active" : "inactive" do %>
       <%= link_to admin_settings_path do %>

@@ -23,6 +23,7 @@ RailsDispatch::Application.routes.draw do |map|
     resources :contributors
     resources :notifications
     resources :pages
+    resources :questions
 
     namespace :community do 
       root :to => "admin/community#index"
