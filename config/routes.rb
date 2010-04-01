@@ -8,7 +8,8 @@ RailsDispatch::Application.routes.draw do |map|
   match "/posts/:slug" => "posts#show", :as => :post
 
   resources :contributors, :only => [:index, :show]
-  match "/pages/:slug" => "pages#show", :as => :page
+  match "/about/" => "pages#index", :as => :page
+  match "/about/:slug" => "pages#show", :as => :page
 
   match 'community' => 'community#index'
   

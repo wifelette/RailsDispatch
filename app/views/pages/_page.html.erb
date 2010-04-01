@@ -1,8 +1,8 @@
 <div id="page_additional">
-  <h3><%= @page.page_title %></h3>
-  <h4><%= @page.page_subtitle %></h4>
+  <h3><%= @page.page_title if @page.page_title %></h3>
+  <h4><%= @page.page_subtitle if @page.page_subtitle %></h4>
 </div>
 
-<%= raw markdown(@page.summary) unless @page.summary.nil? %>
+<%= raw markdown(@page.summary) if @page.summary %>
 
-<%= raw markdown(@page.body) %>
+<%= raw markdown(@page.body) if @page.body %>

@@ -6,13 +6,14 @@ class Post < ActiveRecord::Base
   scope :upcoming, published.where("publish_date > ?", Time.now).limit(1)
   scope :menu, where("published != ?", false).limit(4)
 
+  validates_presence_of :title, :sidebar_title, :contributor, :body, :publish_date, :slug
+
   belongs_to :user
   belongs_to :contributor
   has_many :elements, :dependent => :destroy
   accepts_nested_attributes_for :elements, :reject_if => lambda { |a| a.values.all?(&:blank?) }, :allow_destroy => true
 
   before_validation :write_slug
-  validates_presence_of :title, :body, :contributor, :slug
   
   
   def days_until
