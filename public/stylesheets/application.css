@@ -351,8 +351,8 @@ tr.actionable:hover td.actions a.simple_button {visibility:visible;}
 tr.actionable.in_progress:hover a.simple_button {visibility:visible;}
 
 /* syntax coloring */
-.CodeRay {
-  background-color: #232323;
+.CodeRay .CodeRay {
+/*  background-color: #232323;*/
   border: 1px solid black;
   font-family: 'Courier New', 'Terminal', monospace;
   color: #E6E0DB;
@@ -361,7 +361,7 @@ tr.actionable.in_progress:hover a.simple_button {visibility:visible;}
   font-size: 12px;
   margin: 12px 0;
 }
-.CodeRay pre {
+.CodeRay .CodeRay pre {
   margin: 0px;
   padding: 0px;
 }
