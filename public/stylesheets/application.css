@@ -293,7 +293,7 @@ section article {line-height:1.6em; font-size:14px; color:#333; margin-bottom:26
 section article h2 {font:bold 17px/1.2em "Museo Sans", Helvetica, Arial, sans-serif; margin-top:1.4em; margin-bottom:.5em; display:block;}
 section article h3 {font:bold 24px/1.2em "Museo Sans", Helvetica, Arial, sans-serif;}
 section article h4 {font:italic 14px/1.1em georgia, serif; margin-bottom:12px; color:#595959;}
-div.video_frame {border:10px solid #DFEEF2; display:block; margin-bottom:18px; padding:3px; clear:right;}
+div.video_frame {border:10px solid #DFEEF2; display:block; margin-bottom:18px; padding:3px; clear:right; float:left;}
 div.video {height:380px; background:black;}
 
 .welcome {position:relative;}
