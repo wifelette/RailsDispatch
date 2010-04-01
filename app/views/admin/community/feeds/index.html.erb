@@ -36,7 +36,7 @@
 <tr class="actionable" id="<%= controller.controller_name %>_<%= feed.id %>">
   <td><%= truncate(feed.site_url, 30) %></td>
   <td><%= truncate(feed.feed_url, 30) %></td>
-  <td><%= feed.contributor.full_name %></td>
+  <td><%= feed.contributor.full_name if feed.contributor %></td>
 
   <td class="actions">
     <%= link_to admin_community_feed_path(feed), :method => :delete, :remote => true, :class => "simple_button" do %>
