@@ -27,13 +27,13 @@
 <% end %>
 
 <% unless post.video_embed_link.length == 0 %>
-<div class="video_frame">
-  <div class="video">
+<div class="video">
   <%= raw post.video_embed_link %>
-  </div>
 </div>
 <% end %>
 
 <%#= raw coderay(post.body) %>
 
-<%= raw textilize(coderay(post.body)) unless post.summary.nil? %>
+<div class="post_content">
+  <%= raw textilize(coderay(post.body)) unless post.summary.nil? %>  
+</div>

@@ -293,8 +293,13 @@ section article {line-height:1.6em; font-size:14px; color:#333; margin-bottom:26
 section article h2 {font:bold 17px/1.2em "Museo Sans", Helvetica, Arial, sans-serif; margin-top:1.4em; margin-bottom:.5em; display:block;}
 section article h3 {font:bold 24px/1.2em "Museo Sans", Helvetica, Arial, sans-serif;}
 section article h4 {font:italic 14px/1.1em georgia, serif; margin-bottom:12px; color:#595959;}
-div.video_frame {border:10px solid #DFEEF2; display:block; margin-bottom:18px; padding:3px; clear:right; float:left;}
-div.video {height:380px; background:black;}
+div.video_frame {border:10px solid #DFEEF2; display:block; margin-bottom:18px; padding:3px; float:left;}
+div.video {width:400px; float:left; margin-bottom:20px;}
+div.video * {display:none; float:left;}
+div.video object {display:block; margin:0; padding:0;}
+div.video embed {display:block; margin:0; padding:0;}
+
+.post_content {clear:left;}
 
 .welcome {position:relative;}
 .welcome_content {width:400px;}
