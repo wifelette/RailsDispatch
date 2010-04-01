@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
 
   def index
+    redirect_to "/about/#{Page.published.first.slug}"
   end
 
   def show
