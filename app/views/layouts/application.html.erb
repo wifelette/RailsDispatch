@@ -47,7 +47,7 @@
           <%= link_to "Community", '/community' %>
         <% end %>
         
-        <%= content_tag :li, :class => controller.controller_name == "about" ? "current" : nil do %>
+        <%= content_tag :li, :class => controller.controller_name == "pages" ? "current" : nil do %>
           <%= link_to "About", "/about/#{Page.published.first.slug}" %>
         <% end %>
         
