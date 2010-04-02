@@ -117,7 +117,7 @@ $(document).ready(function () {
   // confirm delete buttons
   $("a[data-method='delete'][data-remote='true']").confirmWith("Are you sure?");
   
-  $('#newsletter_input').helper('inactive_class');
+  $('#dhijjh-dhijjh').helper('inactive_class');
   
   // tipsy tool tips
   $('[rel=tipsy]').tipsy({gravity: 's'});

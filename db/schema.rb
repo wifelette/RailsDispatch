@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100402003414) do
+ActiveRecord::Schema.define(:version => 20100402053249) do
 
   create_table "answers", :force => true do |t|
     t.integer  "contributor_id"
@@ -66,6 +66,10 @@ ActiveRecord::Schema.define(:version => 20100402003414) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "title"
+  end
+
+  create_table "footer_copy", :force => true do |t|
+    t.text "body"
   end
 
   create_table "notifications", :force => true do |t|

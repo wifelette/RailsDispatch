@@ -34,20 +34,6 @@
   </li>
 </ul>
 
-<% form_tag set_admin_settings_path, :method => :put do %>
-  <ol>
-  <% for setting in @settings %>
-    <li class="field">
-      <label><%= setting.setting_name.humanize %></label>
-      <%= text_field_tag "[#{setting.id}][]", setting.setting_value %>
-    </li>
-  <% end %>  
-    <li class="submit">
-      <%= submit_tag "Update settings" %>
-    </li>
-  </ol>
-
-<% end %>
 
 
 
