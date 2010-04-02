@@ -5,6 +5,7 @@ RailsDispatch::Application.routes.draw do |map|
 
   # resources :posts, :only => [:welcome, :index]
   match "/posts" => "posts#welcome"
+  match '/posts/feed.:format' => 'posts#feed'
   match "/posts/:slug" => "posts#show", :as => :post
 
   match '/contributors/apply' => 'contributors#apply'

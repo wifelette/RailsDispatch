@@ -6,7 +6,6 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @posts }
     end
   end
 
@@ -14,10 +13,19 @@ class PostsController < ApplicationController
   def index
     # @posts = Post.published
     # @upcoming = Post.upcoming
+    @posts = Post.past.published.order('publish_date desc').limit(4)
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @posts }
+      format.rss  { render :layout => false }
+    end
+  end
+  
+  def feed
+    @posts = Post.past.published.order('publish_date desc').limit(4)
+
+    respond_to do |format|
+      format.rss  { render :layout => false }
     end
   end
   

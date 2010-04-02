@@ -13,6 +13,8 @@
   <!--[if IE 7]><link rel="stylesheet" href="/stylesheets/main.ie7.css" type="text/css" media="screen" charset="utf-8"><![endif]-->
 
   <%= yield :head -%> 
+  
+  <%= auto_discovery_link_tag(:rss, '/posts/feed.rss') %>
 
   <%= csrf_meta_tag %>
   
