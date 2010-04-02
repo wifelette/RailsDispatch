@@ -11,7 +11,7 @@ class Post < ActiveRecord::Base
   belongs_to :user
   belongs_to :contributor
   has_many :elements, :dependent => :destroy
-  accepts_nested_attributes_for :elements, :reject_if => lambda { |a| a.values.all?(&:blank?) }, :allow_destroy => true
+  accepts_nested_attributes_for :elements, :reject_if => proc { |attributes| attributes['title'].blank? }, :allow_destroy => true
 
   before_validation :write_slug
   

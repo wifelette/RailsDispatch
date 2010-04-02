@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100401203735) do
+ActiveRecord::Schema.define(:version => 20100402003414) do
 
   create_table "answers", :force => true do |t|
     t.integer  "contributor_id"
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(:version => 20100401203735) do
     t.integer  "post_id"
     t.integer  "type_id"
     t.string   "title"
-    t.text     "media_embed_link"
+    t.text     "link"
     t.text     "summary"
     t.text     "body"
     t.datetime "created_at"

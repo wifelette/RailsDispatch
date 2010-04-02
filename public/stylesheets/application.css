@@ -187,7 +187,7 @@ ul.contributor_bio_info {float:left; width:506px; margin-bottom:10px;}
 ul.contributor_bio_info li {font:italic 14px/1.1em georgia, serif; border-bottom:1px solid #F5F5F5; height:28px; line-height:30px;  color:#414141;}
 ul.contributor_bio_info li.contributor_name {font:18px/1.1em "Museo Sans", sans-serif; height:28px; color:#212121;}
 
-#page_additional.with_contributor {padding:22px 24px 10px 26px; margin-bottom:30px;}
+#page_additional.with_contributor {padding:22px 22px 10px 26px; margin-bottom:30px;}
 #page_additional.with_contributor h3 {margin-left:86px;}
 #page_additional.with_contributor h4 {margin-left:86px;}
 

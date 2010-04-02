@@ -21,7 +21,7 @@
 <ul class="element_list">
   <li class="title"><span>In this post</span></li>
   <% for element in post.elements %>
-    <li><%= element.title %></li>
+    <li><%= link_to element.title, element.link %></li>
   <% end %>
 </ul>
 <% end %>
