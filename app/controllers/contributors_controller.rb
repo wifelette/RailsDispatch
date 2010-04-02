@@ -15,6 +15,9 @@ class ContributorsController < ApplicationController
       format.js
     end
   end
+
+  def apply
+  end
   
 end
 

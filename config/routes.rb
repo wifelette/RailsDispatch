@@ -7,7 +7,9 @@ RailsDispatch::Application.routes.draw do |map|
   match "/posts" => "posts#welcome"
   match "/posts/:slug" => "posts#show", :as => :post
 
+  match '/contributors/apply' => 'contributors#apply'
   resources :contributors, :only => [:index, :show]
+
   match "/about/" => "pages#index", :as => :page
   match "/about/:slug" => "pages#show", :as => :page
 

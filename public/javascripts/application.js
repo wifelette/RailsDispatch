@@ -132,6 +132,11 @@ $(document).ready(function () {
   // load more style pagination
   $("#load_more").load_more();
 
+  // prevent users from clicking active tabs
+  $(".active a, li.current a").click(function(event) {
+    event.preventDefault();
+  });
+
   // ============================
   // = add/remove form elements =
   // ============================   

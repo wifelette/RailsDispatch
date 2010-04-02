@@ -90,6 +90,7 @@ header a#enginyard_header {position:absolute; top:0px; right:0; margin-top:68px;
 /* current page */
 header nav ul li.current {background-position:left -37px;}
 header nav ul li.current a, header nav ul li span {background-position:right -37px; text-shadow:0 1px 0 #AFD7DA;}
+header nav ul li.current a {cursor:default;}
 
 /* main */
 section {width:960px; margin:0 auto; position:relative;}
@@ -104,7 +105,7 @@ section nav ul#tab_nav li a, .upcoming_placeholder {margin-bottom:8px; z-index:9
 section nav ul#tab_nav li a span.title, .upcoming_placeholder span.title {float:left; clear:left; color:#333; text-shadow:0; font-family:"Museo Sans"; font-weight:normal;}
 section nav ul#tab_nav li a span.details, .upcoming_placeholder span.details {float:left; clear:left; font-weight:normal; line-height:14px;  font-size:13px; text-shadow:0 -1px 0 white; font-weight:normal; color:black; opacity:.96; -webkit-text-stroke:1px transparent;} 
 
-section nav ul#tab_nav li.active a {display:block; background:url('/images/red_arrow.png') left top no-repeat; width:267px; height:61px; margin-bottom:8px; z-index:9999; width:235px; height:41px; display:block; padding:10px 16px 8px 16px; text-decoration:none; color:white; text-shadow:0 -1px 0 #270100; font-size:17px; font-weight:bold; opacity:.96; -webkit-text-stroke:1px transparent;}
+section nav ul#tab_nav li.active a {display:block; background:url('/images/red_arrow.png') left top no-repeat; width:267px; height:61px; margin-bottom:8px; z-index:9999; width:235px; height:41px; display:block; padding:10px 16px 8px 16px; text-decoration:none; color:white; text-shadow:0 -1px 0 #270100; font-size:17px; font-weight:bold; opacity:.96; -webkit-text-stroke:1px transparent; cursor:default;}
 section nav ul#tab_nav li.active a span.title {color:white;}
 section nav ul#tab_nav li.active a span.details {color:#FFD9DB; text-shadow:0 -1px 0 #221011;}
 
@@ -114,8 +115,8 @@ section nav ul#tab_nav li.future .upcoming_placeholder span {color:#BABABA;}
 section nav ul#tab_nav li.inactive a {display:block;}
 section nav ul#tab_nav li.inactive a span {color:#494949;}
 
-section nav ul#tab_nav li.inactive a:hover {background:url('/images/tabs/past_tab.png') left bottom no-repeat;}
-section nav ul#tab_nav li.inactive a:hover span {color:#272727; text-shadow:0 1px 0 white;}
+section nav ul#tab_nav li.inactive a:hover, section nav ul#tab_nav li.inactive span.upcoming_placeholder {background:url('/images/tabs/past_tab.png') left bottom no-repeat;}
+section nav ul#tab_nav li.inactive a:hover span, section nav ul#tab_nav li.inactive span:hover.upcoming_placeholder span {color:#272727; text-shadow:0 1px 0 white;}
 
 ul#sidebar_more {margin-top:45px; position:relative;}
 /*ul#sidebar_more li:hover {background:url('/images/small_arrow.gif') right center no-repeat;} */
