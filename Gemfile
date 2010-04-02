@@ -28,6 +28,8 @@ gem 'github-markup', :require => 'github/markup'
 gem 'org-ruby'
 gem 'hirb'
 
+gem 'whenever'
+
 gem 'coderay'
 gem 'RedCloth', :require => 'RedCloth'
 
