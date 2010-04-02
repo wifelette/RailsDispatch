@@ -29,6 +29,7 @@ class Admin::PostsController < ApplicationController
   
   def edit    
     @post = Post.find(params[:id])
+    3.times {@post.elements.build}
   end
   
   def update
