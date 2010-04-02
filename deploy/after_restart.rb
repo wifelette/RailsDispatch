@@ -1,1 +1,1 @@
-run "cd #{release_path} && whenever --update-crontab #{application}"
+run "cd #{current_path} && whenever --update-crontab #{application}"
