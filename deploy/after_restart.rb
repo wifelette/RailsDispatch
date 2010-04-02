@@ -1,1 +1,1 @@
-run "cd /data/engineyardrailsdispatch/current/ && whenever --update-crontab #{application}"
+run "cd /data/engineyardrailsdispatch/current/ && whenever --update-crontab"
