@@ -1,1 +1,1 @@
-run "cd #{release_path} && bundle exec whenever --update-crontab"
+run "cd /data/engineyardrailsdispatch/current/ && whenever --update-crontab"
