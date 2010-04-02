@@ -6,8 +6,12 @@ class Admin::SettingsController < ApplicationController
   end
 
   def set
-    # Setting.update_all(:id => params[:setting_ids])
-    Setting.update_all(:id => params[:ids])
+    #this is what I think your action should do
+    params[:settings].each do |setting|
+      @setting = Setting.find(setting[:id])
+      @setting.update_attributes(setting)
+    end
+
     redirect_to admin_settings_path
   end
 

@@ -34,6 +34,24 @@
   </li>
 </ul>
 
+<% form_tag set_admin_settings_path, :method => :put do %>
+  <ol>
+  <% for setting in @settings %>
+    <li class="field">
+      <label>
+        <%= setting.setting_name.humanize %>
+      </label>
+      <!-- settings[][field_name] will group the settings objects in params -->
+      <%= hidden_field_tag("setting_#{setting.id}_id", setting.id, :name => 'settings[][id]') %>
+      <%= text_area_tag("setting_#{setting.id}_setting_value", setting.setting_value, :name => 'settings[][setting_value]') %>
+    </li>
+  <% end %>  
+    <li class="submit">
+      <%= submit_tag "Update settings" %>
+    </li>
+  </ol>
+
+<% end %>
 
 
 
