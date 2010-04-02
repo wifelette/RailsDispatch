@@ -39,7 +39,7 @@
   <% for setting in @settings %>
     <li class="field">
       <label><%= setting.setting_name.humanize %></label>
-      <%= text_field_tag "[setting_value][]", setting.setting_value %>
+      <%= text_field_tag "[#{setting.id}][]", setting.setting_value %>
     </li>
   <% end %>  
     <li class="submit">

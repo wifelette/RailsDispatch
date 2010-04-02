@@ -6,7 +6,8 @@ class Admin::SettingsController < ApplicationController
   end
 
   def set
-    Setting.update_all(:id => params[:setting_ids])
+    # Setting.update_all(:id => params[:setting_ids])
+    Setting.update_all(:setting_value => params[:setting_value])
     redirect_to admin_settings_path
   end
 
