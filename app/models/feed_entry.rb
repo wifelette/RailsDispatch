@@ -13,7 +13,7 @@ class FeedEntry < ActiveRecord::Base
     add_entries(feed.entries, feed_id)    
   end
 
-  # def self.update_from_feed_continuously(feed_url, delay_interval = 15.minutes)
+  # def self.update_from_feed_continuously(feed_url, delay_interval = 1.minutes)
   #   feed = Feedzirra::Feed.fetch_and_parse(feed_url)
   #   add_entries(feed.entries)
   #   loop do
