@@ -296,30 +296,35 @@ a#load_more {font:bold 14px/58px Helvetica, Arial, sans-serif; -webkit-text-stro
 
 /* REFACTOR THIS */
 section article {line-height:1.6em; font-size:14px; color:#333; margin-bottom:26px; display:block; position:relative; z-index:1;}
-/*section article h2 {font:bold 17px/1.2em "Museo Sans", Helvetica, Arial, sans-serif; margin-top:1.4em; margin-bottom:.5em; display:block;}*/
-section article h1 {
+section article h2 {font:bold 17px/1.2em "Museo Sans", Helvetica, Arial, sans-serif; margin-top:1.4em; margin-bottom:.5em; display:block;}
+
+section article .post_content  h1 {
 display:block;
 font:bold 24px/1.2em Helvetica,Arial,sans-serif;
 margin-bottom:0.5em;
 margin-top:1.4em;
 }
 
-section article h2 {
+section article .post_content  h2 {
 display:block;
 font:bold 17px/1.2em Helvetica,Arial,sans-serif;
 margin-bottom:0.5em;
 margin-top:1.4em;
 }
 
-section article h3 {
+section article .post_content  h3 {
 display:block;
 font:bold 15px/1.2em Helvetica,Arial,sans-serif;
 margin-bottom:0.5em;
 margin-top:1.4em;
 }
 
-/*section article h3 {font:bold 24px/1.2em "Museo Sans", Helvetica, Arial, sans-serif;}*/
-/*section article h4 {font:italic 14px/1.1em georgia, serif; margin-bottom:12px; color:#595959;}*/
+h1 + br, h2 + br, h3 + br {display:none;}
+
+.CodeRay > br {display:none;}
+
+section article h3 {font:bold 24px/1.2em "Museo Sans", Helvetica, Arial, sans-serif;}
+section article h4 {font:italic 14px/1.1em georgia, serif; margin-bottom:12px; color:#595959;}
 div.video_frame {border:10px solid #DFEEF2; display:block; margin-bottom:18px; padding:3px; float:left;}
 div.video {width:400px; float:left; margin-bottom:20px;}
 div.video * {display:none; float:left;}

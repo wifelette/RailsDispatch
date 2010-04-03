@@ -17,7 +17,7 @@
   
 </div>
 
-<% unless post.elements.nil? %>
+<% unless post.elements.count == 0 %>
 <ul class="element_list">
   <li class="title"><span>In this post</span></li>
   <% for element in post.elements %>
@@ -25,14 +25,6 @@
   <% end %>
 </ul>
 <% end %>
-
-<% unless post.video_embed_link.length == 0 %>
-<div class="video">
-  <%= raw post.video_embed_link %>
-</div>
-<% end %>
-
-<%#= raw coderay(post.body) %>
 
 <div class="post_content">
   <%= raw textilize(coderay(post.body)) unless post.summary.nil? %>  
