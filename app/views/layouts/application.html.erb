@@ -32,8 +32,20 @@
   </div> -->
 
   <header>
-    <h1><%= link_to_unless_current "Rails Dispatch", root_path -%></h1>
-    <h2>Rails news delivered fresh</h2>
+    
+    <div id="title">
+      <% if (controller.controller_name == "posts" && controller.action_name == "welcome") %>
+      <span>
+        <h1>Rails Dispatch</h1>
+        <h2>Rails news delivered fresh</h2>        
+      </span>
+      <% else %>
+      <a href="/">
+        <h1>Rails Dispatch</h1>
+        <h2>Rails news delivered fresh</h2>        
+      </a>
+      <% end %>
+    </div>
 
     <a id="enginyard_header" href="http://engineyard.com">Presented by Engine Yard</a>
     

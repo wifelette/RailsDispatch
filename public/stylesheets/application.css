@@ -74,9 +74,12 @@ div.notice {padding:8px 15px; margin-bottom:1em; background:#333; color:white; t
 
 /* header */
 header {height:180px; width:955px; margin:0 auto; position:relative; margin-bottom:10px; padding-top:52px; padding-left:5px;}
-header h1 {background:url('/images/ruby_logo.png') left top no-repeat; height:141px; color:white; text-shadow:0 -1px 0 black; font:65px/1 "Museo Slab", "Helvetica", "Arial", sans-serif; padding:10px 0 0 140px; position:relative; left:-58px;}
+header h1 {color:white; text-shadow:0 -1px 0 black; font:65px/1 "Museo Slab", "Helvetica", "Arial", sans-serif;}
 header h1 a {color:white; text-decoration:none; text-shadow:0 -1px 0 black;}
-header h2 {font:26px/1.2 "Museo Sans", "Helvetica", "Arial", sans-serif; color:#004955; width:40%; text-shadow:0 1px 0 #84D0DA; margin-left:140px; position:relative; top:-76px; left:-56px;}
+header h2 {font:26px/1.2 "Museo Sans", "Helvetica", "Arial", sans-serif; color:#004955; text-shadow:0 1px 0 #84D0DA;}
+
+#title {background:url('/images/ruby_logo.png') left top no-repeat; float:left; position:relative; left:-52px;}
+#title a, #title span {padding:14px 20px 10px 140px; display:block; border:0; text-decoration:none;}
 
 header nav {position:absolute; bottom:0; right:0; font: bold 13px/33px Helvetica, Arial, sans-serif;}
 header nav h3 {float:left; height:33px; line-height:35px; position:relative; right:-20px; color:#0B505B; text-shadow:0 1px 0 #D2DDDD; font: 13px/33px Helvetica, Arial, sans-serif;}
