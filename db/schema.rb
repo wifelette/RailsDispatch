@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100402064138) do
+ActiveRecord::Schema.define(:version => 20100403205605) do
 
   create_table "answers", :force => true do |t|
     t.integer  "contributor_id"
@@ -111,6 +111,8 @@ ActiveRecord::Schema.define(:version => 20100402064138) do
     t.datetime "updated_at"
     t.boolean  "published",        :default => true
     t.string   "slug"
+    t.string   "skill_level"
+    t.boolean  "topic_host"
   end
 
   create_table "questions", :force => true do |t|

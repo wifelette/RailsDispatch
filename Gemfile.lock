@@ -86,7 +86,7 @@ specs:
 - i18n: 
     version: 0.3.6
 - memcache-client: 
-    version: 1.8.1
+    version: 1.8.2
 - tzinfo: 
     version: 0.3.18
 - activesupport: 
@@ -193,7 +193,7 @@ specs:
     version: 1.10.0
 - whenever: 
     version: 0.4.1
-hash: 4ec240661703b908540c156afb3d81b63d6fe58d
+hash: 17ecdccf145ff72375a6a4116022b94464320e45
 sources: 
 - Git: 
     name: loofah
@@ -212,6 +212,6 @@ sources:
 - Git: 
     uri: git://github.com/plataformatec/devise.git
     git: git://github.com/plataformatec/devise.git
-    ref: 1ba525a0e93abfc5ded780c004da4c0a310bdb43
+    ref: 22e1fa0cb99faeddf5602cd8007547764ee883e5
 - Rubygems: 
     uri: http://rubygems.org

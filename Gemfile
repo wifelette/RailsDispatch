@@ -13,7 +13,7 @@ gem 'bundler', '0.9.14'
 
 gem 'engineyard', '0.2.7.pre'
 
-gem "devise", :git => "git://github.com/plataformatec/devise.git"
+gem "devise", :git => 'git://github.com/plataformatec/devise.git', :ref => '22e1fa0cb99faeddf5602cd8007547764ee883e5'
 gem 'paperclip', :git => 'git://github.com/JasonKing/paperclip.git', :ref => '9c9082814f628a618f625158fc8507ef1578dacc'
 gem 'right_aws'
 gem 'aws-s3', :require => 'aws/s3'
