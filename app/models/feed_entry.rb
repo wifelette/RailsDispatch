@@ -1,6 +1,6 @@
 class FeedEntry < ActiveRecord::Base
   
-  belongs_to :feed, :dependent => :destroy
+  belongs_to :feed
   
   def self.update_from_feed(feed_url, feed_id)
     feed = Feedzirra::Feed.fetch_and_parse(feed_url)

@@ -369,6 +369,7 @@ div.video embed {display:block; margin:0; padding:0;}
 .element_list li.title {margin:0 0 14px 0; background:url('/images/highlight.gif') left top no-repeat; padding:0;}
 .element_list li.title span {font:18px/1.1em "Museo Sans", sans-serif; text-shadow:0 1px 0 white; padding:0 20px; height:30px; line-height:30px; background:url('/images/highlight_end.gif') right top no-repeat; display:block;}
 .element_list li {padding:0 0 0 18px; margin:0 0 3px 20px; background:url('/images/bullet.gif') left 6px no-repeat;}
+.element_list li a {display:block;}
 
 section article code {white-space:pre;}
 

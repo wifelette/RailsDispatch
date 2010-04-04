@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def coderay(text)
-    text.gsub(/\<pre( lang="(.+?)" data-caption="(.+?)")?\>(.+?)\<\/pre\>/m) do
+    text.gsub(/\<pre( lang="(.+?)"( data-caption="(.+?)"))?\>(.+?)\<\/pre\>/m) do
       content_tag :div, :caption => $3, :class => "code_block" do
         CodeRay.scan($4, $2).div(:css => :class)
       end
