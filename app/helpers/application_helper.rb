@@ -1,11 +1,13 @@
 module ApplicationHelper
-  
+
   def coderay(text)
-    text.gsub(/\<pre( lang="(.+?)")?\>(.+?)\<\/pre\>/m) do
-      CodeRay.scan($3, $2).div(:css => :class).html_safe
+    text.gsub(/\<pre( lang="(.+?)" data-caption="(.+?)")?\>(.+?)\<\/pre\>/m) do
+      content_tag :div, :caption => $3, :class => "code_block" do
+        CodeRay.scan($4, $2).div(:css => :class)
+      end
     end
   end
-  
+
   def weeks_or_time_ago_in_words(from_time, include_seconds = false)
     to_time   = Time.now
     weeks_ago = (to_time - from_time)/1.week

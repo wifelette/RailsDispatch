@@ -112,6 +112,14 @@ $.fn.confirmRemoteDestroy = function(message) {
 };
 })(jQuery);
 
+(function($){
+$.fn.captionCodeBlocks = function(attr) {
+  return this.each(function() {
+    jQuery(this).prepend("<h5>" + jQuery(this).attr("caption") + "</h5>")
+  });
+};
+})(jQuery);
+
 $(document).ready(function () {
   
   // confirm delete buttons
@@ -136,6 +144,9 @@ $(document).ready(function () {
   $(".active a, li.current a").click(function(event) {
     event.preventDefault();
   });
+  
+  $("div[caption]").captionCodeBlocks("caption")
+  
 
   // ============================
   // = add/remove form elements =
