@@ -433,8 +433,8 @@ tr.actionable.in_progress:hover a.simple_button {visibility:visible;}
 .CodeRay .an { color:#E7BE69 }                      /* html attribute */
 .CodeRay .c  { color:#BC9358; font-style: italic; } /* comment */
 .CodeRay .ch { color:#509E4F }                      /* escaped character */
-.CodeRay .cl { color:#4C789A }                         /* class */
-.CodeRay .co { color:#4C789A }                         /* constant */
+.CodeRay .cl { color:#29547D }                         /* class */
+.CodeRay .co { color:#29547D }                         /* constant */
 .CodeRay .fl { color:#85A641 }                      /* float */
 .CodeRay .fu { color:#CA8F3B }                      /* function */
 .CodeRay .gv { color:#D0CFFE }                      /* global variable */
