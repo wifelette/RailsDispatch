@@ -155,6 +155,8 @@ footer div#engineyard_photo {width:241px; display:block; height:250px; float:lef
 footer div#engineyard_photo img {float:right;}
 
 footer h3 {font:18px "Museo Slab"; margin-bottom:8px;}
+footer p a:link, footer p a:hover, footer p a:visited, footer p a:active {background:#1F1F1F;}
+
 
 /*footer div#newgoldleaf {background:url('/images/footer_seperator.png') center right no-repeat; width:241px; display:block; height:250px; float:left; margin-right:24px;}*/
 footer div#engineyard {float:left; width:412px; display:block; height:250px; float:left; margin-right:24px; font-size:14px; opacity:.99;}
