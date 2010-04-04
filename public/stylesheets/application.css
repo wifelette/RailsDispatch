@@ -211,18 +211,18 @@ ul.contributor_bio_info li.contributor_name {font:18px/1.1em "Museo Sans", sans-
 #page_additional .contributor_social_links li a.github_social {background:url('/images/git_icon.png') top left no-repeat;}
 #page_additional .contributor_social_links li a.ask_contributor_question {background:url('/images/ask_question.gif') top left no-repeat;}
 
-span.topichost {color:red; font:normal 14px/1.1em georgia, serif; margin-bottom:12px; color:#8E846D; margin-right:4px;}
+span.topichost {color:red; font:normal 14px/1.1em georgia, serif; text-shadow:0 1px 0 white; margin-bottom:12px; color:#8E846D; margin-right:4px;}
 
 span.skill_tag {float:right; background:url('/images/icons/tags_bg.png') 0 0 no-repeat; display:block; position:relative; left:-7px;}
 span.skill_tag span { background:url('/images/icons/tags_ends.png') right 0 no-repeat; position:relative; right:-7px; float:left; display:block; height:20px; padding:0 10px 0 12px; font-weight:normal; opacity:.96; -webkit-text-stroke:1px transparent; font:11px/20px "Helvetica Neue", sans-serif;}
 
-span.skill_tag.beginner {color:white; text-shadow:0 -1px 0 black; background-position:0 -21px;}
+span.skill_tag.beginner {color:white; text-shadow:0 -1px 0 #102F09; background-position:0 -21px;}
 span.skill_tag.beginner span {background-position:right -21px;}
 
-span.skill_tag.intermediate {color:white; text-shadow:0 -1px 0 black; background-position:0 -42px;}
+span.skill_tag.intermediate {color:white; text-shadow:0 -1px 0 #072D2E; background-position:0 -42px;}
 span.skill_tag.intermediate span {background-position:right -42px;}
 
-span.skill_tag.expert {color:white; text-shadow:0 -1px 0 black; background-position:0 0px;}
+span.skill_tag.expert {color:white; text-shadow:0 -1px 0 #380505; background-position:0 0px;}
 span.skill_tag.expert span {background-position:right 0px;}
 
 #person_bio p {font-size:12px;}
