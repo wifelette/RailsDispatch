@@ -27,10 +27,6 @@
   </div>
   <% end %>
   
-  <!-- <div class="alert">
-    <span>Rails 3.0.0 beta is out! Read the <a href="#">guide to upgrading your Rails app</a> to 3.0 or <a href="#">go see what has changed</a>. <a href="#" class="close_alert"></a></span>
-  </div> -->
-
   <header>
     
     <div id="title">
@@ -74,7 +70,7 @@
 
   <section>
 
-    <%= content_tag :nav, yield(:page_nav) -%>  
+    <%= yield :page_nav -%>  
 
     <%= content_tag :article, yield -%>  
 
