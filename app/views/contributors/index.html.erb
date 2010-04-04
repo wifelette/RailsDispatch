@@ -1,23 +1,23 @@
 <% content_for :page_nav do %>
+<nav>
   <ul id="tab_nav">
-  
     <li class="active">
       <a href="/contributors">
         <span class="title">Contributors</span>
         <span class="details">Meet the team</span>
       </a>
     </li>
-  
+
     <li class="inactive">
       <a href="/contributors/apply">
         <span class="title">Become a Contributor</span>
         <span class="details">Join the team</span>
       </a>
     </li>
-  
   </ul>
-  
+
   <%= render "layouts/shared/sidebar_social_links" %>
+</nav>
 <% end %>
 
 <div id="page_additional">
