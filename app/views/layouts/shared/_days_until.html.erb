@@ -1,4 +1,4 @@
-<% if @upcoming %>
+<% if @upcoming.any? %>
 <div id="upcoming">
   <% wrap_each_char(@upcoming[0].days_until) do |digit| -%>    
   <div class="counter_section">
