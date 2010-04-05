@@ -8,6 +8,12 @@
     <li class="contributor_name"><%= @contributor.full_name %></li>
     <!-- <li>lorem ipsum</li> -->
   </ul>
+  
+  <ul class="contributor_social_links">
+    <li><%= link_to @contributor.firstname, "http://github.com/#{@contributor.github_username}", :rel => "tipsy", :class => "github_social", :title => "Follow #{@contributor.firstname} on Github" %></li>
+    <li><%= link_to @contributor.firstname, "http://twitter.com/#{@contributor.twitter_username}", :rel => "tipsy", :class => "twitter_social", :title => "Follow #{@contributor.firstname} on Twitter" %></li>
+  </ul>  
+  
 
   <p><%= raw markdown(@contributor.bio) %></p>
 

@@ -194,7 +194,11 @@ a.person_thumb.loading img {opacity:.3;}
 .person_thumb.large img {height:143px; width:143px;}
 .person_thumb.large span.person_mask {height:143px; width:143px; background:url('/images/user_mask_large.png');}
 
-#contributor_details {height:144px; padding:20px 0;}
+#contributor_details {height:144px; padding:20px 0; position:relative;}
+
+#contributor_details ul.contributor_social_links {position:absolute; top:12px; right:0; width:400px;}
+#contributor_details ul.contributor_social_links li {float:right;}
+
 ul.contributor_bio_info {float:left; width:506px; margin-bottom:8px;}
 ul.contributor_bio_info li {font:italic 14px/1.1em georgia, serif; border-bottom:1px solid #F5F5F5; height:28px; line-height:30px;  color:#414141;}
 ul.contributor_bio_info li.contributor_name {font:18px/1.1em "Museo Sans", sans-serif; height:28px; color:#212121;}
@@ -216,10 +220,10 @@ ul.contributor_bio_info li.contributor_name {font:18px/1.1em "Museo Sans", sans-
 .contributor_details {display:block;}
 .contributor_details h4 {font-style:normal;}
 
-#page_additional .contributor_social_links li a {height:20px; width:20px; display:block; margin:8px 6px; text-indent:-9999px;}
-#page_additional .contributor_social_links li a.twitter_social {background:url('/images/twitter.gif') top left no-repeat;}
-#page_additional .contributor_social_links li a.github_social {background:url('/images/git_icon.png') top left no-repeat;}
-#page_additional .contributor_social_links li a.ask_contributor_question {background:url('/images/ask_question.gif') top left no-repeat;}
+.contributor_social_links li a {height:20px; width:20px; display:block; margin:8px 6px; text-indent:-9999px;}
+.contributor_social_links li a.twitter_social {background:url('/images/twitter.gif') top left no-repeat;}
+.contributor_social_links li a.github_social {background:url('/images/git_icon.png') top left no-repeat;}
+.contributor_social_links li a.ask_contributor_question {background:url('/images/ask_question.gif') top left no-repeat;}
 
 span.topichost {color:red; font:normal 14px/1.1em georgia, serif; text-shadow:0 1px 0 white; margin-bottom:12px; color:#8E846D; margin-right:4px;}
 
@@ -379,7 +383,8 @@ div.video embed {display:block; margin:0; padding:0;}
 .element_list li.title {margin:0 0 14px 0; background:url('/images/highlight.gif') left top no-repeat; padding:0;}
 .element_list li.title span {font:18px/1.1em "Museo Sans", sans-serif; text-shadow:0 1px 0 white; padding:0 20px; height:30px; line-height:30px; background:url('/images/highlight_end.gif') right top no-repeat; display:block;}
 .element_list li {padding:0 0 0 18px; margin:0 0 3px 20px; background:url('/images/bullet.gif') left 6px no-repeat;}
-.element_list li a {display:block;}
+.element_list li a {display:block; color:#828282; text-decoration:none;  width:180px;}
+.element_list li a:hover {color:#3F3F3F; background:url('/images/small_arrow.gif') right center no-repeat;}
 
 section article code {white-space:pre;}
 
