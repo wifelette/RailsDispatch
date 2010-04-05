@@ -50,15 +50,15 @@
       <%= f.check_box :published %> 
     </li>
 
-    <!-- <li class="field">
+    <li class="field">
       <h3>Elements</h3>
       <% f.fields_for :elements do |element_form| %>
-      <%= render :partial => 'element', :locals => { :f => element_form } %>
+        <%= render :partial => 'element', :locals => { :f => element_form } %>
       <% end %>
-      <p><%= add_child_link "Add element", :elements %></p>
+      <p><%#= add_child_link "Add element", :elements %></p>
 
       <%= new_child_fields_template(f, :elements)%>  
-    </li> -->
+    </li>
 
     <p><%= f.submit "Submit" %></p>  
   </ol>

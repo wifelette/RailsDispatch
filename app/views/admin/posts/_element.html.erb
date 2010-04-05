@@ -1,19 +1,11 @@
 <ul class="nested_fields">
   <li class="field">
-    <label>Type</label>
-    <%= f.select("type_id", Type.all.collect {|p| [ p.name, p.id ] }, { :include_blank => true }) %>    
-  </li>
-  <li class="field">
     <label>Title</label>
     <%= f.text_field :title %>    
   </li>
   <li class="field">
     <label>Link</label>
-    <%= f.text_area :link %>    
-  </li>
-  <li class="field">
-    <label>Body</label>
-    <%= f.text_area :body %>    
+    <%= f.text_field :link %>    
   </li>
   <li class="field">
     <label></label>

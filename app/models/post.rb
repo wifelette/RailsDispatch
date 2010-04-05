@@ -14,18 +14,17 @@ class Post < ActiveRecord::Base
   accepts_nested_attributes_for :elements, :reject_if => proc { |attributes| attributes['title'].blank? }, :allow_destroy => true
 
   before_validation :write_slug
-  
-  
+
   def days_until
     (self.publish_date.to_datetime - Date.today.to_datetime).to_i.to_s
   end  
-  
+
   def write_slug
     self.slug = self.title if self.slug.blank?
   end
-  
+
   def slug=(text)
     write_attribute(:slug, text.parameterize)
   end
-  
+
 end
