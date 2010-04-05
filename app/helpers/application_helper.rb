@@ -47,5 +47,12 @@ module ApplicationHelper
      "three weeks ago", "four weeks ago", 
      "one month ago", "about one month ago"][weeks_ago] || super
   end
-
+  
+  def tracking_code
+    if controller.controller_name == 'posts' && controller.action_name = 'welcome'
+      render 'layouts/shared/tracking_code_home'
+    else
+      render 'layouts/shared/tracking_code_all_pages'
+    end
+  end
 end
