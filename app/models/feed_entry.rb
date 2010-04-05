@@ -4,7 +4,7 @@ class FeedEntry < ActiveRecord::Base
   
   def self.update_from_feed(feed_url, feed_id)
     feed = Feedzirra::Feed.fetch_and_parse(feed_url)
-    add_entries(feed.entries, feed_id) if feed.updated?
+    add_entries(feed.entries, feed_id)
   end
 
   # def self.update_from_feed_continuously(feed_url, delay_interval = 1.minutes)
@@ -35,3 +35,5 @@ class FeedEntry < ActiveRecord::Base
     end    
   end
 end
+
+
