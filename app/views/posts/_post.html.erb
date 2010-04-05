@@ -31,5 +31,5 @@
 <% end %>
 
 <div class="post_content">
-  <%= raw textilize(coderay(post.body)) unless post.summary.nil? %>  
+  <%= raw textilize(post.body) unless post.body.nil? %>
 </div>
