@@ -129,18 +129,7 @@ $(document).ready(function () {
     contributor_id = window.location.hash.substr(1)
     $("a[href=/contributors/" + contributor_id + "]").addClass("loading")
     $("a[href=/contributors/" + contributor_id + "]").html("Loading...")
-    
-    // console.log(contributor_id)
     $.getScript("/contributors/" + contributor_id);
-    
-    // $.ajax({
-    //    type: "GET",
-    //    url: $(contributor_id).href,
-    //    dataType: "script"
-    //  });
-    
-    // $.getScript();
-    // event.preventDefault();
   }
   
   // confirm delete buttons
