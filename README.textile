@@ -1,0 +1,7 @@
+h1. Rails Dispatch
+
+Rails Dispatch provides timely information about Rails to the Rails community.
+
+h1. Installation
+
+After cloning this repository, simply run rake setup. If the MySQL gem requires special settings on your platform, please install it first.
