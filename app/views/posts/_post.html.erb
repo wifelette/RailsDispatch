@@ -10,9 +10,16 @@
   <div class="contributor_details">
     <h4>
       <span class="topichost"><%= "Topic Host:" if post.topic_host == true %></span>
-      <%= post.contributor.full_name %>
-      <%= raw "<span class='skill_header'>Skill Level: <span class='skill_tag #{post.skill_level.downcase}'><span>#{post.skill_level}</span></span></span>" if post.skill_level %>
+      <%= post.contributor.full_name %>      
     </h4>  
+    
+    <% if post.skill_level %>
+      <div class="post_skill_level">
+        <h3>Skill Level:</h3>
+        <%= raw "<span class='skill_tag #{post.skill_level.downcase}'><span>#{post.skill_level}</span></span>"  %>          
+      </div>
+    <% end %>
+    
     <ul class="contributor_social_links">
       <li><%= link_to post.contributor.firstname, "http://twitter.com/#{post.contributor.twitter_username}", :rel => "tipsy", :class => "twitter_social", :title => "Follow #{post.contributor.firstname} on Twitter" %></li>
       <li><%= link_to post.contributor.firstname, "http://github.com/#{post.contributor.github_username}", :rel => "tipsy", :class => "github_social", :title => "Follow #{post.contributor.firstname} on Github" %></li>

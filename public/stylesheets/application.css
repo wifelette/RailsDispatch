@@ -239,9 +239,10 @@ span.skill_tag.intermediate span {background-position:right -42px;}
 span.skill_tag.expert {color:white; text-shadow:0 -1px 0 #380505; background-position:0 0px;}
 span.skill_tag.expert span {background-position:right 0px;}
 
-.skill_header {float:right;}
-
 #person_bio p {font-size:12px;}
+
+.post_skill_level {float:left; display:block; position:absolute; bottom:5px; right:20px;}
+#page_additional.with_contributor .post_skill_level h3 {color:#8E846D; font:14px/1.1em georgia,serif; margin-bottom:12px; margin-right:4px; text-shadow:0 1px 0 white; margin:0; padding:0; float:left;}
 
 /* forms */
 fieldset.inputs li {width:100%;}
