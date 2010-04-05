@@ -24,13 +24,10 @@ function initialize() {
 
 // load bio for contributor
 $.fn.load_bio = function(options) {  
-  $("#contributors_page .person_thumb").live("click", function(event) {
-    $(this).removeClass("active");
-    $(this).addClass("loading");
-    $(this).prepend("<span class='bio_loader'></span>")
-    $.getScript(this.href);
-    event.preventDefault();
-  });
+  $(this).removeClass("active");
+  $(this).addClass("loading");
+  $(this).prepend("<span class='bio_loader'></span>");
+  $.getScript(this.href);
 };
 
 // loadmore pagaination
@@ -103,8 +100,6 @@ $.fn.confirmWith = function(message) {
 (function($){
 $.fn.confirmRemoteDestroy = function(message) {
   return this.each(function() {
-    
-    
     $(this).fadeOut('fast', function() {
       $(this).remove();
     });
@@ -121,6 +116,10 @@ $.fn.captionCodeBlocks = function(attr) {
 })(jQuery);
 
 $(document).ready(function () {
+    
+  if (window.location.pathname.match(/contributors/)) {
+    console.log(window.location.hash.substr(1))
+  }
   
   // confirm delete buttons
   $("a[data-method='delete'][data-remote='true']").confirmWith("Are you sure?");
@@ -135,15 +134,18 @@ $(document).ready(function () {
   });
   
   // load bio
-  $(".person_thumb").load_bio();
+  $("#contributors_page .person_thumb").click(function(event) {
+    $(this).load_bio();
+    event.preventDefault();
+  });
   
   // load more style pagination
   $("#load_more").load_more();
 
   // prevent users from clicking active tabs
-  $(".active a, li.current a").click(function(event) {
-    event.preventDefault();
-  });
+  // $(".active a, li.current a").click(function(event) {
+  //   event.preventDefault();
+  // });
   
   $("div[caption]").captionCodeBlocks("caption")
   
@@ -152,8 +154,6 @@ $(document).ready(function () {
   // = add/remove form elements =
   // ============================   
   $('.add_child').click(function() {
-    
-    
     var association = $(this).attr('data-association');
     var template = $('#' + association + '_fields_template').html();
     var regexp = new RegExp('new_' + association, 'g');
