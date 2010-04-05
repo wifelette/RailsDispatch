@@ -445,7 +445,7 @@ tr.actionable.in_progress:hover a.simple_button {visibility:visible;}
 .CodeRay .fu { color:#CA8F3B }                      /* function */
 .CodeRay .gv { color:#D0CFFE }                      /* global variable */
 .CodeRay .i  { color:#A4C260 }                      /* integer */
-.CodeRay .iv { color:#D0CFFE }                      /* instance variable */
+.CodeRay .iv { color:#807AAE }                      /* instance variable */
 .CodeRay .pp { color:#E7BE69 }                      /* doctype */
 .CodeRay .r  { color:#CB7832 }                      /* keyword */
 .CodeRay .rx { color:#A4C260 }                      /* regex */
