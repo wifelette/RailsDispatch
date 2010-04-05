@@ -302,7 +302,9 @@ div.counter_section_mask {background:url('/images/counter/small/counter_mask.png
 /* Community Page */
 .popular_post {margin:0 0 46px 0;}
 .popular_post .person_thumb {margin:4px 0 0 0;}
-.post_abstract {width:562px; padding:0 0 0 105px;}
+.post_abstract {width:562px; padding:0; margin-left:100px; overflow:hidden;}
+.post_abstract pre {position:relative; overflow:hidden;}
+
 .post_abstract h4 {font:bold 16px/1em "Museo Sans", Helvetica, Arial, sans-serif; color:#333;}
 .post_meta_title {border-bottom:1px solid #DCDCDC; margin-bottom:8px;}
 
