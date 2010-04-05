@@ -354,6 +354,9 @@ margin-bottom:0.5em;
 margin-top:1.4em;
 }
 
+.post_title a:link, .post_title a:hover, .post_title a:visited, .post_title a:active {color:#333; text-decoration:none;}
+.post_title a:hover {color:black;}
+
 h1 + br, h2 + br, h3 + br {display:none;}
 
 .code_block {position:relative;}
@@ -475,3 +478,5 @@ pre br {display:none;}
 /* coming soon */
 section article#coming_soon {background:url('/images/page_background_full.png') top left no-repeat; width:908px; min-height:623px; padding:26px; margin:0;}
 section article#coming_soon h4 {font:italic bold 32px georgia; text-align:center; margin-top:100px;}
+
+#tracking_code {position:absolute; bottom:0; right:0;}

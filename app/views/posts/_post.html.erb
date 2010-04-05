@@ -5,7 +5,7 @@
     <%= content_tag(:span, "", :class => 'person_mask') %>
   <% end -%>
   
-  <h3><%= post.title %></h3>
+  <h3 class="post_title"><%= link_to post.title, post_url(post.slug) %></h3>
 
   <div class="contributor_details">
     <h4>
@@ -41,3 +41,5 @@
 <div class="post_content">
   <%= raw textilize(post.body) unless post.body.nil? %>
 </div>
+
+
