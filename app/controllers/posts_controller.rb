@@ -1,39 +1,15 @@
 class PostsController < ApplicationController
-  
-  def welcome
-    @posts = Post.recent
-    @upcoming = Post.next
-
-    respond_to do |format|
-      format.html # index.html.erb
-    end
-  end
-
+  respond_to :html, :rss
 
   def index
-    # @posts = Post.published
-    # @upcoming = Post.upcoming
-    @posts = Post.recent
+    @nav_posts = Post.recent
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.rss  { render :layout => false }
-    end
-  end
-  
-  def feed
-    @posts = Post.recent
+    @body_posts = Post.past
+    @body_posts = @body_posts.slugged(params[:slug]) if params[:slug]
+    @body_posts = @body_posts.limit(1) unless request.format.rss?
 
-    respond_to do |format|
-      format.rss  { render :layout => false }
-    end
-  end
-  
-  def show
-    @post = Post.slugged(params[:slug])
-    @posts = Post.recent
     @upcoming = Post.next
+    respond_with @body_posts
   end
-  
-end
 
+end

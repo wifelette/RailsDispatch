@@ -1,11 +1,9 @@
 class Post < ActiveRecord::Base
 
-  scope :published, where("published != ?", false)# .where("published_date <= ?", Time.now)
-  scope :future, where("publish_date > ?", Time.now)
-  scope :past, where("publish_date < ?", Time.now)# .where("published_date <= ?", Time.now)
-  scope :upcoming, published.where("publish_date > ?", Time.now).limit(1)
+  scope :published, where("published != ?", false)
   scope :menu, where("published != ?", false).limit(4)
-  scope :recent, past.published.order('publish_date desc').limit(4)
+  scope :desc, order("publish_date desc")
+  scope :asc, order("publish_date asc")
 
   validates_presence_of :title, :sidebar_title, :contributor, :body, :publish_date, :slug
 
@@ -16,12 +14,28 @@ class Post < ActiveRecord::Base
 
   before_validation :write_slug
 
+  def self.future
+    where("publish_date > ?", Time.now)
+  end
+
+  def self.past
+    where("publish_date < ?", Time.now)
+  end
+
+  def self.recent
+    past.published.desc.limit(4)
+  end
+
+  def self.upcoming
+    published.where("publish_date > ?", Time.now).asc.limit(1)
+  end
+
   def self.slugged(name)
-    past.published.where(:slug => name).first
+    past.published.where(:slug => name)
   end
 
   def self.next
-    future.published.order("publish_date asc").limit(1).first
+    future.published.asc.limit(1).first
   end
 
   def days_until

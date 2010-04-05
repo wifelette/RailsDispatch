@@ -1,6 +1,6 @@
 <ul id="tab_nav">
 <% if @upcoming %>
-  <% content_tag :li, :class => "future" do %>
+  <%= content_tag :li, :class => "future" do %>
     <%= content_tag :span, :class => "upcoming_placeholder" do %>
     <span class="title"><%= @upcoming.sidebar_title %></span>
     <span class="details">Coming Next</span>
@@ -8,7 +8,7 @@
   <% end %>
 <% end %>
    
-<% @posts.each do |post| %>
+<% @nav_posts.each do |post| %>
   <%= content_tag(:li, :class => post_class(post)) do %>
     <%= link_to post_url(post.slug) do %>
     <span class="title"><%= post.sidebar_title %></span>

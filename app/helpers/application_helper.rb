@@ -30,8 +30,11 @@ module ApplicationHelper
   end
 
   def current_post?(post)
-    return true if current_page?(:slug => post.slug)
-    return true if current_page?("/posts") && post == @posts.first
+    if slug = params[:slug]
+      return true if slug == post.slug
+    else
+      return true if post == @body_posts.first
+    end
   end
 
   def post_class(post)
