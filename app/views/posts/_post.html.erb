@@ -11,7 +11,7 @@
     <h4>
       <span class="topichost"><%= "Topic Host:" if post.topic_host == true %></span>
       <%= post.contributor.full_name %>
-      <%= raw "<span class='skill_tag #{post.skill_level.downcase}'><span>#{post.skill_level}</span></span>" if post.skill_level %>
+      <%= raw "<span class='skill_header'>Skill Level: <span class='skill_tag #{post.skill_level.downcase}'><span>#{post.skill_level}</span></span></span>" if post.skill_level %>
     </h4>  
     <ul class="contributor_social_links">
       <li><%= link_to post.contributor.firstname, "http://twitter.com/#{post.contributor.twitter_username}", :rel => "tipsy", :class => "twitter_social", :title => "Follow #{post.contributor.firstname} on Twitter" %></li>
