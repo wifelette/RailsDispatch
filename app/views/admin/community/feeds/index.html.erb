@@ -29,13 +29,13 @@
 <tr>
   <th>Site url</th>
   <th>Feed url</th>
-  <th>Contributor</th>
+  <th style="width:175px;">Contributor</th>
   <th></th>
 </tr>
 <% @feeds.each_with_index do |feed, i| %>
 <tr class="actionable" id="<%= controller.controller_name %>_<%= feed.id %>">
-  <td><%= truncate(feed.site_url, 30) %></td>
-  <td><%= truncate(feed.feed_url, 30) %></td>
+  <td><%= truncate(feed.site_url, 20) %></td>
+  <td><%= truncate(feed.feed_url, 20) %></td>
   <td><%= feed.contributor.full_name if feed.contributor %></td>
 
   <td class="actions">

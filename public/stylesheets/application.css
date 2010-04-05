@@ -195,7 +195,7 @@ a.person_thumb.loading img {opacity:.3;}
 .person_thumb.large span.person_mask {height:143px; width:143px; background:url('/images/user_mask_large.png');}
 
 #contributor_details {height:144px; padding:20px 0;}
-ul.contributor_bio_info {float:left; width:506px; margin-bottom:10px;}
+ul.contributor_bio_info {float:left; width:506px; margin-bottom:8px;}
 ul.contributor_bio_info li {font:italic 14px/1.1em georgia, serif; border-bottom:1px solid #F5F5F5; height:28px; line-height:30px;  color:#414141;}
 ul.contributor_bio_info li.contributor_name {font:18px/1.1em "Museo Sans", sans-serif; height:28px; color:#212121;}
 
@@ -205,6 +205,10 @@ ul.contributor_bio_info li.contributor_name {font:18px/1.1em "Museo Sans", sans-
 
 .with_contributor a.person_thumb.small{position:absolute; bottom:-47px; left:20px;}
 .with_contributor a.person_thumb.small span.person_mask {background:url('/images/people/masks/content_header_masks.png');}
+
+.contributor_bio_info pre {overflow:hidden;}
+
+.contributor_bio_info br + br {display:none;}
 
 #page_additional .contributor_social_links {position:absolute; left:107px; bottom:-35px;}
 #page_additional .contributor_social_links li {float:left;}
