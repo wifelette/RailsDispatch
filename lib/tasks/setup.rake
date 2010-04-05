@@ -4,4 +4,4 @@ namespace :bundle do
   end
 end
 
-task :setup => ["bundle:install", "db:setup", "db:seed"]
+task :setup => ["bundle:install", "db:setup"]

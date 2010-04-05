@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
   
   def welcome
-    @posts = Post.past.published.order('publish_date desc').limit(4)
-    @upcoming = Post.published.future.order("publish_date asc").limit(1)
+    @posts = Post.recent
+    @upcoming = Post.next
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class PostsController < ApplicationController
   def index
     # @posts = Post.published
     # @upcoming = Post.upcoming
-    @posts = Post.past.published.order('publish_date desc').limit(4)
+    @posts = Post.recent
 
     respond_to do |format|
       format.html # index.html.erb
@@ -22,7 +22,7 @@ class PostsController < ApplicationController
   end
   
   def feed
-    @posts = Post.past.published.order('publish_date desc').limit(4)
+    @posts = Post.recent
 
     respond_to do |format|
       format.rss  { render :layout => false }
@@ -30,9 +30,9 @@ class PostsController < ApplicationController
   end
   
   def show
-    @post = Post.past.published.first(:conditions => {:slug => params[:slug]})
-    @posts = Post.past.published.order('publish_date desc').limit(4)
-    @upcoming = Post.published.future.order("publish_date asc").limit(1)
+    @post = Post.slugged(params[:slug])
+    @posts = Post.recent
+    @upcoming = Post.next
   end
   
 end

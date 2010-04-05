@@ -1,23 +1,19 @@
 <ul id="tab_nav">
 <% if @upcoming %>
-  <% @upcoming.each do |post| %>
-    <% content_tag :li, :class => "future" do %>
-      <%= content_tag :span, :class => "upcoming_placeholder" do %>
-      <span class="title"><%= post.sidebar_title %></span>
-      <span class="details">Coming next</span>
-      <% end %>
+  <% content_tag :li, :class => "future" do %>
+    <%= content_tag :span, :class => "upcoming_placeholder" do %>
+    <span class="title"><%= @upcoming.sidebar_title %></span>
+    <span class="details">Coming Next</span>
     <% end %>
   <% end %>
 <% end %>
    
-<% if @posts.past.published %>   
-<% @posts.past.published.each_with_index do |post, i| %>
-  <% content_tag :li, :class => (current_page?(:slug => post.slug) || (i == 0 && controller.action_name == 'welcome')) ? "active" : "inactive" do %>
+<% @posts.each do |post| %>
+  <%= content_tag(:li, :class => post_class(post)) do %>
     <%= link_to post_url(post.slug) do %>
     <span class="title"><%= post.sidebar_title %></span>
-    <span class="details"><%= weeks_or_time_ago_in_words(post.publish_date) %></span>
+    <span class="details"><%= time_ago_in_words(post.publish_date) %></span>
     <% end %>
   <% end %>
-<% end %>
 <% end %>
 </ul>
