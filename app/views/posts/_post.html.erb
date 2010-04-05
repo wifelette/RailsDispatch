@@ -9,7 +9,7 @@
 
   <div class="contributor_details">
     <h4>
-      <span class="topichost"><%= "Topic host:" if post.topic_host == true %></span>
+      <span class="topichost"><%= "Topic Host:" if post.topic_host == true %></span>
       <%= post.contributor.full_name %>
       <%= raw "<span class='skill_tag #{post.skill_level.downcase}'><span>#{post.skill_level}</span></span>" unless post.skill_level.empty? %>
     </h4>  

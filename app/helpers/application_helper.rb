@@ -6,7 +6,7 @@ module ApplicationHelper
     text.gsub(/\<pre(?:\s+lang="(.+?)"(?:\s+data-caption="(.+?)")?)?\>(.+?)\<\/pre\>/m) do
       contents = $3.strip
       content_tag :div, :caption => $2, :class => "code_block" do
-        CodeRay.scan(contents, $1).div(:css => :class)
+        CodeRay.scan(contents, $1).div(:css => :class).html_safe
       end
     end
   end
