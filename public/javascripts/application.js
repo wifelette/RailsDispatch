@@ -38,7 +38,7 @@ $.fn.linked_bio = function(options) {
   console.log(this)
 };
 
-// loadmore pagaination
+// load more... pagination
 $.fn.load_more = function(options) {  
   $("#load_more").live("click", function(event) {
     $(this).addClass("loading")
@@ -128,7 +128,6 @@ $(document).ready(function () {
   if (window.location.pathname.match(/contributors/)) {
     contributor_id = window.location.hash.substr(1)
     $("a[href=/contributors/" + contributor_id + "]").addClass("loading")
-    $("a[href=/contributors/" + contributor_id + "]").html("Loading...")
     $.getScript("/contributors/" + contributor_id);
   }
   
