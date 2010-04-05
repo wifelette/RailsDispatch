@@ -11,7 +11,7 @@
       <h4><%= link_to raw(feed_entry.title), feed_entry.url %></h4>  
       <h5>Posted <%= time_ago_in_words(feed_entry.published_at) %> ago on <%= link_to feed_entry.feed.site_url %> <%= " by #{feed_entry.feed.contributor.full_name}" if feed_entry.feed.contributor %></h5>
     </div>
-    <%= truncate(feed_entry.summary.html_safe, 680) %>
+    <%= truncate(feed_entry.summary, 400).html_safe %>
   </div>
 
 </div>
