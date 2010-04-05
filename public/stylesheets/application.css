@@ -213,6 +213,7 @@ ul.contributor_bio_info li.contributor_name {font:18px/1.1em "Museo Sans", sans-
 .contributor_bio_info pre {overflow:hidden;}
 
 .contributor_bio_info br + br {display:none;}
+.post_abstract br + br {display:none;}
 
 #page_additional .contributor_social_links {position:absolute; left:107px; bottom:-35px;}
 #page_additional .contributor_social_links li {float:left;}

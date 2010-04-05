@@ -13,8 +13,10 @@
 
 
 <%= form_for ([:admin, @page]) do |form| %>
-  <ol>
-    
+  
+<%= form.error_messages %>
+
+  <ol>  
     <li class="field">
       <label>Page title</label>
       <%= form.text_field :page_title %>
