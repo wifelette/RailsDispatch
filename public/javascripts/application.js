@@ -24,10 +24,18 @@ function initialize() {
 
 // load bio for contributor
 $.fn.load_bio = function(options) {  
-  $(this).removeClass("active");
-  $(this).addClass("loading");
-  $(this).prepend("<span class='bio_loader'></span>");
-  $.getScript(this.href);
+  $("#contributors_page .person_thumb").live("click", function(event) {
+    $(this).removeClass("active");
+    $(this).addClass("loading");
+    $(this).prepend("<span class='bio_loader'></span>");
+    $.getScript(this.href);
+    event.preventDefault();
+  });
+};
+
+// load bio from links to contributor
+$.fn.linked_bio = function(options) {  
+  console.log(this)
 };
 
 // loadmore pagaination
@@ -118,7 +126,21 @@ $.fn.captionCodeBlocks = function(attr) {
 $(document).ready(function () {
     
   if (window.location.pathname.match(/contributors/)) {
-    console.log(window.location.hash.substr(1))
+    contributor_id = window.location.hash.substr(1)
+    $("a[href=/contributors/" + contributor_id + "]").addClass("loading")
+    $("a[href=/contributors/" + contributor_id + "]").html("Loading...")
+    
+    // console.log(contributor_id)
+    $.getScript("/contributors/" + contributor_id);
+    
+    // $.ajax({
+    //    type: "GET",
+    //    url: $(contributor_id).href,
+    //    dataType: "script"
+    //  });
+    
+    // $.getScript();
+    // event.preventDefault();
   }
   
   // confirm delete buttons
@@ -134,18 +156,15 @@ $(document).ready(function () {
   });
   
   // load bio
-  $("#contributors_page .person_thumb").click(function(event) {
-    $(this).load_bio();
-    event.preventDefault();
-  });
+  $(".person_thumb").load_bio();
   
   // load more style pagination
   $("#load_more").load_more();
 
   // prevent users from clicking active tabs
-  // $(".active a, li.current a").click(function(event) {
-  //   event.preventDefault();
-  // });
+  $(".active a, li.current a").click(function(event) {
+    event.preventDefault();
+  });
   
   $("div[caption]").captionCodeBlocks("caption")
   

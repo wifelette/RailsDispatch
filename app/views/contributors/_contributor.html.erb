@@ -1,4 +1,4 @@
-<% content_tag :a, :href => url_for(contributor), :title => contributor.full_name, :class => "person_thumb small#{(' last_in_row' if ((contributor_counter) % 6 == 0) && contributor_counter != 0)}", :rel => 'tipsy' do -%>
+<% content_tag :a, :href => url_for(contributor), :title => contributor.full_name, :class => "person_thumb small#{(' last_in_row' if ((contributor_counter) % 6 == 0) && contributor_counter != 0)} #{contributor.id}", :rel => 'tipsy' do -%>
   <%= image_tag contributor.photo.url(:thumb), :alt => contributor.full_name %>
   <%= content_tag(:span, "", :class => 'person_mask') %>
 <% end -%>
