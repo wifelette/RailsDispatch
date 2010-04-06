@@ -13,12 +13,12 @@
       <%= post.contributor.full_name %>      
     </h4>  
     
-    <!-- <%# if post.skill_level %>
+    <% if post.skill_level %>
       <div class="post_skill_level">
         <h3>Skill Level:</h3>
-        <%#= raw "<span class='skill_tag #{post.skill_level.downcase}'><span>#{post.skill_level}</span></span>"  %>          
+        <%= raw "<span class='skill_tag #{post.skill_level.downcase}'><span>#{post.skill_level}</span></span>"  %>          
       </div>
-    <%# end %> -->
+    <% end %>
     
     <ul class="contributor_social_links">
       <li><%= link_to post.contributor.firstname, "http://twitter.com/#{post.contributor.twitter_username}", :rel => "tipsy", :class => "twitter_social", :title => "Follow #{post.contributor.firstname} on Twitter" %></li>
