@@ -6,7 +6,7 @@
         <%= content_tag(:span, "", :class => 'person_mask') %>
       <% end -%>
     <% else %>
-      <% content_tag :span, :class => "person_thumb small", :rel => 'tipsy' do -%>
+      <% content_tag :span, :class => "person_thumb small", :title => feed_entry.feed.contributor.full_name, :rel => 'tipsy' do -%>
         <%= image_tag feed_entry.feed.contributor.photo.url(:thumb), :alt => feed_entry.feed.contributor.full_name %>
         <%= content_tag(:span, "", :class => 'person_mask') %>
       <% end -%>
