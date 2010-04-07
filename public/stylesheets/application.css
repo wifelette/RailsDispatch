@@ -144,7 +144,7 @@ div#sidebar_notice {background:#ffe7b4; background:rgba(255, 231, 180, .5); padd
 div#sidebar_notice_content {background:url('/images/screencast_icon.png') #ffe7b4 12px 11px no-repeat; background:url('/images/screencast_icon.png') rgba(254, 242, 216, .8) 12px 11px no-repeat; border:1px solid #9E9377; padding:10px 10px 10px 48px; -moz-border-radius: 2px; -webkit-border-radius: 2px;}
 div#sidebar_notice p {font-size:12px; line-height:16px; margin:0; color:#3c2900; text-shadow:0 1px 0 white;}
 
-.banner {position:relative; top:10px; left:-2px;}
+.banner {position:relative; top:10px; left:-2px; margin-bottom:10px; display:block;}
 
 div.next_week {margin-top:8px; padding:22px 0 0 33px; color:white; font-size:17px; font-weight:bold; opacity:.96; -webkit-text-stroke:1px transparent; text-shadow:0 -1px 0 #004955; font-family:"Museo Sans"; background:url('/images/next_week.png') top left no-repeat; height:50px; position:relative; left:-33px;}
 
