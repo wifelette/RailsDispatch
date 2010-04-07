@@ -176,9 +176,9 @@ div#engineyard_photo h6 {margin-top:10px; width:124px; height:24px; background:u
 #page_additional.settings {padding-bottom:0;}
 #page_additional.settings nav {}
 
-a.person_thumb {height:79px; width:79px; display:block; margin:0 19px 19px 0; position:relative; float:left;}
+a.person_thumb, span.person_thumb {height:79px; width:79px; display:block; margin:0 19px 19px 0; position:relative; float:left;}
 a.person_thumb.last_in_row {margin-right:0;}
-a.person_thumb img {position:absolute; top:0; left:0;}
+a.person_thumb img, span.person_thumb img {position:absolute; top:0; left:0;}
 span.person_mask {height:79px; width:79px; display:block; position:absolute; top:0; left:0; background:url('/images/user_mask_small.png');}
 a.person_thumb.loading img {opacity:.3;}
 
@@ -188,7 +188,6 @@ a.person_thumb.loading img {opacity:.3;}
 #person_bio.loading {}
 #person_bio.loading .bio_loader {display:block; background:url('/images/loader.gif') left center no-repeat; height:100%; width:500px; margin:0 auto;}
 #person_bio.active {display:block;}
-
 
 .person_thumb.large {height:143px; width:143px; margin:0 20px 0 0;}
 .person_thumb.large img {height:143px; width:143px;}
