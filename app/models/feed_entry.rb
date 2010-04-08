@@ -21,17 +21,16 @@ class FeedEntry < ActiveRecord::Base
 
   def self.add_entries(entries, feed_id)
     entries.each do |entry|
-      unless exists? :guid => entry.id
-        create!(
-          :title          => entry.title,
-          :summary        => entry.summary,
-          :url            => entry.url,
-          :published_at   => entry.published,
-          :author         => entry.author,
-          :guid           => entry.id,
-          :feed_id        => feed_id
-        )
-      end
+      e = {
+        :title          => entry.title,
+        :summary        => entry.summary,
+        :url            => entry.url,
+        :published_at   => entry.published,
+        :author         => entry.author,
+        :guid           => entry.id,
+        :feed_id        => feed_id
+      }
+      FeedEntry.find_or_create_by_guid(e)
     end    
   end
 end
