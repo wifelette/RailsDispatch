@@ -1,7 +1,5 @@
 source 'http://rubygems.org'
 
-# gem 'rails', '3.0.0.beta1'
-# gem "rails", :git => "git://github.com/rails/rails.git", :ref => '1b9777e84f569c6abde2435d66882170e263fc90'
 gem 'rails', '3.0.0.beta2'
 
 # Bundle edge Rails instead:
@@ -19,9 +17,8 @@ gem 'right_aws'
 gem 'aws-s3', :require => 'aws/s3'
 gem 'feedzirra', :git => 'git://github.com/pauldix/feedzirra.git'
 gem "loofah", "0.4.7", :git => 'git://github.com/jpsilvashy/loofah.git'
+# gem 'backup'
 
-# gem 'will_paginate', :git => 'git://github.com/mislav/will_paginate.git', :branch => 'rails3'
-# gem 'will_paginate', :git => 'git://github.com/kaichen/will_paginate.git', :branch => 'rails3_namespace_fix'
 gem "bluecloth"
 
 gem 'github-markup', :require => 'github/markup'

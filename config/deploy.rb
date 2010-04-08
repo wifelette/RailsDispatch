@@ -30,8 +30,8 @@ role :db, domain, :primary => true
 
 set :scm, :git
 set :branch, "master"
-set :repository, "git@git.newgoldleaf.com:engineyard-railsdispatch.git"
-set :deploy_via, :remote_cache
+set :repository, "git@github.com:wifelette/RailsDispatch.git"
+# set :deploy_via, :remote_cache
 
 # #############################################################
 # # Deploy

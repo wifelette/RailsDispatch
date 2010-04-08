@@ -132,7 +132,7 @@ specs:
 - bundler: 
     version: 0.9.14
 - json_pure: 
-    version: 1.2.3
+    version: 1.2.4
 - rubyforge: 
     version: 2.0.4
 - hoe: 
@@ -151,7 +151,7 @@ specs:
 - highline: 
     version: 1.5.2
 - json: 
-    version: 1.2.3
+    version: 1.2.4
 - rest-client: 
     version: 1.4.2
 - termios: 
@@ -193,7 +193,7 @@ specs:
     version: 1.10.0
 - whenever: 
     version: 0.4.1
-hash: 17ecdccf145ff72375a6a4116022b94464320e45
+hash: fedd98cb84961ccea5caaecf9e35c1d541b9862b
 sources: 
 - Git: 
     name: loofah

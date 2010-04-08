@@ -37,6 +37,17 @@ test:
   password:
   socket: /tmp/mysql.sock
 
+staging:
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: rails_dispatch_staging
+  pool: 5
+  username: root
+  password: jsilvash2
+  socket: /tmp/mysql.sock
+
+
 production:
   adapter: mysql
   encoding: utf8
