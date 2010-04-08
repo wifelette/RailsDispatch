@@ -47,7 +47,6 @@ staging:
   password: jsilvash2
   socket: /var/run/mysqld/mysqld.sock
 
-
 production:
   adapter: mysql
   encoding: utf8
