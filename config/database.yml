@@ -45,7 +45,7 @@ staging:
   pool: 5
   username: root
   password: jsilvash2
-  socket: /tmp/mysql.sock
+  socket: /var/run/mysqld/mysqld.sock
 
 
 production:
