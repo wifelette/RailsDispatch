@@ -6,7 +6,7 @@
 
 
   <!--[if lte IE 8]><script src="/javascripts/html5.js"></script><![endif]-->
-  <%= javascript_include_tag "jquery-1.4.2.min", "jquery.rails", "tipsy", "application" %>
+  <%= javascript_include_tag "jquery-1.4.2.min", "jquery.rails", "jquery.cookie", "tipsy", "application" %>
   <%= stylesheet_link_tag "application" %>
   
   <!--[if lte IE 6]><link rel="stylesheet" href="/stylesheets/main.ie6.css" type="text/css" media="screen" charset="utf-8"><![endif]-->
@@ -22,9 +22,11 @@
 <body id="<%= controller.controller_name %>_page">
 
   <% for notification in Notification.current_notifications %>
-  <div class="alert">
-    <span><%= raw notification.message %> <a href="#" class="close_alert"></a></span>
+  <% unless request.cookies['notifications'] && request.cookies['notifications'].split(' ').include?("#{notification.id}") %>
+  <div class="alert" id="<%= "alert_#{notification.id}" %>">
+    <span><%= raw notification.message %> <a href="#" class="close_alert" data-notice-id='<%= notification.id %>'></a></span>
   </div>
+  <% end %>
   <% end %>
   
   <header>
@@ -60,8 +62,10 @@
           <%= link_to "Community", '/community' %>
         <% end %>
         
+        <%- if Page.published.size > 0 -%>
         <%= content_tag :li, :class => controller.controller_name == "pages" ? "current" : nil do %>
           <%= link_to "About", "/about/#{Page.published.first.slug}" %>
+        <% end %>
         <% end %>
         
       </ul>  
@@ -92,7 +96,9 @@
           <li><%= link_to "Posts", root_path %></li>
           <li><%= link_to "Contributors", contributors_path %></li>
           <li><%= link_to "Community", '/community' %></li>
+          <%- if Page.published.size > 0 -%>
           <li><%= link_to "About", "/about/#{Page.published.first.slug}" %></li>
+          <%- end -%>
         </ul>
         
         <div id="copyrights">

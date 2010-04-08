@@ -123,6 +123,35 @@ $.fn.captionCodeBlocks = function(attr) {
 };
 })(jQuery);
 
+var cookie;
+
+/* NGL notification helpers. depends on jQuery.cookie plugin */
+(function($){
+  if (typeof(jQuery.cookie) != 'function') {
+    $.fn.notifications = function(){};
+    return false;
+  };
+  var defaults = {cookie : 'notifications', notice_selector : 'div.alert', notice_prefix : 'alert_', id_attr : 'data-notice-id'}
+  
+  $.fn.notifications = function(options){
+    options = $.extend({}, defaults, options);
+
+    this.each(function(el){
+      var el = $(this);
+      
+      el.click(function(){
+        var id = $(this).attr(options['id_attr']);
+        var notice = ["#", options['notice_prefix'], id].join('')
+        cookie = $.cookie(options['cookie']);
+        seen = cookie==null ? [] : cookie;
+        seen.push(id);
+        $.cookie(options['cookie'], seen.join(' '), {expires : 90})
+        $(notice).fadeOut('fast');
+      });
+    });
+  };
+})(jQuery);
+
 $(document).ready(function () {
     
   if (window.location.pathname.match(/contributors/)) {
@@ -139,9 +168,7 @@ $(document).ready(function () {
   // tipsy tool tips
   $('[rel=tipsy]').tipsy({gravity: 's'});
 
-  $("a.close_alert").click(function(event) {
-    $("div.alert").fadeOut("fast");
-  });
+  $("a.close_alert").notifications();
   
   // load bio
   $(".person_thumb").load_bio();
