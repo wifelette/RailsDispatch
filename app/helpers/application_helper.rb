@@ -41,12 +41,19 @@ module ApplicationHelper
     current_post?(post) ? "active" : "inactive"
   end
 
-  def time_ago_in_words(from_time, include_seconds = false)
+  def weeks_ago_in_words(from_time, include_seconds = false)
     weeks_ago = (Time.now - from_time) / 1.week
     ["this week", "last week", "two weeks ago", 
      "three weeks ago", "four weeks ago", 
      "one month ago", "about one month ago"][weeks_ago] || super
   end
+  
+  # def weeks_until_in_words(from_time, include_seconds = false)
+  #   to_time   = Time.now
+  #   weeks_ago = (from_time - to_time)/1.week
+  #   ["next week", "in about two weeks", "in three weeks", "in four weeks", "in about a month", "upcoming"][weeks_ago] || distance_of_time_in_words(from_time, Time.now, include_seconds)
+  # end
+  
   
   def tracking_code
     if controller.controller_name == 'posts' && controller.action_name = 'welcome'

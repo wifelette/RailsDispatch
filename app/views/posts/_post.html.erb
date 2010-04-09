@@ -9,9 +9,7 @@
 
   <div class="contributor_details">
     <h4>
-      <span class="topichost"><%= "Topic Host:" if post.topic_host == true %></span>
-      <%= post.contributor.full_name %>      
-    </h4>  
+      <span class="topichost"><%= "Topic Host:" if post.topic_host == true %></span><%= post.contributor.full_name %></h4>  
     
     <!-- <%# if post.skill_level %>
       <div class="post_skill_level">

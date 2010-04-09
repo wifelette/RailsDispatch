@@ -170,7 +170,7 @@ div#engineyard_photo h6 {margin-top:10px; width:124px; height:24px; background:u
 #copyrights p {color:white; margin:30px 0 0 0; float:left; width:165px;}
 
 /* page details */
-#page_additional {width:664px; position:relative; top:-21px; left:-21px; background:#FFF9EB; border-bottom:1px solid #F5EDD2; padding:18px 26px;}
+#page_additional {width:664px; position:relative; top:-21px; left:-21px; background:#FFF9EB; border-bottom:1px solid #F5EDD2; padding:22px 22px 10px 26px;}
 #page_additional h4 {margin:0;}
 
 #page_additional.settings {padding-bottom:0;}
@@ -202,7 +202,7 @@ ul.contributor_bio_info {float:left; width:506px; margin-bottom:8px;}
 ul.contributor_bio_info li {font:italic 14px/1.1em georgia, serif; border-bottom:1px solid #F5F5F5; height:28px; line-height:30px;  color:#414141;}
 ul.contributor_bio_info li.contributor_name {font:18px/1.1em "Museo Sans", sans-serif; height:28px; color:#212121;}
 
-#page_additional.with_contributor {padding:22px 22px 10px 26px; margin-bottom:30px;}
+#page_additional.with_contributor {margin-bottom:30px;}
 #page_additional.with_contributor h3 {margin-left:86px;}
 #page_additional.with_contributor h4 {margin-left:86px;}
 
@@ -311,7 +311,9 @@ div.counter_section_mask {background:url('/images/counter/small/counter_mask.png
 .post_abstract h4 {font:bold 16px/1em "Museo Sans", Helvetica, Arial, sans-serif; color:#333;}
 .post_meta_title {border-bottom:1px solid #DCDCDC; margin-bottom:8px;}
 
-.popular_post a {color:#9A0000;}
+.popular_post a {color:#780000; text-decoration:none;}
+.popular_post h5 a {border-bottom:1px solid #FBE7E7;}
+.popular_post h5 a:hover {border-bottom:1px solid #780000;}
 .popular_post a:hover {}
 
 .popular_post .post_meta_title h4 a {color:#780000; text-decoration:none;}
@@ -375,7 +377,7 @@ br:first-child {display:none;}
 div.code pre br {display:none;}
 
 section article h3 {font:bold 24px/1.2em "Museo Sans", Helvetica, Arial, sans-serif;}
-section article h4 {font:italic 14px/1.1em georgia, serif; margin-bottom:12px; color:#595959;}
+section article h4 {font:normal 14px/1.1em georgia, serif; margin-bottom:12px; color:#595959;}
 div.video_frame {border:10px solid #DFEEF2; display:block; margin-bottom:18px; padding:3px; float:left;}
 div.video {width:400px; float:left; margin-bottom:20px;}
 div.video * {display:none; float:left;}

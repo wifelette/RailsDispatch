@@ -12,7 +12,7 @@
   <%= content_tag(:li, :class => post_class(post)) do %>
     <%= link_to post_url(post.slug) do %>
     <span class="title"><%= post.sidebar_title %></span>
-    <span class="details"><%= time_ago_in_words(post.publish_date) %></span>
+    <span class="details"><%= weeks_ago_in_words(post.publish_date) %></span>
     <% end %>
   <% end %>
 <% end %>

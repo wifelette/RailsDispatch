@@ -16,7 +16,7 @@
   <div class="post_abstract">
     <div class="post_meta_title">
       <h4><%= link_to raw(feed_entry.title), feed_entry.url %></h4>  
-      <h5><%= link_to "Posted #{time_ago_in_words(feed_entry.published_at)}", feed_entry.feed.site_url %> ago <%= "by #{feed_entry.feed.contributor.full_name}" if feed_entry.feed.contributor %></h5>
+      <h5><%= link_to "Posted #{time_ago_in_words(feed_entry.published_at)} ago", feed_entry.feed.site_url %> <%= "by #{feed_entry.feed.contributor.full_name}" if feed_entry.feed.contributor %></h5>
     </div>
     <%= raw truncate(feed_entry.summary, 400) %>
   </div>
