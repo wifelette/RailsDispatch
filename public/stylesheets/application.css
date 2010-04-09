@@ -203,8 +203,10 @@ ul.contributor_bio_info li {font:italic 14px/1.1em georgia, serif; border-bottom
 ul.contributor_bio_info li.contributor_name {font:18px/1.1em "Museo Sans", sans-serif; height:28px; color:#212121;}
 
 #page_additional.with_contributor {margin-bottom:30px;}
-#page_additional.with_contributor h3 {margin-left:86px;}
-#page_additional.with_contributor h4 {margin-left:86px;}
+#page_additional h3 {position:relative; bottom:4px;}
+#page_additional.with_contributor h3 {margin-left:86px; bottom:2px;}
+#page_additional h4 {position:relative; bottom:2px;}
+#page_additional.with_contributor h4 {margin-left:86px; bottom:0;}
 
 .with_contributor a.person_thumb.small{position:absolute; bottom:-47px; left:20px;}
 .with_contributor a.person_thumb.small span.person_mask {background:url('/images/people/masks/content_header_masks.png');}
@@ -304,7 +306,6 @@ div.counter_section_mask {background:url('/images/counter/small/counter_mask.png
 
 /* Community Page */
 .popular_post {margin:0 0 46px 0;}
-.popular_post .person_thumb {margin:4px 0 0 0;}
 .post_abstract {width:562px; padding:0; margin-left:100px; overflow:hidden;}
 .post_abstract pre {position:relative; overflow:hidden;}
 
@@ -475,6 +476,8 @@ tr.actionable.in_progress:hover a.simple_button {visibility:visible;}
 
 pre br {display:none;}
 
+/* hacks */
+iframe {position:absolute; bottom:0; left:0;}
 
 /* coming soon */
 section article#coming_soon {background:url('/images/page_background_full.png') top left no-repeat; width:908px; min-height:623px; padding:26px; margin:0;}
