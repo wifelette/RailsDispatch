@@ -477,7 +477,7 @@ tr.actionable.in_progress:hover a.simple_button {visibility:visible;}
 pre br {display:none;}
 
 /* hacks */
-iframe {position:absolute; bottom:0; left:0;}
+body > iframe {position:absolute; bottom:0; left:0;}
 
 /* coming soon */
 section article#coming_soon {background:url('/images/page_background_full.png') top left no-repeat; width:908px; min-height:623px; padding:26px; margin:0;}
