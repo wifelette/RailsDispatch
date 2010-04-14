@@ -33,7 +33,7 @@ module ApplicationHelper
     if slug = params[:slug]
       return true if slug == post.slug
     else
-      return true if post == @body_posts.first
+      return true if post == @nav_posts.first
     end
   end
 
