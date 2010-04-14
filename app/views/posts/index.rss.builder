@@ -22,7 +22,7 @@ xml.rss :version => "2.0" do
     for post in @body_posts
       xml.item do
         xml.title post.title
-        xml.description post.body
+        xml.description textilize(post.body)
         xml.pubDate post.created_at.to_s(:rfc822)
         xml.link post_url(post.slug)
       end
