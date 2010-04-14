@@ -161,11 +161,12 @@ footer p a:hover {background:none; border-bottom:2px solid #6D6D6D; color:white;
 
 /*footer div#newgoldleaf {background:url('/images/footer_seperator.png') center right no-repeat; width:241px; display:block; height:250px; float:left; margin-right:24px;}*/
 footer div#engineyard {float:left; width:412px; display:block; height:250px; float:left; margin-right:24px; font-size:14px; opacity:.99;}
-footer nav {float:left; width:253px; display:block; height:250px; float:left;}
+footer nav {float:left; width:253px; display:block; height:250px;}
 footer nav ul li {border-bottom:1px solid #545454;}
 footer nav ul li a {color:white; padding:8px 0; display:block; border-bottom:1px solid #181818; text-decoration:none; font-weight:bold;}
 div#engineyard_photo h6 {margin-top:10px; width:124px; height:24px; background:url('/images/our_office.png') no-repeat; text-indent:-9999px; width:150px; display:block; float:right; clear:left;}
 
+#copyrights {float:left; width:253px; display:block; position:relative; top:-15px;}
 #copyrights h5 {display:block; background:url('/images/engineyard_footer_logo.png') no-repeat; width:66px; height:103px; text-indent:-9999px; float:left; margin:18px 18px 0 0;}
 #copyrights p {color:white; margin:30px 0 0 0; float:left; width:165px;}
 

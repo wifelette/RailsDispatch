@@ -91,26 +91,13 @@
         <%= raw markdown(Setting.all[2].setting_value) %>
       </div>
 
-      <nav>
-        <ul>
-          <li><%= link_to "Posts", root_path %></li>
-          <li><%= link_to "Contributors", contributors_path %></li>
-          <li><%= link_to "Community", '/community' %></li>
-          <%- if Page.published.size > 0 -%>
-          <li><%= link_to "About", "/about/#{Page.published.first.slug}" %></li>
-          <%- end -%>
-        </ul>
-        
-        <div id="copyrights">
-          <h5>Engine Yard</h5>
-          <p>Designed and developed by <a href="http://newgoldleaf.com">New Gold Leaf</a>, deployed at <a href="http://engineyard.com">Engine Yard</a>.</p>
-        </div>
-        
-      </nav>
+      <div id="copyrights">
+        <h5>Engine Yard</h5>
+        <p>Designed and developed by <a href="http://newgoldleaf.com">New Gold Leaf</a>, deployed at <a href="http://engineyard.com">Engine Yard</a>.</p>
+      </div>
     </div>
-    
   </footer>
-  
+
   <div id="tracking_code">
     <%= tracking_code %>
   </div>
