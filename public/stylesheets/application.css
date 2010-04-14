@@ -98,7 +98,7 @@ header nav ul li.current a {cursor:default;}
 /* main */
 section {width:960px; margin:0 auto; position:relative;}
 section nav {position:absolute; top:5px; left:0; width:220px; z-index:10;}
-section article {background:url('/images/page_background.png') top left no-repeat; width:670px; min-height:843px; padding:26px; margin-left:238px;}
+section article {background:url('/images/page_background.png') top left no-repeat; width:670px; min-height:920px; padding:26px; margin-left:238px;}
 
 section nav ul#tab_nav {margin-top:145px; position:relative; left:-10px;}
 section nav ul#tab_nav li {}
@@ -212,6 +212,12 @@ ul.contributor_bio_info li.contributor_name {font:18px/1.1em "Museo Sans", sans-
 .with_contributor a.person_thumb.small{position:absolute; bottom:-47px; left:20px;}
 .with_contributor a.person_thumb.small span.person_mask {background:url('/images/people/masks/content_header_masks.png');}
 
+a.person_thumb.tiny.inline {display:inline-block; float:none; position:relative; top:2px;}
+.question_details span {display:inline-block; float:left; margin-right:8px;}
+a.person_thumb.tiny.inline {height:18px; width:18px;}
+a.person_thumb.tiny.inline img {height:18px; width:18px;}
+a.person_thumb.tiny.inline .person_mask {height:18px; width:18px; background:url('/images/user_mask_tiny.png');}
+
 .contributor_bio_info pre {overflow:hidden;}
 
 .contributor_bio_info br + br {display:none;}
@@ -277,6 +283,9 @@ li.field.time_select div.selector select {width:108px;}
 #uniform-post_publish_date_4i {clear:left;}
 
 .nested_fields {margin-bottom:2em;}
+
+/* uniforms */
+.uniform label {position:relative; top:2px;}
 
 /* errors */
 div.errorExplanation {margin-bottom:1.4em; padding-bottom:1em; border-bottom:1px solid #ccc;}
@@ -375,7 +384,31 @@ h1 + br, h2 + br, h3 + br {display:none;}
 
 .post_content code {background:#F0F0F0; padding:3px;}
 
+/* questions */
+section article .questions  h2 {
+display:block;
+font:bold 18px/1.2em Helvetica,Arial,sans-serif;
+margin:5px 0 1.2em 0;
+}
 
+.question {padding-bottom:1em; margin-bottom:1em; border-bottom:1px solid #E3E3E3; clear:both; overflow:hidden; position:relative;}
+
+.question_details {position:absolute; top:0; left:0; font-size:12px; font-weight:bold; color:#2F2F2F; padding:0 0 0 4px;}
+.question_body {font-size:12px; width:520px; float:left; padding:26px 0 0 4px; line-height:20px; color:#626262;}
+.question_meta {font-size:12px; width:117px; float:right;}
+
+/* voting */
+.voting {display:block; text-align:center; margin-top:6px;}
+.voting.voted {}
+.vote_count {display:inline; font-size:18px; font-weight:bold; color:#EBA600; padding:7px 0; position:relative; top:6px;}
+
+.vote_count.is_zero {color:#868686;}
+
+.vote_up {background:url('/images/icons/vote.png') 0 -31px no-repeat; display:inline-block; height:31px; width:25px; margin:0 5px; text-indent:-9999px; position:relative; top:3px;}
+.vote_down {background:url('/images/icons/vote.png') -28px -31px no-repeat; display:inline-block; height:31px; width:25px; margin:0 5px; text-indent:-9999px;}
+
+.vote_up:hover {background-position:0 0;}
+.vote_down:hover {background-position:-28px 0;}
 
 .CodeRay > br {display:none;}
 br:first-child {display:none;}
@@ -432,6 +465,7 @@ a.simple_button:active span {color:#4F4F4F; background-position:right -28px;}
 a.simple_button.warning {background-image:url("/images/simple_buttons_bg_warn.png")}
 a.simple_button.warning span {color:white; text-shadow:0 -1px 0 #270100; opacity:.96; -webkit-text-stroke:1px transparent; background-image:url("/images/simple_buttons_ends_warn.png")}
 
+a.simple_button.ask_question {position:absolute; right:40px;}
 
 
 tr.actionable td {vertical-align:middle;}

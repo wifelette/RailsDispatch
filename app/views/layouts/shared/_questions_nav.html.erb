@@ -1,0 +1,30 @@
+<ul id="tab_nav">
+  
+  <%= content_tag :li, :class => ("active" if controller.controller_name == "questions" && controller.action_name == "index") do %>
+    <%= link_to community_questions_path do %>
+      <span class="title">Recently asked</span>
+      <span class="details">Vote on questions you&rsquo;d like answered</span>
+    <% end %>
+  <% end %>
+
+  <li class="inactive">
+    <a href="#">
+      <span class="title">Recently answered questions</span>
+      <span class="details">See what the experts have to say</span>
+    </a>
+  </li>
+
+  <%= content_tag :li, :class => ("active" if controller.controller_name == "questions" && controller.action_name == "new") do %>
+    <%= link_to new_community_question_path do %>
+      <span class="title">Ask a question</span>
+      <span class="details">Ask a question to the contributors</span>
+    <% end %>
+  <% end %>
+
+  <li class="inactive">
+    <a href="#">
+      <span class="title">Blogs</span>
+      <span class="details">Posts and articles</span>
+    </a>
+  </li>
+</ul>

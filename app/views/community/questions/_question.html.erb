@@ -1,0 +1,24 @@
+<div class="question">
+
+  <div class="question_details">
+    <span><%= question.asker_name %> asked <%= question.contributor.full_name if question.contributor %></span>
+    <% if question.contributor %>
+      <% content_tag :a, :href => contributors_path(:anchor => question.contributor.id), :title => question.contributor.full_name, :class => "person_thumb tiny inline", :rel => 'tipsy' do -%>
+        <%= image_tag question.contributor.photo.url(:tiny), :alt => question.contributor.full_name %>
+        <%= content_tag(:span, "", :class => 'person_mask') %>
+      <% end -%>    
+    <% end -%>
+  </div>
+
+  <div class="question_body">
+    <%= question.body %>
+  </div>
+
+  <div class="question_meta">    
+    <div class="voting">
+      <a href="#" class="vote_up">vote up</a>
+      <span class="vote_count is_zero">0</span>
+      <a href="#" class="vote_down">vote down</a>      
+    </div>
+  </div>  
+</div>

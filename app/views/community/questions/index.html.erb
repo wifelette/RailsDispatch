@@ -1,0 +1,25 @@
+<%# add these to the head only for the public pages with forms %>
+<% content_for :head do %>
+  <%= javascript_include_tag "jquery.uniform" %>
+  <%= stylesheet_link_tag "uniform.default" %>
+<% end %>
+
+<% content_for :page_nav do %>
+<nav>
+  <%= render "layouts/shared/questions_nav" %>
+  <%= render "layouts/shared/sidebar_social_links" %>
+</nav>
+<% end %>
+
+<div id="page_additional">
+  <h3>Recently asked questions</h3>
+  <h4>Vote on questions you&rsquo;d like to see answered by the expert contributors</h4>
+</div>
+
+<!-- <%= link_to new_community_question_path, :class => "simple_button ask_question" do %>
+  <span>Ask a question</span>
+<% end %> -->
+
+<div class="questions">
+  <%= render @questions %>  
+</div>

@@ -22,11 +22,11 @@
 <body id="<%= controller.controller_name %>_page">
 
   <% for notification in Notification.current_notifications %>
-  <% unless request.cookies['notifications'] && request.cookies['notifications'].split(' ').include?("#{notification.id}") %>
-  <div class="alert" id="<%= "alert_#{notification.id}" %>">
-    <span><%= raw notification.message %> <a href="#" class="close_alert" data-notice-id='<%= notification.id %>'></a></span>
-  </div>
-  <% end %>
+    <% unless request.cookies['notifications'] && request.cookies['notifications'].split(' ').include?("#{notification.id}") %>
+    <div class="alert" id="<%= "alert_#{notification.id}" %>">
+      <span><%= raw notification.message %> <a href="#" class="close_alert" data-notice-id='<%= notification.id %>'></a></span>
+    </div>
+    <% end %>
   <% end %>
   
   <header>
@@ -63,9 +63,9 @@
         <% end %>
         
         <%- if Page.published.size > 0 -%>
-        <%= content_tag :li, :class => controller.controller_name == "pages" ? "current" : nil do %>
-          <%= link_to "About", "/about/#{Page.published.first.slug}" %>
-        <% end %>
+          <%= content_tag :li, :class => controller.controller_name == "pages" ? "current" : nil do %>
+            <%= link_to "About", "/about/#{Page.published.first.slug}" %>
+          <% end %>
         <% end %>
         
       </ul>  

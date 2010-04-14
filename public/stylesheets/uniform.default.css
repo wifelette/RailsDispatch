@@ -381,8 +381,8 @@ div.textarea span.bot-right {
 }
 
 div.textarea textarea {
-  height: 172px;
-  margin: 14px 0;
+  height: 168px;
+  margin: 12px 0;
   padding-left: 10px;
   background-color: transparent;
   border: 0;
@@ -555,7 +555,7 @@ div.textarea {
 div.textarea textarea {
   color: #777;
   font-size: 11px;
-  width: 287px;
+  width: 455px;
 }
 
 div.textarea.disabled textarea {

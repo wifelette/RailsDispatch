@@ -12,7 +12,7 @@ class Contributor < ActiveRecord::Base
   
   has_attached_file :photo,
     :styles => {
-      :tiny => "35x35#",
+      :tiny => "18x18#",
       :thumb => "79x79#",
       :large => "143x143#"
     }, 

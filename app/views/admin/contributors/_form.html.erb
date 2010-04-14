@@ -12,6 +12,9 @@
 <% end %>
 
 <%= form_for ([:admin, @contributor], :html => {:multipart => true }) do |form| %>
+
+<%= form.error_messages %>
+
 <ol>
   <li class="field">
     <label>Firstname</label>

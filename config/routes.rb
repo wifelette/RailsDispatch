@@ -11,11 +11,18 @@ RailsDispatch::Application.routes.draw do |map|
 
   match "/about/" => "pages#index", :as => :page
   match "/about/:slug" => "pages#show", :as => :page
+    
+  namespace :community do
+    root :to => "community#index"
 
-  match 'community' => 'community#index'
-  
-  resources :feeds do
-    resources :feed_entries, :only => [:index, :show]
+    resources :questions do
+      resources :answers
+    end
+    
+    resources :feeds do
+      resources :feed_entries, :only => [:index, :show]
+    end
+    
   end  
   
   namespace :admin do
@@ -38,8 +45,8 @@ RailsDispatch::Application.routes.draw do |map|
         put :set
       end
     end
-
   end
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
