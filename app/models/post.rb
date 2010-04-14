@@ -19,7 +19,7 @@ class Post < ActiveRecord::Base
   end
 
   def self.past
-    where("publish_date < ?", Time.now)
+    where("publish_date < ?", Time.now).desc
   end
 
   def self.recent
