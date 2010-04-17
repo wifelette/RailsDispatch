@@ -1,1 +1,1 @@
-run "bundle install"
+run "HOME=/home/deploy cd #{release_path} && bundler install"
