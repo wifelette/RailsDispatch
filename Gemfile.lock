@@ -21,7 +21,7 @@ dependencies:
   rails: 
     group: 
     - :default
-    version: = 3.0.0.beta2
+    version: = 3.0.0.beta3
   mysql: 
     group: 
     - :default
@@ -53,7 +53,7 @@ dependencies:
   bundler: 
     group: 
     - :default
-    version: = 0.9.14
+    version: = 0.9.21
   org-ruby: 
     group: 
     - :default
@@ -88,15 +88,15 @@ specs:
 - builder: 
     version: 2.1.2
 - i18n: 
-    version: 0.3.6
+    version: 0.3.7
 - memcache-client: 
     version: 1.8.2
 - tzinfo: 
     version: 0.3.19
 - activesupport: 
-    version: 3.0.0.beta2
+    version: 3.0.0.beta3
 - activemodel: 
-    version: 3.0.0.beta2
+    version: 3.0.0.beta3
 - erubis: 
     version: 2.6.5
 - rack: 
@@ -106,7 +106,7 @@ specs:
 - rack-test: 
     version: 0.5.3
 - actionpack: 
-    version: 3.0.0.beta2
+    version: 3.0.0.beta3
 - mime-types: 
     version: "1.16"
 - polyglot: 
@@ -114,19 +114,19 @@ specs:
 - treetop: 
     version: 1.4.5
 - mail: 
-    version: 2.1.5.3
+    version: 2.2.0
 - text-hyphen: 
     version: 1.0.0
 - text-format: 
     version: 1.0.0
 - actionmailer: 
-    version: 3.0.0.beta2
+    version: 3.0.0.beta3
 - arel: 
     version: 0.3.3
 - activerecord: 
-    version: 3.0.0.beta2
+    version: 3.0.0.beta3
 - activeresource: 
-    version: 3.0.0.beta2
+    version: 3.0.0.beta3
 - xml-simple: 
     version: 1.0.12
 - aws-s3: 
@@ -134,7 +134,7 @@ specs:
 - bluecloth: 
     version: 2.0.7
 - bundler: 
-    version: 0.9.14
+    version: 0.9.21
 - json_pure: 
     version: 1.2.4
 - rubyforge: 
@@ -190,16 +190,16 @@ specs:
 - thor: 
     version: 0.13.4
 - railties: 
-    version: 3.0.0.beta2
+    version: 3.0.0.beta3
 - rails: 
-    version: 3.0.0.beta2
+    version: 3.0.0.beta3
 - right_http_connection: 
     version: 1.2.4
 - right_aws: 
     version: 1.10.0
 - whenever: 
     version: 0.4.1
-hash: dc524057c3b48db3eb9240793f47d90b057992b2
+hash: 64b51dab84f34709c4fecb32414da17c0598795b
 sources: 
 - Git: 
     name: loofah
