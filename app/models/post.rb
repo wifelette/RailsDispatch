@@ -2,8 +2,8 @@ class Post < ActiveRecord::Base
 
   scope :published, where("published != ?", false)
   scope :menu, where("published != ?", false).limit(4)
-  scope :desc, order("publish_date desc")
-  scope :asc, order("publish_date asc")
+  scope :descending, order("publish_date desc")
+  scope :ascending, order("publish_date asc")
 
   validates_presence_of :title, :sidebar_title, :contributor, :body, :publish_date, :slug
 
@@ -19,15 +19,15 @@ class Post < ActiveRecord::Base
   end
 
   def self.past
-    where("publish_date < ?", Time.now).desc
+    where("publish_date < ?", Time.now).descending
   end
 
   def self.recent
-    past.published.desc.limit(4)
+    past.published.descending.limit(4)
   end
 
   def self.upcoming
-    published.where("publish_date > ?", Time.now).asc.limit(1)
+    published.where("publish_date > ?", Time.now).ascending.limit(1)
   end
 
   def self.slugged(name)
@@ -35,7 +35,7 @@ class Post < ActiveRecord::Base
   end
 
   def self.next
-    future.published.asc.limit(1).first
+    future.published.ascending.limit(1).first
   end
 
   def days_until
