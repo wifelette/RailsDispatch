@@ -102,7 +102,7 @@ specs:
 - rack: 
     version: 1.1.0
 - rack-mount: 
-    version: 0.6.2
+    version: 0.6.3
 - rack-test: 
     version: 0.5.3
 - actionpack: 
