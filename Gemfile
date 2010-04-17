@@ -30,7 +30,7 @@ gem 'whenever'
 gem 'coderay'
 gem 'RedCloth', :require => 'RedCloth'
 
-gem 'honeypot-captcha'
+gem 'honeypot-captcha', :git => 'git://github.com/sax/honeypot-captcha.git'
 
 # Use unicorn as the web server
 # gem 'unicorn'

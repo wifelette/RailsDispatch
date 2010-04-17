@@ -1,6 +1,6 @@
 <%# add these to the head only for the public pages with forms %>
 <% content_for :head do %>
-  <%= javascript_include_tag "jquery.uniform" %>
+  <%= javascript_include_tag "jquery.uniform", 'app/questions', 'app/questions.run' %>
   <%= stylesheet_link_tag "uniform.default" %>
 <% end %>
 

@@ -404,11 +404,11 @@ margin:5px 0 1.2em 0;
 
 .vote_count.is_zero {color:#868686;}
 
-.vote_up {background:url('/images/icons/vote.png') 0 -31px no-repeat; display:inline-block; height:31px; width:25px; margin:0 5px; text-indent:-9999px; position:relative; top:3px;}
-.vote_down {background:url('/images/icons/vote.png') -28px -31px no-repeat; display:inline-block; height:31px; width:25px; margin:0 5px; text-indent:-9999px;}
+.vote_up {background:url('/images/icons/vote.png') -28px -31px no-repeat; display:inline-block; height:31px; width:25px; margin:0 5px; text-indent:-9999px; position:relative; top:3px;}
+.vote_down {background:url('/images/icons/vote.png') 0 -31px no-repeat; display:inline-block; height:31px; width:25px; margin:0 5px; text-indent:-9999px;}
 
-.vote_up:hover {background-position:0 0;}
-.vote_down:hover {background-position:-28px 0;}
+.vote_up:hover {background-position:-28px 0;}
+.vote_down:hover {background-position:0 0;}
 
 .CodeRay > br {display:none;}
 br:first-child {display:none;}
