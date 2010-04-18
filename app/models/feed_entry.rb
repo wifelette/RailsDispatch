@@ -3,7 +3,7 @@ class FeedEntry < ActiveRecord::Base
   belongs_to :feed
 
   scope :by_date, order("published_at desc")
-  scope :recent, limit(10)
+  scope :recent, limit(10).by_date
   scope :paginated, lambda { |page| recent.offset(page.to_i * 10) }
   
   def self.update_from_feed(feed_url, feed_id)

@@ -10,7 +10,7 @@ class Question < ActiveRecord::Base
 
   scope :by_points, order('questions.points desc')
   scope :by_date, order("questions.created_at desc")
-  scope :recent, limit(10)
+  scope :recent, limit(10).by_date
   scope :paginated, lambda { |page| recent.offset(page.to_i * 10) }
   scope :answered, lambda {
     joins(:answer).

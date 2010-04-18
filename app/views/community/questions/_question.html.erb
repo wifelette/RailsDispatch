@@ -19,5 +19,14 @@
       <span class="vote_count is_zero"><%= question.points.to_i %></span>
       <%= link_to 'vote up', vote_community_question_url(question, :up => true), :class => 'vote up', :method => :put %>
     </div>
-  </div>  
+  </div>
+
+  <% unless question.answer.blank? %>
+  <div class='answer'>
+    <div class='meta'><span><%= question.answer.contributor.try(:full_name) || "Anonymous" %> answered</span></div>
+    <div class='body'>
+      <%= textilize(question.answer.body) %>
+    </div>
+  </div>
+  <% end %>
 </div>
