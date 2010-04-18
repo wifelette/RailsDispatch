@@ -22,7 +22,7 @@ class Admin::QuestionsController < ApplicationController
   def update
     @question = Question.find(params[:id])
     if @question.update_attributes(params[:question])
-      flash[:notice] = "Successfully updated user."
+      flash[:notice] = "Successfully updated answer."
       redirect_to admin_questions_url
     else
       render :action => 'edit'
