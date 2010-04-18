@@ -184,7 +184,7 @@ $(document).ready(function () {
   $("div[caption]").captionCodeBlocks("caption")
   
   // pretty forms!
-  $(".uniform input, .uniform textarea, .uniform select").uniform();
+  if(jQuery().uniform) $(".uniform input, .uniform textarea, .uniform select").uniform();
 
   // ============================
   // = add/remove form elements =

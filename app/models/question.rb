@@ -9,8 +9,8 @@ class Question < ActiveRecord::Base
   accepts_nested_attributes_for :answer, :reject_if => :all_blank
 
   scope :by_points, order('questions.points desc')
-  scope :descending, order("questions.created_at desc")
-  scope :recent, descending.limit(10)
+  scope :by_date, order("questions.created_at desc")
+  scope :recent, limit(10)
   scope :paginated, lambda { |page| recent.offset(page.to_i * 10) }
   scope :answered, lambda {
     joins(:answer).

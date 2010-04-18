@@ -1,7 +1,7 @@
 class CommunityController < ApplicationController
   def index
 
-    @feed_entries = FeedEntry.paginated(params[:page]).all
+    @feed_entries = FeedEntry.by_date.paginated(params[:page]).all
     # if defined? params[:page]
     #   @feed_entries = FeedEntry.find(:all, :offset => (params[:page].to_i * 10), :order => 'published_at desc', :limit => 10)
     #   # @feed_entries = FeedEntry.where().limit(5)

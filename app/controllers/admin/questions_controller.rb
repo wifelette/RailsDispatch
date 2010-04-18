@@ -5,7 +5,7 @@ class Admin::QuestionsController < ApplicationController
   
   def index
     @questions = Question.unanswered.by_points
-    @answered = Question.answered.descending
+    @answered = Question.answered.by_date
   end
   
   def destroy

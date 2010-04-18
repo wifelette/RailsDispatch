@@ -2,7 +2,7 @@ class Community::QuestionsController < ApplicationController
   respond_to :html, :xml, :js
   
   def index
-    @questions = Question.unanswered.paginated(params[:page]).all
+    @questions = Question.unanswered.by_points.paginated(params[:page]).all
   end
   
   def show
