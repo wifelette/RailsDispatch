@@ -7,12 +7,12 @@
     <% end %>
   <% end %>
 
-  <li class="inactive">
-    <a href="#">
+  <%= content_tag :li, :class => ("active" if controller.controller_name == "answers") do %>
+    <%= link_to community_answers_path do %>
       <span class="title">Recently answered questions</span>
       <span class="details">See what the experts have to say</span>
-    </a>
-  </li>
+    <% end %>
+  <% end %>
 
   <%= content_tag :li, :class => ("active" if controller.controller_name == "questions" && controller.action_name == "new") do %>
     <%= link_to new_community_question_path do %>
@@ -21,10 +21,10 @@
     <% end %>
   <% end %>
 
-  <li class="inactive">
-    <a href="#">
+  <%= content_tag :li, :class => ("active" if controller.controller_name == "community") do %>
+    <%= link_to community_root_path do %>
       <span class="title">Blogs</span>
       <span class="details">Posts and articles</span>
-    </a>
-  </li>
+    <% end %>
+  <% end %>
 </ul>

@@ -1,22 +1,7 @@
 <% content_for :page_nav do %>
 <nav>
-  <ul id="tab_nav">
-    <li class="active">
-      <a href="#">
-        <span class="title">Blogs</span>
-        <span class="details">Posts and articles</span>
-      </a>
-    </li>
-    <li class="inactive">
-      <span class="upcoming_placeholder">
-        <span class="title">More Resources</span>
-        <span class="details">Coming Soon</span>
-      </span>
-    </li>
-  </ul>
-
+  <%= render "layouts/shared/questions_nav" %>
   <%= render "layouts/shared/sidebar_social_links" %>
-
 </nav>
 <% end %>
 

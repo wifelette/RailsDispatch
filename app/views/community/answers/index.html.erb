@@ -1,0 +1,15 @@
+<% content_for :page_nav do %>
+<nav>
+  <%= render "layouts/shared/questions_nav" %>
+  <%= render "layouts/shared/sidebar_social_links" %>
+</nav>
+<% end %>
+
+<div id="page_additional">
+  <h3>Recently answered questions</h3>
+  <h4>Stuff and other stuff</h4>
+</div>
+
+<div class="questions">
+  <%= render @questions %>  
+</div>

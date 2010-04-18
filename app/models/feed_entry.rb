@@ -1,6 +1,10 @@
 class FeedEntry < ActiveRecord::Base
   
   belongs_to :feed
+
+  scope :descending, order("published_at desc")
+  scope :recent, descending.limit(10)
+  scope :paginated, lambda { |page| recent.offset(page.to_i * 10) }
   
   def self.update_from_feed(feed_url, feed_id)
     feed = Feedzirra::Feed.fetch_and_parse(feed_url)

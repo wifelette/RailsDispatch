@@ -151,7 +151,7 @@ specs:
     version: 0.10.3
 - devise: 
     version: 1.1.pre4
-    source: 3
+    source: 4
 - highline: 
     version: 1.5.2
 - json: 
@@ -164,20 +164,21 @@ specs:
     version: 0.2.7.pre
 - loofah: 
     version: 0.4.7
-    source: 0
+    source: 1
 - nokogiri: 
     version: 1.4.1
 - sax-machine: 
     version: 0.0.15
 - feedzirra: 
     version: 0.0.23
-    source: 1
+    source: 2
 - github-markup: 
     version: 0.3.3
 - hirb: 
     version: 0.3.1
 - honeypot-captcha: 
     version: 0.0.1
+    source: 0
 - mysql: 
     version: 2.8.1
 - rubypants: 
@@ -186,7 +187,7 @@ specs:
     version: 0.5.3
 - paperclip: 
     version: 2.3.1.1
-    source: 2
+    source: 3
 - thor: 
     version: 0.13.4
 - railties: 
@@ -199,8 +200,12 @@ specs:
     version: 1.10.0
 - whenever: 
     version: 0.4.1
-hash: 64b51dab84f34709c4fecb32414da17c0598795b
+hash: 5a44f7e97c381f92fdad7970ce6094f33a91b562
 sources: 
+- Git: 
+    uri: git://github.com/sax/honeypot-captcha.git
+    git: git://github.com/sax/honeypot-captcha.git
+    ref: a1a9b1c79e57f5d0cd9bef9a6975553f49236ddc
 - Git: 
     name: loofah
     uri: git://github.com/jpsilvashy/loofah.git

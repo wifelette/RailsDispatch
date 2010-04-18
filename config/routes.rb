@@ -17,8 +17,9 @@ RailsDispatch::Application.routes.draw do |map|
 
     resources :questions do
       put :vote, :on => :member
-      resources :answers
     end
+
+    resources :answers
     
     resources :feeds do
       resources :feed_entries, :only => [:index, :show]
