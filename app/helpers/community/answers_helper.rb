@@ -1,0 +1,2 @@
+module Community::AnswersHelper
+end

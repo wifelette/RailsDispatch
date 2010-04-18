@@ -16,6 +16,7 @@ RailsDispatch::Application.routes.draw do |map|
     root :to => "community#index"
 
     resources :questions do
+      put :vote, :on => :member
       resources :answers
     end
     

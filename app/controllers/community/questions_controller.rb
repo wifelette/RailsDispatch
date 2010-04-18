@@ -26,6 +26,21 @@ class Community::QuestionsController < ApplicationController
   def edit    
     @question = Question.find(params[:id])
   end
+  
+  def vote
+    @question = Question.find(params[:id])
+    if params[:up]
+      @question.points = @question.points.to_i + 1
+    elsif params[:down]
+      @question.points = @question.points.to_i - 1
+    end
+    @question.save
+    
+    respond_to do |format|
+      format.html { redirect_to community_questions_url }
+      format.any(:xml, :json, :js) { render request.format.to_sym => @question }
+    end
+  end
   # 
   # def update
   #   @post = Post.find(params[:id])

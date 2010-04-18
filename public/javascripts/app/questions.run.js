@@ -1,3 +1,3 @@
 jQuery(window).load(function(){
-  $('.voting').voting({up: '.vote_up', down: '.vote_down'});
+  $('.voting').voting({handle: '.vote', count: '.vote_count', response_count: 'points'});
 });
