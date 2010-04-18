@@ -7,6 +7,7 @@ class Contributor < ActiveRecord::Base
   scope :invisible, where("on_contributor_page != ?", true)
   
   has_many :posts
+  has_many :questions
 
   validates_presence_of :firstname, :lastname
   

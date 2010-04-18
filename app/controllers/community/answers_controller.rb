@@ -1,5 +1,5 @@
 class Community::AnswersController < ApplicationController
   def index
-    @questions = Question.answered
+    @questions = Question.answered.paginated(params[:page])
   end
 end

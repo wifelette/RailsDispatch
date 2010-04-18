@@ -37,7 +37,7 @@
 <%# end %> -->
 
 <div class="post_content">
-  <%= raw textilize(post.body) unless post.body.nil? %>
+  <%= textilize(post.body) unless post.body.nil? %>
 </div>
 
 

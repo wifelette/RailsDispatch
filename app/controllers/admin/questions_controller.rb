@@ -4,7 +4,8 @@ class Admin::QuestionsController < ApplicationController
   respond_to :html, :xml, :js
   
   def index
-    @questions = Question.all
+    @questions = Question.unanswered.by_points
+    @answered = Question.answered.descending
   end
   
   def destroy
@@ -12,5 +13,19 @@ class Admin::QuestionsController < ApplicationController
     @question.destroy
     respond_with(@question, :location => admin_questions_url)
   end
-
+  
+  def edit
+    @question = Question.find(params[:id])
+    @question.build_answer if @question.answer.blank?
+  end
+  
+  def update
+    @question = Question.find(params[:id])
+    if @question.update_attributes(params[:question])
+      flash[:notice] = "Successfully updated user."
+      redirect_to admin_questions_url
+    else
+      render :action => 'edit'
+    end
+  end
 end

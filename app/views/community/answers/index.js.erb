@@ -1,4 +1,4 @@
-$("div#feed_container").append("<%= escape_javascript(render :partial => 'feed_entry', :collection => @feed_entries) %>");
+$("div#questions").append("<%= escape_javascript(render :partial => 'question', :collection => @questions) %>");
 $("div#pagination").replaceWith("<%= escape_javascript(pagination) %>");
 $("#load_more").removeClass("loading");
 $("#load_more span").html("Load more");

@@ -12,7 +12,9 @@ module ApplicationHelper
   end
 
   # Override textilize to syntax highlight code blocks in <pre>
+  # TODO double check xss security of this
   def textilize(text)
+    text = text.gsub(/<script.+script>/, '')
     output, current = "", ""
     s = StringScanner.new(text)
 
@@ -26,7 +28,7 @@ module ApplicationHelper
       end
     end
     output << super(current) unless current.blank?
-    output
+    output.html_safe
   end
 
   def current_post?(post)
@@ -60,6 +62,14 @@ module ApplicationHelper
       render 'layouts/shared/tracking_code_home'
     else
       render 'layouts/shared/tracking_code_all_pages'
+    end
+  end
+  
+  def pagination
+    content_tag :div, :id => 'pagination' do
+      link_to "?page=#{(params[:page].to_i + 1)}", :id => "load_more" do
+        "<span>Load more</span>".html_safe
+      end
     end
   end
 end

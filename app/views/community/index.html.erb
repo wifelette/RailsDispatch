@@ -14,8 +14,4 @@
   <%= render :partial => "feed_entry", :collection => @feed_entries %>
 </div>
 
-<% if defined? params[:page] %>
-<div id="feed_pagination">
-  <%= render "feed_pagination" %>  
-</div>
-<% end %>
+<%= pagination %>

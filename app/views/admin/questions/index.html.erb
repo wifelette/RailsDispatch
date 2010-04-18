@@ -20,11 +20,12 @@
 </ul>
 
 
-<h3 class="section_header">Questions</h3>
+<h3 class="section_header">Unanswered Questions</h3>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
   <th style="width:140px;">Contributor</th>
   <th>Body</th>
+  <th>Points</th>
   <th></th>
   <th></th>
 </tr>
@@ -33,17 +34,46 @@
 <tr class="actionable" id="<%= controller.controller_name %>_<%= question.id %>">
   <td><%= question.contributor.full_name %></td>
   <td><%= truncate(question.body, 45) %></td>
+  <td><%= question.points %></td>
   <td><%= question.created_at.strftime("%m/%d/%Y") %></td>
 
   <td class="actions">
     <%= link_to admin_question_path(question), :method => :delete, :remote => true, :class => "simple_button" do %>
       <span>Spam?</span>
     <% end %>
+    <%= link_to edit_admin_question_path(question), :class => "simple_button" do %>
+      <span>Answer</span>
+    <% end %>    
   </td>
-  
 </tr>
 <% end %>
+</table>
 
+
+<h3 class="section_header">Answered Questions</h3>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+  <th style="width:140px;">Contributor</th>
+  <th>Body</th>
+  <th>Points</th>
+  <th></th>
+  <th></th>
+</tr>
+
+<% @answered.each_with_index do |question, i| %>
+<tr class="actionable" id="<%= controller.controller_name %>_<%= question.id %>">
+  <td><%= question.contributor.full_name %></td>
+  <td><%= truncate(question.body, 45) %></td>
+  <td><%= question.points %></td>
+  <td><%= question.created_at.strftime("%m/%d/%Y") %></td>
+
+  <td class="actions">
+    <%= link_to edit_admin_question_path(question), :class => "simple_button" do %>
+      <span>Revise</span>
+    <% end %>    
+  </td>
+</tr>
+<% end %>
 </table>
 
 
