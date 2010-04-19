@@ -1,5 +1,5 @@
 class Admin::SettingsController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :authenticate_admin!
     
   def index
     @settings = Setting.all

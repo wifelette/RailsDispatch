@@ -1,9 +1,9 @@
 class Question < ActiveRecord::Base
-  belongs_to :guest
+  belongs_to :user
   belongs_to :contributor
   has_one :answer, :dependent => :destroy
 
-  validates_presence_of :asker_name, :email
+  validates_presence_of :asker_name, :email, :user
   validates_uniqueness_of :body
   
   accepts_nested_attributes_for :answer, :reject_if => :all_blank

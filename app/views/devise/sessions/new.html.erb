@@ -1,8 +1,14 @@
 <% content_for :page_nav do %>
 <nav>
   <ul id="tab_nav">
+    <li class='inactive'>
+      <%= link_to new_user_registration_path do %>
+        <span class="title">Sign Up</span>
+        <span class="details">Create a new user account</span>
+      <% end %>
+    </li>
     <li class="inactive">
-      <%= link_to admin_posts_path do %>
+      <%= link_to root_path do %>
         <span class="title">Go back to the homepage</span>
         <span class="details">and cancel logging in</span>
       <% end %>
@@ -13,7 +19,7 @@
 
 <div id="page_additional">
   <h3>Login</h3>
-  <h4>If you are an administrator or publisher, login with you credentials.</h4>
+  <h4>Login to access special features.</h4>
 </div>
 
 <%= form_for(resource_name, resource, :url => session_path(resource_name)) do |form| %>
