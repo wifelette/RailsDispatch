@@ -22,7 +22,7 @@
   <h4>Login to access special features.</h4>
 </div>
 
-<%= form_for(resource_name, resource, :url => session_path(resource_name)) do |form| %>
+<%= form_for(resource, :url => session_path(resource_name), :as => resource_name) do |form| %>
   <ol>
     <li class="field">
       <label>Email Address</label>

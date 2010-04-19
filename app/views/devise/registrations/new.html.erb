@@ -22,7 +22,7 @@
   <h4>We won't ever email you... ever.</h4>
 </div>
 
-<%= form_for(resource_name, resource, :url => registration_path(resource_name)) do |form| %>
+<%= form_for(resource, :url => registration_path(resource_name), :as => resource_name) do |form| %>
   <ol>
     <li class="field">
       <label>Email Address</label>

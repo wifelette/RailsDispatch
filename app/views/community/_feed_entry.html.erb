@@ -1,12 +1,12 @@
 <div class="popular_post">
   <% if feed_entry.feed.contributor %>
     <% if feed_entry.feed.contributor.on_contributor_page == true %>
-      <% content_tag :a, :href => contributors_path(:anchor => feed_entry.feed.contributor.id), :title => feed_entry.feed.contributor.full_name, :class => "person_thumb small", :rel => 'tipsy' do -%>
+      <%= content_tag :a, :href => contributors_path(:anchor => feed_entry.feed.contributor.id), :title => feed_entry.feed.contributor.full_name, :class => "person_thumb small", :rel => 'tipsy' do -%>
         <%= image_tag feed_entry.feed.contributor.photo.url(:thumb), :alt => feed_entry.feed.contributor.full_name %>
         <%= content_tag(:span, "", :class => 'person_mask') %>
       <% end -%>
     <% else %>
-      <% content_tag :span, :class => "person_thumb small", :title => feed_entry.feed.contributor.full_name, :rel => 'tipsy' do -%>
+      <%= content_tag :span, :class => "person_thumb small", :title => feed_entry.feed.contributor.full_name, :rel => 'tipsy' do -%>
         <%= image_tag feed_entry.feed.contributor.photo.url(:thumb), :alt => feed_entry.feed.contributor.full_name %>
         <%= content_tag(:span, "", :class => 'person_mask') %>
       <% end -%>
@@ -18,7 +18,7 @@
       <h4><%= link_to raw(feed_entry.title), feed_entry.url %></h4>  
       <h5><%= link_to "Posted #{time_ago_in_words(feed_entry.published_at)} ago", feed_entry.feed.site_url %> <%= "by #{feed_entry.feed.contributor.full_name}" if feed_entry.feed.contributor %></h5>
     </div>
-    <%= raw truncate(strip_tags(feed_entry.summary), 400) %>
+    <%= raw truncate(strip_tags(feed_entry.summary), :length => 400) %>
   </div>
 
 </div>
