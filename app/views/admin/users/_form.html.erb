@@ -27,6 +27,11 @@
       <label>Password confirmation</label>
       <%= form.password_field :password_confirmation %>
     </li>
+    
+    <li class='field'>
+      <label>Admin?</label>
+      <%= current_user == @user ? form.check_box(:admin, :disabled => 'disabled') : form.check_box(:admin) %>
+    </li>
         
     <li class="submit">
       <%= submit_tag "Save" %>
