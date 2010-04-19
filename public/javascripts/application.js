@@ -209,5 +209,7 @@ $(document).ready(function () {
     $(this).parents('.fields').hide();
     return false;
   });
+  
+  $('.focus').focus();
 
 });

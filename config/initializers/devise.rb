@@ -92,4 +92,12 @@ Devise.setup do |config|
   #   end
   #   manager.default_strategies.unshift :twitter_oauth
   # end
+  
+  # Save attempted request to session. Devise doesn't seem to do this correctly
+  Warden::Manager.before_failure do |env,opts|
+    request = Rack::Request.new(env)
+    request.session[:return_to] = request.env['REQUEST_METHOD']=="GET" ? request.env['action_dispatch.request.path_parameters'] : request.env['HTTP_REFERER']
+    request.session[:return_params] = request.env['action_dispatch.request.request_parameters']
+  end
+  
 end

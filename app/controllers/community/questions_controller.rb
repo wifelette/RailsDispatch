@@ -12,7 +12,7 @@ class Community::QuestionsController < ApplicationController
   end
 
   def new
-    @question = Question.new
+    @question = Question.new(params[:question])
   end
   
   def create
