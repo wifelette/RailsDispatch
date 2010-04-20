@@ -14,7 +14,6 @@ class Question < ActiveRecord::Base
   scope :paginated, lambda { |page| recent.offset(page.to_i * 10) }
   scope :answered, lambda {
     joins(:answer).
-    where("answers.question_id IS NOT NULL").
     group('questions.id')
   }
   scope :unanswered, lambda {
