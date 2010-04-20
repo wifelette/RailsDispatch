@@ -100,7 +100,7 @@ specs:
 - memcache-client: 
     version: 1.8.2
 - tzinfo: 
-    version: 0.3.19
+    version: 0.3.20
 - activesupport: 
     version: 3.0.0.beta3
 - activemodel: 
@@ -222,12 +222,12 @@ specs:
     version: 2.0.0.beta.7
 - whenever: 
     version: 0.4.1
-hash: 47440a7a2c9bb04e0ccfbdb7138c64d43709e122
+hash: 6ea6dc05f333afebf5cedbbcb9faf38d6a31e575
 sources: 
 - Git: 
-    uri: git://github.com/sax/honeypot-captcha.git
-    git: git://github.com/sax/honeypot-captcha.git
-    ref: a1a9b1c79e57f5d0cd9bef9a6975553f49236ddc
+    uri: http://github.com/curtis/honeypot-captcha.git
+    git: http://github.com/curtis/honeypot-captcha.git
+    ref: 067e25f73c888cf38a929109f84a08427e172d0c
 - Git: 
     name: loofah
     uri: git://github.com/jpsilvashy/loofah.git

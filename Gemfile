@@ -30,7 +30,7 @@ gem 'whenever'
 gem 'coderay'
 gem 'RedCloth', :require => 'RedCloth'
 
-gem 'honeypot-captcha', :git => 'git://github.com/sax/honeypot-captcha.git'
+gem 'honeypot-captcha', :git => 'http://github.com/curtis/honeypot-captcha.git'
 
 group :test do
   gem 'rspec-rails', '~> 2.0.0.beta.7'
