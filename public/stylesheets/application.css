@@ -150,8 +150,8 @@ div.next_week {margin-top:8px; padding:22px 0 0 33px; color:white; font-size:17p
 
 /* footer */
 footer {background:url('/images/footer_bg.gif') -15% top repeat-x; color:white; text-shadow:0 -1px 0 black; -webkit-text-stroke:1px transparent; padding-top:35px;}
-footer div#footer_contents {width:960px; margin:0 auto; padding:20px 0; height:260px;}
-footer div#engineyard_photo {width:241px; display:block; height:250px; float:left; margin-right:24px;}
+footer div#footer_contents {width:960px; margin:0 auto; padding:20px 0; height:190px;}
+footer div#engineyard_photo {width:241px; display:block; height:190px; float:left; margin-right:24px;}
 footer div#engineyard_photo img {float:right;}
 
 footer h3 {font:18px "Museo Slab"; margin-bottom:8px;}
@@ -160,7 +160,7 @@ footer p a:hover {background:none; border-bottom:2px solid #6D6D6D; color:white;
 
 
 /*footer div#newgoldleaf {background:url('/images/footer_seperator.png') center right no-repeat; width:241px; display:block; height:250px; float:left; margin-right:24px;}*/
-footer div#engineyard {float:left; width:412px; display:block; height:250px; float:left; margin-right:24px; font-size:14px; opacity:.99;}
+footer div#engineyard {float:left; width:412px; display:block; height:190px; float:left; margin-right:24px; font-size:14px; opacity:.99;}
 footer nav {float:left; width:253px; display:block; height:250px;}
 footer nav ul li {border-bottom:1px solid #545454;}
 footer nav ul li a {color:white; padding:8px 0; display:block; border-bottom:1px solid #181818; text-decoration:none; font-weight:bold;}
@@ -211,6 +211,8 @@ ul.contributor_bio_info li.contributor_name {font:18px/1.1em "Museo Sans", sans-
 
 .with_contributor a.person_thumb.small{position:absolute; bottom:-47px; left:20px;}
 .with_contributor a.person_thumb.small span.person_mask {background:url('/images/people/masks/content_header_masks.png');}
+
+a.person_thumb:nth-child(7n+2) {margin-right:0;}
 
 a.person_thumb.tiny.inline {display:inline-block; float:none; position:relative; top:2px;}
 .question_details span {display:inline-block; float:left; margin-right:8px;}
