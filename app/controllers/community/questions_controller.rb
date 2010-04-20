@@ -41,7 +41,7 @@ class Community::QuestionsController < ApplicationController
     
     respond_to do |format|
       format.html { redirect_to community_questions_url }
-      format.any(:xml, :json, :js) { render request.format.to_sym => @question }
+      format.any(:xml, :json) { render request.format.to_sym => @question.send("to_#{request.format.to_sym}", :only => :points) }
     end
   end
   # 
