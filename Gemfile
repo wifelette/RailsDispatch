@@ -32,6 +32,11 @@ gem 'RedCloth', :require => 'RedCloth'
 
 gem 'honeypot-captcha', :git => 'git://github.com/sax/honeypot-captcha.git'
 
+group :test do
+  gem 'rspec-rails', '~> 2.0.0.beta.7'
+  gem 'factory_girl'
+end
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

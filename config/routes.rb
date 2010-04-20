@@ -1,7 +1,7 @@
 RailsDispatch::Application.routes.draw do |map|
 
   root :to => "posts#index"
-  devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout' }
+  devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout', :sign_up => 'register' }
 
   # resources :posts, :only => [:welcome, :index]
   match "/posts(/:slug)(/feed.:format)" => "posts#index", :as => :post

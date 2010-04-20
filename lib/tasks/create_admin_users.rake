@@ -7,7 +7,7 @@ namespace :db do
     password = Base64.encode64(Digest::SHA1.digest("#{rand(1<<64)}/#{Time.now.to_f}/#{Process.pid}"))[0..7]
     
     User.destroy_all(:email => email)
-    user = User.new({:email => email, :password => password, :password_confirmation => password  })
+    user = User.new({:email => email, :password => password, :password_confirmation => password, :admin => true  })
     
     if user.save!  
       puts "\n"

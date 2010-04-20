@@ -1,17 +1,48 @@
-<h2>Sign up</h2>
+<% content_for :page_nav do %>
+<nav>
+  <ul id="tab_nav">
+    <li class='inactive'>
+      <%= link_to new_user_session_path do %>
+        <span class="title">Log in</span>
+        <span class="details">Already have an account?</span>
+      <% end %>
+    </li>
+    <li class="inactive">
+      <%= link_to root_path do %>
+        <span class="title">Go back to the homepage</span>
+        <span class="details">and cancel signing up</span>
+      <% end %>
+    </li>
+  </ul>
+</nav>
+<% end %>
 
-<%= form_for(resource_name, resource, :url => registration_path(resource_name)) do |f| %>
-  <%= f.error_messages %>
-  <p><%= f.label :email %></p>
-  <p><%= f.text_field :email %></p>
+<div id="page_additional">
+  <h3>Sign Up</h3>
+  <h4>We won't ever email you... ever.</h4>
+</div>
 
-  <p><%= f.label :password %></p>
-  <p><%= f.password_field :password %></p>
-
-  <p><%= f.label :password_confirmation %></p>
-  <p><%= f.password_field :password_confirmation %></p>
-
-  <p><%= f.submit "Sign up" %></p>
+<%= form_for(resource, :url => registration_path(resource_name), :as => resource_name) do |form| %>
+  <ol>
+    <li class="field">
+      <label>Email Address</label>
+      <%= form.text_field :email %>
+    </li>
+  
+    <li class="field">
+      <label>Password</label>
+      <%= form.password_field :password %>
+    </li>
+    
+    <li class='field'>
+      <label>Password Confirmation</label>
+      <%= form.password_field :password_confirmation %>
+    </li>
+      
+    <li class="submit">
+      <%= submit_tag "Sign up" %>
+    </li>
+  </ol>
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>

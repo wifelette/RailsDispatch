@@ -1,5 +1,5 @@
 class Admin::NotificationsController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :authenticate_admin!
   
   respond_to :html, :xml, :js
   

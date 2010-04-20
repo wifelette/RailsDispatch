@@ -1,6 +1,8 @@
 class Community::QuestionsController < ApplicationController  
   respond_to :html, :xml, :js
   
+  before_filter :authenticate_user!, :only => [:create, :vote]
+  
   def index
     @questions = Question.unanswered.paginated(params[:page]).by_points.all
   end
@@ -10,11 +12,12 @@ class Community::QuestionsController < ApplicationController
   end
 
   def new
-    @question = Question.new
+    @question = Question.new(params[:question])
   end
   
   def create
-    @question = Question.new(params[:question])    
+    @question = Question.new(params[:question])
+    @question.user = current_user
     if @question.save
         flash[:notice] = "Successfully updated post."
         redirect_to community_questions_url
