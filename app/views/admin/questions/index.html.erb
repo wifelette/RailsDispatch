@@ -32,7 +32,7 @@
 
 <% @questions.each_with_index do |question, i| %>
 <tr class="actionable" id="<%= controller.controller_name %>_<%= question.id %>">
-  <td><%= question.contributor.full_name %></td>
+  <td><%= question.contributor.try(:full_name) %></td>
   <td><%= truncate(question.body, 45) %></td>
   <td><%= question.points %></td>
   <td><%= question.created_at.strftime("%m/%d/%Y") %></td>
@@ -62,7 +62,7 @@
 
 <% @answered.each_with_index do |question, i| %>
 <tr class="actionable" id="<%= controller.controller_name %>_<%= question.id %>">
-  <td><%= question.contributor.full_name %></td>
+  <td><%= question.contributor.try(:full_name) %></td>
   <td><%= truncate(question.body, 45) %></td>
   <td><%= question.points %></td>
   <td><%= question.created_at.strftime("%m/%d/%Y") %></td>

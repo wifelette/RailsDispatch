@@ -154,7 +154,7 @@ specs:
 - coderay: 
     version: 0.9.3
 - curb: 
-    version: 0.7.0
+    version: 0.7.1
 - warden: 
     version: 0.10.3
 - devise: 
