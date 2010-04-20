@@ -9,5 +9,5 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :rememberable, :trackable, :registerable
   
   has_many :posts
-  
+  has_many :questions, :dependent => :destroy
 end
