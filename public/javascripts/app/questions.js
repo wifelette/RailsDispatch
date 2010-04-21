@@ -1,5 +1,5 @@
 (function($){
-  var defaults = {handle : '.vote', count : '.count', response_count : 'count'}
+  var defaults = {handle : '.vote', count : '.count', response_count : 'count', message : 'message', message_class : 'notice', message_tag : 'div', messages_selector : '#messages'}
   
   $.fn.voting = function(options){
     options = $.extend({}, defaults, options);
@@ -18,6 +18,10 @@
       },
       set_count : function(el, data) {
         el.find(options['count']).html(data[options['response_count']]);
+        if (data[options['message']]) {
+          message = $("<"+options['message_tag']+" class='"+options['message_class']+"'>"+data[options['message']]+"</"+options['message_tag']+">");
+          message.appendTo(options['messages_selector']).delaySlideUp();
+        }
       }
     };
     

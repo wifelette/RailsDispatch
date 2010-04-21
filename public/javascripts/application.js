@@ -152,6 +152,15 @@ var cookie;
   };
 })(jQuery);
 
+(function($){
+  $.fn.delaySlideUp = function(){
+    this.each(function(){
+      $(this).delay(2000).slideUp(function(){$(this).remove()});
+    });
+    return this;
+  };
+})(jQuery);
+
 $(document).ready(function () {
     
   if (window.location.pathname.match(/contributors/)) {
@@ -211,5 +220,7 @@ $(document).ready(function () {
   });
   
   $('.focus').focus();
+
+  
 
 });

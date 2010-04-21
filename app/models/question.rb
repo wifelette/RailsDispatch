@@ -4,6 +4,8 @@ class Question < ActiveRecord::Base
   has_one :answer, :dependent => :destroy
   has_many :votes, :as => :votable, :dependent => :destroy
 
+  attr_accessor :message
+
   validates_presence_of :asker_name, :email, :user
   validates_uniqueness_of :body
   
@@ -30,14 +32,12 @@ class Question < ActiveRecord::Base
       if v.up? && up || !v.up? && !up
         return false
       end
-      v.update_attributes({:up => up})
-      change = up ? 2 : -2
+      v.update_attributes({:up => up}) && v.save
     else
       v = Vote.new({:up => up, :user => user})
       votes << v
-      change = up ? 1 : -1
     end
-    self.points = self.points + change
+    self.points = votes.inject(0) {|sum, vote| vote.up? ? 1 : -1 }
     true
   end
 end
