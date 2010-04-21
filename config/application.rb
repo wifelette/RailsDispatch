@@ -36,6 +36,8 @@ module RailsDispatch
     #   g.template_engine :erb
     #   g.test_framework  :test_unit, :fixture => true
     # end
+    config.secret_token = '830e731f8c0e9785f95f94fe3d63e5585e43fa2d9cfa8db3fc9487a599203e0e573862f54dfd0ea81a4f2807e8eff38b313c7b8158ed40577f14fee003975e90'
+    
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters << :password

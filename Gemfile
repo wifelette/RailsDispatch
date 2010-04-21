@@ -34,7 +34,8 @@ gem 'honeypot-captcha', :git => 'http://github.com/curtis/honeypot-captcha.git'
 
 group :test do
   gem 'rspec-rails', '~> 2.0.0.beta.7'
-  gem 'factory_girl'
+  gem 'factory_girl', :git => 'git://github.com/thoughtbot/factory_girl.git', :branch => 'rails3'
+  gem 'mocha'
 end
 
 # Use unicorn as the web server

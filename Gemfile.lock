@@ -1,6 +1,6 @@
 --- 
 dependencies: 
-  honeypot-captcha: 
+  feedzirra: 
     group: 
     - :default
     version: ">= 0"
@@ -10,23 +10,23 @@ dependencies:
     version: ">= 0"
     require: 
     - github/markup
-  feedzirra: 
+  honeypot-captcha: 
     group: 
     - :default
     version: ">= 0"
-  loofah: 
-    group: 
-    - :default
-    version: = 0.4.7
   rails: 
     group: 
     - :default
     version: = 3.0.0.beta3
-  mysql: 
+  loofah: 
+    group: 
+    - :default
+    version: = 0.4.7
+  bluecloth: 
     group: 
     - :default
     version: ">= 0"
-  bluecloth: 
+  mysql: 
     group: 
     - :default
     version: ">= 0"
@@ -38,15 +38,11 @@ dependencies:
     group: 
     - :test
     version: ~> 2.0.0.beta.7
-  factory_girl: 
+  mocha: 
     group: 
     - :test
     version: ">= 0"
-  hirb: 
-    group: 
-    - :default
-    version: ">= 0"
-  paperclip: 
+  right_aws: 
     group: 
     - :default
     version: ">= 0"
@@ -54,7 +50,19 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
-  right_aws: 
+  paperclip: 
+    group: 
+    - :default
+    version: ">= 0"
+  hirb: 
+    group: 
+    - :default
+    version: ">= 0"
+  factory_girl: 
+    group: 
+    - :test
+    version: ">= 0"
+  org-ruby: 
     group: 
     - :default
     version: ">= 0"
@@ -62,30 +70,26 @@ dependencies:
     group: 
     - :default
     version: = 0.9.21
-  org-ruby: 
-    group: 
-    - :default
-    version: ">= 0"
   engineyard: 
     group: 
     - :default
     version: = 0.2.7.pre
-  coderay: 
-    group: 
-    - :default
-    version: ">= 0"
-  aws-s3: 
-    group: 
-    - :default
-    version: ">= 0"
-    require: 
-    - aws/s3
   RedCloth: 
     group: 
     - :default
     version: ">= 0"
     require: 
     - RedCloth
+  aws-s3: 
+    group: 
+    - :default
+    version: ">= 0"
+    require: 
+    - aws/s3
+  coderay: 
+    group: 
+    - :default
+    version: ">= 0"
 specs: 
 - rake: 
     version: 0.8.7
@@ -159,7 +163,7 @@ specs:
     version: 0.10.3
 - devise: 
     version: 1.1.pre4
-    source: 4
+    source: 5
 - highline: 
     version: 1.5.2
 - json: 
@@ -171,24 +175,27 @@ specs:
 - engineyard: 
     version: 0.2.7.pre
 - factory_girl: 
-    version: 1.2.4
+    version: 1.2.3
+    source: 0
 - loofah: 
     version: 0.4.7
-    source: 1
+    source: 2
 - nokogiri: 
     version: 1.4.1
 - sax-machine: 
     version: 0.0.15
 - feedzirra: 
     version: 0.0.23
-    source: 2
+    source: 3
 - github-markup: 
     version: 0.3.3
 - hirb: 
     version: 0.3.1
 - honeypot-captcha: 
     version: 0.0.1
-    source: 0
+    source: 1
+- mocha: 
+    version: 0.9.8
 - mysql: 
     version: 2.8.1
 - rubypants: 
@@ -197,7 +204,7 @@ specs:
     version: 0.5.3
 - paperclip: 
     version: 2.3.1.1
-    source: 3
+    source: 4
 - thor: 
     version: 0.13.4
 - railties: 
@@ -222,8 +229,13 @@ specs:
     version: 2.0.0.beta.7
 - whenever: 
     version: 0.4.1
-hash: 6ea6dc05f333afebf5cedbbcb9faf38d6a31e575
+hash: e5e7cc5f1dd0113da5c63665a06a0ef3f213fcc1
 sources: 
+- Git: 
+    uri: git://github.com/thoughtbot/factory_girl.git
+    branch: rails3
+    git: git://github.com/thoughtbot/factory_girl.git
+    ref: feac7298352a83fef0717d8beadd2eda9aabfe56
 - Git: 
     uri: http://github.com/curtis/honeypot-captcha.git
     git: http://github.com/curtis/honeypot-captcha.git

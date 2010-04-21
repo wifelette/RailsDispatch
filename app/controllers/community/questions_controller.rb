@@ -32,16 +32,26 @@ class Community::QuestionsController < ApplicationController
   
   def vote
     @question = Question.find(params[:id])
-    if params[:up]
-      @question.points = @question.points.to_i + 1
-    elsif params[:down]
-      @question.points = @question.points.to_i - 1
+    
+    if @question.votes.map(&:user).include? current_user
+      @message = "Changing your vote."
     end
-    @question.save
+
+    if @question.vote(!params[:up].blank?, current_user)
+      @question.save
+    else
+      @message = "You've already voted for that question."
+    end
+    
+    flash[:notice] = @message if @message
     
     respond_to do |format|
       format.html { redirect_to community_questions_url }
-      format.any(:xml, :json) { render request.format.to_sym => @question.send("to_#{request.format.to_sym}", :only => :points) }
+      format.any(:xml, :json) {
+        response = @question.send("to_#{request.format.to_sym}", :only => :points)
+        # response.merge!({:flash => @message}) unless @message.blank?
+        render request.format.to_sym => response
+      }
     end
   end
   # 

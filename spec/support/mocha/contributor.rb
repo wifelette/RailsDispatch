@@ -1,0 +1,1 @@
+Contributor.any_instance.stubs(:save_attached_files).returns(true)
