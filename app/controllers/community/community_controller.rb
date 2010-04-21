@@ -1,4 +1,4 @@
-class CommunityController < ApplicationController
+class Community::CommunityController < ApplicationController
   def index
 
     @feed_entries = FeedEntry.paginated(params[:page]).all
