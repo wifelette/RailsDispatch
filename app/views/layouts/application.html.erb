@@ -58,7 +58,7 @@
           <%= link_to "Contributors", contributors_path %>
         <% end %>
         
-        <%= content_tag :li, :class => controller.controller_name == "community" ? "current" : nil do %>
+        <%= content_tag :li, :class => controller.controller_name == "community" || "questions" ? "current" : nil do %>
           <%= link_to "Community", '/community' %>
         <% end %>
         

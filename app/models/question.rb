@@ -7,7 +7,7 @@ class Question < ActiveRecord::Base
   attr_accessor :message
 
   validates_presence_of :user
-  validates_uniqueness_of :body
+  validates_uniqueness_of :body, :on => :create, :message => "must be unique"
   
   accepts_nested_attributes_for :answer, :reject_if => :all_blank
 
