@@ -1,4 +1,11 @@
 <ul id="tab_nav">
+
+  <%= content_tag :li, :class => ("active" if controller.controller_name == "community") do %>
+    <%= link_to community_root_path do %>
+      <span class="title">Blogs</span>
+      <span class="details">Posts and articles</span>
+    <% end %>
+  <% end %>
   
   <%= content_tag :li, :class => ("active" if controller.controller_name == "questions" && controller.action_name == "index") do %>
     <%= link_to community_questions_path do %>
@@ -18,13 +25,6 @@
     <%= link_to new_community_question_path do %>
       <span class="title">Ask a question</span>
       <span class="details">Ask a question to the contributors</span>
-    <% end %>
-  <% end %>
-
-  <%= content_tag :li, :class => ("active" if controller.controller_name == "community") do %>
-    <%= link_to community_root_path do %>
-      <span class="title">Blogs</span>
-      <span class="details">Posts and articles</span>
     <% end %>
   <% end %>
 </ul>
