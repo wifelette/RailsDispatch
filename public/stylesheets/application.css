@@ -398,11 +398,11 @@ margin:5px 0 1.2em 0;
 
 .question {padding-bottom:1em; margin-bottom:1em; border-bottom:1px solid #E3E3E3; clear:both; overflow:hidden; position:relative;}
 
-.answer {clear:both;margin-top:10px;border-top:1px solid #e3e3e3;padding-top:10px;}
-.answer .meta {font-size:12px;font-weight:bold;color:#2f2f2f;}
+.answer {clear:both;margin-top:10px; border-top:1px solid #e3e3e3; padding-top:10px; background:#E1F4DB;}
+.answer .meta {font-size:12px; font-weight:bold; color:#2f2f2f; padding-left:10px;}
 .question_details {position:absolute; top:0; left:0; font-size:12px; font-weight:bold; color:#2F2F2F; padding:0 0 0 4px;}
 .question_body, .answer .body {font-size:12px; width:520px; float:left; padding:26px 0 0 4px; line-height:20px; color:#626262;}
-.answer .body {padding:10px 0 0 40px;}
+.answer .body {padding:10px 140px 0 10px; background:#E1F4DB; margin-bottom:10px;}
 .question_meta {font-size:12px; width:117px; float:right;}
 
 /* voting */
