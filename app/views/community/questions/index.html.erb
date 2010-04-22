@@ -17,6 +17,16 @@
   <h4>Vote on questions you&rsquo;d like to see answered by the expert contributors</h4>
 </div>
 
+<% unless user_signed_in? %>
+  <div id="signup_message">
+    Signup to ask questions or vote for the questions you&rsquo;d like to see answered.
+    <%= link_to new_user_registration_path, :class => "simple_button signup_button" do %>
+      <span>Signup</span>
+    <% end %>
+    
+  </div>
+<% end %>
+
 <div id="messages"></div>
 
 <!-- <%= link_to new_community_question_path, :class => "simple_button ask_question" do %>

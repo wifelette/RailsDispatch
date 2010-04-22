@@ -8,7 +8,8 @@
     <li class="contributor_name"><%= @contributor.full_name %></li>
     <li class="contributor_social"><%= link_to @contributor.firstname, "http://twitter.com/#{@contributor.twitter_username}", :rel => "tipsy", :class => "twitter_social", :title => "Follow #{@contributor.firstname} on Twitter" %></li>
     <li class="contributor_social"><%= link_to @contributor.firstname, "http://github.com/#{@contributor.github_username}", :rel => "tipsy", :class => "github_social", :title => "Follow #{@contributor.firstname} on Github" %></li>
-  </ul>  
+    <li class="contributor_social"><%= link_to @contributor.firstname, new_community_question_path(:question => {:contributor_id => @contributor.id}), :rel => "tipsy", :class => "ask_contributor_question", :title => "Ask #{@contributor.firstname} a question" %></li>
+  </ul>
 
   <p><%= raw markdown(@contributor.bio) %></p>
 
