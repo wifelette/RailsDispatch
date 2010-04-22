@@ -72,4 +72,16 @@ module ApplicationHelper
       end
     end
   end
+  
+  def on_posts?
+    controller.controller_name == "posts"
+  end
+  
+  def on_contributors?
+    controller.controller_name == "contributors"
+  end
+  
+  def on_community?
+    controller.controller_name == "community" || controller.controller_name == "questions" || controller.controller_name == "answers"
+  end
 end

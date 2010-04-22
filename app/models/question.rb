@@ -37,7 +37,7 @@ class Question < ActiveRecord::Base
       v = Vote.new({:up => up, :user => user})
       votes << v
     end
-    self.points = votes.inject(0) {|sum, vote| vote.up? ? 1 : -1 }
+    self.points = votes.inject(0) {|sum, vote| sum + (vote.up? ? 1 : -1) }
     true
   end
   

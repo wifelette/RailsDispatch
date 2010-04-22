@@ -1,3 +1,7 @@
+<% content_for :head do %>
+  <%= javascript_include_tag 'app/questions', 'app/questions.run' if user_signed_in? %>
+<% end %>
+
 <% content_for :page_nav do %>
 <nav>
   <%= render "layouts/shared/questions_nav" %>
