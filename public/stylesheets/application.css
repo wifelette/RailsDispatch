@@ -104,7 +104,6 @@ section nav ul#tab_nav {margin-top:145px; position:relative; left:-10px;}
 section nav ul#tab_nav li {}
 section nav ul#tab_nav li a, .upcoming_placeholder {margin-bottom:8px; z-index:9999; width:235px; height:41px; display:block; padding:10px 16px 8px 16px; text-decoration:none; color:white; font-size:16px; font-weight:bold; opacity:.96; -webkit-text-stroke:1px transparent;}
 
-
 section nav ul#tab_nav li a span.title, .upcoming_placeholder span.title {float:left; clear:left; color:#333; text-shadow:0; font-family:"Museo Sans"; font-weight:normal;}
 section nav ul#tab_nav li a span.details, .upcoming_placeholder span.details {float:left; clear:left; font-weight:normal; line-height:14px;  font-size:13px; text-shadow:0 -1px 0 white; font-weight:normal; color:black; opacity:.96; -webkit-text-stroke:1px transparent;} 
 

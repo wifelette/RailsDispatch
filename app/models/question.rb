@@ -6,7 +6,7 @@ class Question < ActiveRecord::Base
 
   attr_accessor :message
 
-  validates_presence_of :asker_name, :email, :user
+  validates_presence_of :user
   validates_uniqueness_of :body
   
   accepts_nested_attributes_for :answer, :reject_if => :all_blank
