@@ -26,7 +26,7 @@
         if (count < new_count) el.addClass(options['up']).removeClass(options['down']);
         else if (count > new_count) el.addClass(options['down']).removeClass(options['up']);
         
-        el.find(options['count']).html(data[options['response_count']]);
+        el.find(options['count']).html(new_count);
         
         if (data[options['message']]) {
           message = $("<"+options['message_tag']+" class='"+options['message_class']+"'/>").append(data[options['message']]);
