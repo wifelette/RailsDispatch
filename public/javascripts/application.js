@@ -155,7 +155,7 @@ var cookie;
 (function($){
   $.fn.delaySlideUp = function(){
     this.each(function(){
-      $(this).delay(2000).slideUp(function(){$(this).remove()});
+      // $(this).delay(2000).slideUp(function(){$(this).remove()});
     });
     return this;
   };

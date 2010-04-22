@@ -72,6 +72,8 @@ div.alert.notice span {color:white;}
 
 div.notice {padding:8px 15px; margin-bottom:1em; background:#333; color:white; text-shadow:0 -1px 0 black; -moz-border-radius: 5px; -webkit-border-radius: 5px;}
 
+#messages div.notice {background:#F6BCBC; color:#300509; text-shadow:0 1px 0 white; -moz-border-radius: 0px; -webkit-border-radius: 0px; border-bottom:1px solid #EE9095; border-top:1px solid #EE9095;}
+
 /* header */
 header {height:180px; width:955px; margin:0 auto; position:relative; margin-bottom:10px; padding-top:52px; padding-left:5px;}
 header h1 {color:white; text-shadow:0 -1px 0 black; font:65px/1 "Museo Slab", "Helvetica", "Arial", sans-serif;}
