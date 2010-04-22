@@ -22,7 +22,7 @@ class Community::QuestionsController < ApplicationController
         flash[:notice] = "Successfully updated post."
         redirect_to community_questions_url
       else
-        render :action => 'edit'
+        render :action => 'new'
     end
   end
   

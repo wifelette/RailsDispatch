@@ -40,4 +40,11 @@ class Question < ActiveRecord::Base
     self.points = votes.inject(0) {|sum, vote| vote.up? ? 1 : -1 }
     true
   end
+  
+  def voted?(user)
+    return nil if user.blank?
+    vote = votes.detect{|v| v.user == user}
+    return nil if vote.blank?
+    vote.up? ? "up" : "down"
+  end
 end
