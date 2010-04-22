@@ -16,9 +16,9 @@
   <div class="question_meta">    
     <div class="voting <%= question.voted?(current_user) %>">
       <%= link_to 'vote down', vote_community_question_url(question, :down => true), :class => "vote down", :method => :put %>
-      <span class="vote_count is_zero"><%= question.points.to_i %></span>
-      <%= link_to 'vote up', vote_community_question_url(question, :up => true), :class => "vote up", :method => :put %>
-    </div>
+      <span class="vote_count <%= 'is_zero' if question.points.to_i==0 %>"><%= question.points.to_i %></span>
+      <%= link_to 'vote up', vote_community_question_url(question, :up => true), :class => "vote up", :method => :put, :onclick => 'return false;' %>
+    </div><!-- vote_community_question_url(question, :up => true) -->
   </div>
 
   <% unless question.answer.blank? %>

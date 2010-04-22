@@ -21,12 +21,20 @@
         });
       },
       set_count : function(el, data) {
-        count = el.find(options['count']).html();
-        new_count = data[options['response_count']];
-        if (count < new_count) el.addClass(options['up']).removeClass(options['down']);
-        else if (count > new_count) el.addClass(options['down']).removeClass(options['up']);
+        var counter = el.find(options['count']);
+        var count = counter.html();
+        var new_count = data[options['response_count']];
         
-        el.find(options['count']).html(new_count);
+        if (count < new_count) {el.addClass(options['up']).removeClass(options['down']);}
+        else if (count > new_count) {el.addClass(options['down']).removeClass(options['up']);}
+
+        if (new_count == '0' && !counter.hasClass('is_zero')) {
+          counter.addClass('is_zero')
+        } else {
+          counter.removeClass('is_zero')
+        }
+        
+        counter.html(new_count);
         
         if (data[options['message']]) {
           message = $("<"+options['message_tag']+" class='"+options['message_class']+"'/>").append(data[options['message']]);
