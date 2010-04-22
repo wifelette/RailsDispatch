@@ -14,10 +14,10 @@
   </div>
 
   <div class="question_meta">    
-    <div class="voting">
-      <%= link_to 'vote down', vote_community_question_url(question, :down => true), :class => 'vote down', :method => :put %>
+    <div class="voting <%= question.voted?(current_user) %>">
+      <%= link_to 'vote down', vote_community_question_url(question, :down => true), :class => "vote down", :method => :put %>
       <span class="vote_count is_zero"><%= question.points.to_i %></span>
-      <%= link_to 'vote up', vote_community_question_url(question, :up => true), :class => 'vote up', :method => :put %>
+      <%= link_to 'vote up', vote_community_question_url(question, :up => true), :class => "vote up", :method => :put %>
     </div>
   </div>
 
