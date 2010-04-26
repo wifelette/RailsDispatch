@@ -410,6 +410,7 @@ margin:5px 0 1.2em 0;
 .question_body, .answer .body {font-size:12px; width:520px; float:left; padding:26px 0 0 4px; line-height:20px; color:#626262;}
 .answer .body {padding:10px 140px 0 10px; background:#E1F4DB; margin-bottom:10px;}
 .question_meta {font-size:12px; width:117px; float:right;}
+.question_date {display:block; position:absolute; right:0; bottom:0; font-size:11px; color:#494949;}
 
 /* voting */
 .voting {display:block; text-align:center; margin-top:6px;}
