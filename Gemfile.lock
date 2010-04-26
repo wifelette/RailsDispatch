@@ -69,7 +69,7 @@ dependencies:
   bundler: 
     group: 
     - :default
-    version: = 0.9.21
+    version: ">= 0"
   engineyard: 
     group: 
     - :default
@@ -146,9 +146,9 @@ specs:
 - bluecloth: 
     version: 2.0.7
 - bundler: 
-    version: 0.9.21
+    version: 0.9.24
 - json_pure: 
-    version: 1.2.4
+    version: 1.4.1
 - rubyforge: 
     version: 2.0.4
 - hoe: 
@@ -167,7 +167,7 @@ specs:
 - highline: 
     version: 1.5.2
 - json: 
-    version: 1.2.4
+    version: 1.4.1
 - rest-client: 
     version: 1.4.2
 - termios: 
@@ -188,7 +188,7 @@ specs:
     version: 0.0.23
     source: 3
 - github-markup: 
-    version: 0.3.3
+    version: 0.4.0
 - hirb: 
     version: 0.3.1
 - honeypot-captcha: 
@@ -228,8 +228,8 @@ specs:
 - rspec-rails: 
     version: 2.0.0.beta.7
 - whenever: 
-    version: 0.4.1
-hash: e5e7cc5f1dd0113da5c63665a06a0ef3f213fcc1
+    version: 0.4.2
+hash: 2c0bf6a6dcdfdf15a8f383d209b8161e3ed53653
 sources: 
 - Git: 
     uri: git://github.com/thoughtbot/factory_girl.git

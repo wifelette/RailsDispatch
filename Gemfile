@@ -7,7 +7,7 @@ gem 'rails', '3.0.0.beta3'
 
 gem 'mysql'
 
-gem 'bundler', '0.9.21'
+gem 'bundler'
 
 gem 'engineyard', '0.2.7.pre'
 

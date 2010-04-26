@@ -2,3 +2,4 @@ $("div#person_bio").html("<%= escape_javascript(render :partial => 'contributor_
 $("div#person_bio").show();
 $(".person_thumb").removeClass("loading");
 $(".person_thumb").addClass("active");
+$('[rel=tipsy]').tipsy({gravity: 's'});

@@ -9,18 +9,27 @@
 
   <div class="contributor_details">
     <h4>
-      <span class="topichost"><%= "Topic Host:" if post.topic_host == true %></span><%= post.contributor.full_name %></h4>  
+      <% if post.topic_host == true %>
+        <span class="topichost">Topic Host:</span>
+      <% end %>
+      
+      <%= link_to post.contributor.full_name, contributors_path(:anchor => post.contributor.id) %>
+    </h4>  
     
-    <!-- <%# if post.skill_level %>
+    <% unless post.skill_level.empty? %>
       <div class="post_skill_level">
         <h3>Skill Level:</h3>
-        <%#= raw "<span class='skill_tag #{post.skill_level.downcase}'><span>#{post.skill_level}</span></span>"  %>          
+        <%= raw "<span class='skill_tag #{post.skill_level.downcase}'><span>#{post.skill_level}</span></span>"  %>          
       </div>
-    <%# end %> -->
+    <% end %>
     
     <ul class="contributor_social_links">
       <li><%= link_to post.contributor.firstname, "http://twitter.com/#{post.contributor.twitter_username}", :rel => "tipsy", :class => "twitter_social", :title => "Follow #{post.contributor.firstname} on Twitter" %></li>
       <li><%= link_to post.contributor.firstname, "http://github.com/#{post.contributor.github_username}", :rel => "tipsy", :class => "github_social", :title => "Follow #{post.contributor.firstname} on Github" %></li>
+      <% unless post.contributor.website_url.nil? %>
+        test
+        <li><%= link_to post.contributor.firstname, post.contributor.website_url, :rel => "tipsy", :class => "website_social", :title => "#{post.contributor.firstname}&rsquo;s site" %></li>
+      <% end %>
       <li><a class="ask_contributor_question" title="Ask <%= post.contributor.firstname %> a Question" rel="tipsy" href="<%= new_community_question_path(:question => {:contributor_id => post.contributor.id}) %>">Ask a Question</a></li>
     </ul>  
   </div>
