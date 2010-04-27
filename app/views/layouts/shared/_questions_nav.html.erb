@@ -7,7 +7,7 @@
     <% end %>
   <% end %>
   
-  <%= content_tag :li, :class => ("active" if controller.controller_name == "questions" && controller.action_name == "index") do %>
+  <!-- <%= content_tag :li, :class => ("active" if controller.controller_name == "questions" && controller.action_name == "index") do %>
     <%= link_to community_questions_path do %>
       <span class="title">Recently asked</span>
       <span class="details">Vote on questions you&rsquo;d like answered</span>
@@ -26,5 +26,12 @@
       <span class="title">Ask a question</span>
       <span class="details">Ask a question to the contributors</span>
     <% end %>
-  <% end %>
+  <% end %> -->
+  
+  <li class="inactive">
+    <span class="upcoming_placeholder">
+      <span class="title">More Resources</span>
+      <span class="details">Coming Soon</span>
+    </span>
+  </li>
 </ul>
