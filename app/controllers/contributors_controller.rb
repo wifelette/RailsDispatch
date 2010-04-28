@@ -1,6 +1,6 @@
 class ContributorsController < ApplicationController
   def index
-    @contributors = Contributor.visible.order("firstname asc")
+    @contributors = Contributor.visible
 
     respond_to do |format|
       format.html # index.html.erb

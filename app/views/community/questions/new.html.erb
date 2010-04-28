@@ -23,7 +23,7 @@
   <ol class='uniform'>
     <li class="field">
       <label>My Question is For:</label>
-      <%= f.collection_select :contributor_id, Contributor.visible.by_last_name, :id, :full_name, :include_blank => true %>
+      <%= f.collection_select :contributor_id, Contributor.visible, :id, :full_name, :include_blank => true %>
     </li>
 
     <li class="field">
