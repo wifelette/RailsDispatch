@@ -6,6 +6,8 @@ class Contributor < ActiveRecord::Base
   scope :visible, where("on_contributor_page != ?", false)
   scope :invisible, where("on_contributor_page != ?", true)
   
+  scope :by_last_name, order("lastname asc")
+
   has_many :posts
   has_many :questions
 

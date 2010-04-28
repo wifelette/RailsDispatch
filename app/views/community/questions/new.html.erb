@@ -22,12 +22,12 @@
 
   <ol class='uniform'>
     <li class="field">
-      <label>Ask contributor</label>
-      <%= f.select(:contributor_id , Contributor.visible.collect {|p| [ p.full_name, p.id ] }, { :include_blank => true }) %>
+      <label>My Question is For:</label>
+      <%= f.collection_select :contributor_id, Contributor.visible.by_last_name, :id, :full_name, :include_blank => true %>
     </li>
 
     <li class="field">
-      <label>Question</label>
+      <label>My Question is:</label>
       <%= f.text_area :body %>
     </li>
 
