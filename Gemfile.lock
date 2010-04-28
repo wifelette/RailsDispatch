@@ -102,7 +102,7 @@ specs:
 - i18n: 
     version: 0.3.7
 - memcache-client: 
-    version: 1.8.2
+    version: 1.8.3
 - tzinfo: 
     version: 0.3.20
 - activesupport: 
@@ -126,7 +126,7 @@ specs:
 - treetop: 
     version: 1.4.5
 - mail: 
-    version: 2.2.0
+    version: 2.1.5.3
 - text-hyphen: 
     version: 1.0.0
 - text-format: 
@@ -229,7 +229,7 @@ specs:
     version: 2.0.0.beta.7
 - whenever: 
     version: 0.4.2
-hash: 2c0bf6a6dcdfdf15a8f383d209b8161e3ed53653
+hash: 9b432f7f2f276a0afaad370324f2c69e76e60219
 sources: 
 - Git: 
     uri: git://github.com/thoughtbot/factory_girl.git
@@ -237,8 +237,8 @@ sources:
     git: git://github.com/thoughtbot/factory_girl.git
     ref: feac7298352a83fef0717d8beadd2eda9aabfe56
 - Git: 
-    uri: http://github.com/curtis/honeypot-captcha.git
-    git: http://github.com/curtis/honeypot-captcha.git
+    uri: git://github.com/curtis/honeypot-captcha.git
+    git: git://github.com/curtis/honeypot-captcha.git
     ref: 067e25f73c888cf38a929109f84a08427e172d0c
 - Git: 
     name: loofah
