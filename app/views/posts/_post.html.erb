@@ -24,12 +24,7 @@
     <% end %>
     
     <ul class="contributor_social_links">
-      <li><%= link_to post.contributor.firstname, "http://twitter.com/#{post.contributor.twitter_username}", :rel => "tipsy", :class => "twitter_social", :title => "Follow #{post.contributor.firstname} on Twitter" %></li>
-      <li><%= link_to post.contributor.firstname, "http://github.com/#{post.contributor.github_username}", :rel => "tipsy", :class => "github_social", :title => "Follow #{post.contributor.firstname} on Github" %></li>
-      <% unless post.contributor.website_url.nil? %>
-        <li><%= link_to post.contributor.firstname, post.contributor.website_url, :rel => "tipsy", :class => "website_social", :title => "#{post.contributor.firstname}&rsquo;s site" %></li>
-      <% end %>
-      <!-- <li><a class="ask_contributor_question" title="Ask <%= post.contributor.firstname %> a Question" rel="tipsy" href="<%= new_community_question_path(:question => {:contributor_id => post.contributor.id}) %>">Ask a Question</a></li> -->
+      <%= render "contributors/bio", :contributor => post.contributor %>
     </ul>  
   </div>
   

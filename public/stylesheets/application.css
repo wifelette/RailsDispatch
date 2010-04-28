@@ -243,7 +243,7 @@ li.contributor_social a.twitter_social, .contributor_social_links li a.twitter_s
 li.contributor_social a.github_social, .contributor_social_links li a.github_social {background:url('/images/git_icon.png') top left no-repeat;}
 li.contributor_social a.ask_contributor_question, .contributor_social_links li a.ask_contributor_question {background:url('/images/ask_question.gif') top left no-repeat;}
 
-li.contributor_social {float:left; position:relative; top:-7px; right:-6px;}
+ul.contributor_bio_info li.contributor_social {float:left; position:relative; top:-7px; right:-6px;}
 
 span.topichost {color:red; font:normal 14px/1.1em georgia, serif; text-shadow:0 1px 0 white; margin-bottom:12px; color:#8E846D; margin-right:2px;}
 
