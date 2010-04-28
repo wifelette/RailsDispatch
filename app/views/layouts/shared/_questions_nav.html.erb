@@ -1,19 +1,19 @@
 <ul id="tab_nav">
-  <%= content_tag :li, :class => ("active" if controller.controller_name == "questions" && controller.action_name == "new") do %>
+  <%= content_tag :li, :class => question_class_for("new") do %>
     <%= link_to new_community_question_path do %>
       <span class="title">Ask a Question</span>
       <span class="details">What's on your mind?</span>
     <% end %>
   <% end %>
 
-  <%= content_tag :li, :class => ("active" if controller.controller_name == "questions" && controller.action_name == "index") do %>
+  <%= content_tag :li, :class => question_class_for("index") do %>
     <%= link_to community_questions_path do %>
       <span class="title">Recently Asked</span>
       <span class="details">Cast your vote</span>
     <% end %>
   <% end %>
 
-  <%= content_tag :li, :class => ("active" if controller.controller_name == "answers") do %>
+  <%= content_tag :li, :class => question_class_for("answers") do %>
     <%= link_to community_answers_path do %>
       <span class="title">Recently Answered</span>
       <span class="details">Responses from the experts</span>
