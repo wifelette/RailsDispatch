@@ -1,37 +1,22 @@
 <ul id="tab_nav">
-
-  <%= content_tag :li, :class => ("active" if controller.controller_name == "community") do %>
-    <%= link_to community_root_path do %>
-      <span class="title">Blogs</span>
-      <span class="details">Posts and articles</span>
+  <%= content_tag :li, :class => ("active" if controller.controller_name == "questions" && controller.action_name == "new") do %>
+    <%= link_to new_community_question_path do %>
+      <span class="title">Ask a Question</span>
+      <span class="details">What's on your mind?</span>
     <% end %>
   <% end %>
-  
+
   <%= content_tag :li, :class => ("active" if controller.controller_name == "questions" && controller.action_name == "index") do %>
     <%= link_to community_questions_path do %>
-      <span class="title">Recently asked</span>
-      <span class="details">Vote on questions you&rsquo;d like answered</span>
+      <span class="title">Recently Asked</span>
+      <span class="details">Cast your vote</span>
     <% end %>
   <% end %>
 
   <%= content_tag :li, :class => ("active" if controller.controller_name == "answers") do %>
     <%= link_to community_answers_path do %>
-      <span class="title">Recently answered questions</span>
-      <span class="details">See what the experts have to say</span>
+      <span class="title">Recently Answered</span>
+      <span class="details">Responses from the experts</span>
     <% end %>
   <% end %>
-
-  <%= content_tag :li, :class => ("active" if controller.controller_name == "questions" && controller.action_name == "new") do %>
-    <%= link_to new_community_question_path do %>
-      <span class="title">Ask a question</span>
-      <span class="details">Ask a question to the contributors</span>
-    <% end %>
-  <% end %>
-  
-  <li class="inactive">
-    <span class="upcoming_placeholder">
-      <span class="title">More Resources</span>
-      <span class="details">Coming Soon</span>
-    </span>
-  </li>
 </ul>

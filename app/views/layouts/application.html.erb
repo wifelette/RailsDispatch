@@ -8,16 +8,16 @@
   <!--[if lte IE 8]><script src="/javascripts/html5.js"></script><![endif]-->
   <%= javascript_include_tag "jquery-1.4.2.min", "jquery.rails", "jquery.cookie", "tipsy", "application" %>
   <%= stylesheet_link_tag "application" %>
-  
+
   <!--[if lte IE 6]><link rel="stylesheet" href="/stylesheets/main.ie6.css" type="text/css" media="screen" charset="utf-8"><![endif]-->
   <!--[if IE 7]><link rel="stylesheet" href="/stylesheets/main.ie7.css" type="text/css" media="screen" charset="utf-8"><![endif]-->
 
-  <%= yield :head -%> 
-  
+  <%= yield :head -%>
+
   <%= auto_discovery_link_tag(:rss, '/posts/feed.rss') %>
 
   <%= csrf_meta_tag %>
-  
+
 </head>
 <body id="<%= controller.controller_name %>_page">
 
@@ -28,55 +28,59 @@
     </div>
     <% end %>
   <% end %>
-  
+
   <header>
-    
+
     <div id="title">
       <% if (controller.controller_name == "posts" && controller.action_name == "welcome") %>
       <span>
         <h1>Rails Dispatch</h1>
-        <h2>Rails news delivered fresh</h2>        
+        <h2>Rails news delivered fresh</h2>
       </span>
       <% else %>
       <a href="/">
         <h1>Rails Dispatch</h1>
-        <h2>Rails news delivered fresh</h2>        
+        <h2>Rails news delivered fresh</h2>
       </a>
       <% end %>
     </div>
 
     <a id="enginyard_header" href="http://engineyard.com">Presented by Engine Yard</a>
-    
+
     <nav>
       <ul>
-        
+
         <%= content_tag :li, :class => on_posts? ? "current" : nil do %>
           <%= link_to "Posts", root_path %>
         <% end %>
-        
+
         <%= content_tag :li, :class => on_contributors? ? "current" : nil do %>
           <%= link_to "Contributors", contributors_path %>
         <% end %>
-        
+
         <%= content_tag :li, :class => on_community? ? "current" : nil do %>
           <%= link_to "Community", '/community' %>
         <% end %>
-        
+
+        <%= content_tag :li, :class => on_qa? ? "current" : nil do %>
+          <%= link_to "Q&A", "/community/questions" %>
+        <% end %>
+
         <%- if Page.published.size > 0 -%>
           <%= content_tag :li, :class => controller.controller_name == "pages" ? "current" : nil do %>
             <%= link_to "About", "/about/#{Page.published.first.slug}" %>
           <% end %>
         <% end %>
-        
-      </ul>  
+
+      </ul>
     </nav>
   </header>
 
   <section>
 
-    <%= yield :page_nav -%>  
+    <%= yield :page_nav -%>
 
-    <%= content_tag :article, yield -%>  
+    <%= content_tag :article, yield -%>
 
   </section>
 

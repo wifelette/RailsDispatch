@@ -1,0 +1,17 @@
+<ul id="tab_nav">
+
+<%= content_tag :li, :class => ("active" if controller.controller_name == "community") do %>
+  <%= link_to community_root_path do %>
+    <span class="title">Blogs</span>
+    <span class="details">Posts and articles</span>
+  <% end %>
+<% end %>
+
+<li class="inactive">
+  <span class="upcoming_placeholder">
+    <span class="title">More Resources</span>
+    <span class="details">Coming Soon</span>
+  </span>
+</li>
+
+</ul>
