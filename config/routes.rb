@@ -37,7 +37,7 @@ RailsDispatch::Application.routes.draw do |map|
     resources :questions
 
     namespace :community do 
-      root :to => "admin/community#index"
+      root :to => "community#index"
       resources :feeds do
         resources :feed_entries
       end
