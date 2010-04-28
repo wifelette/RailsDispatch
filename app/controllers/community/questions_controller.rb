@@ -4,7 +4,7 @@ class Community::QuestionsController < ApplicationController
   before_filter :authenticate_user!, :only => [:create, :vote]
   
   def index
-    @questions = Question.unanswered.paginated(params[:page]).by_points.all
+    @questions = Question.unanswered.paginated(params[:page]).by_points
   end
   
   def show

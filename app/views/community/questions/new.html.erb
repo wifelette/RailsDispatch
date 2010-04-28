@@ -16,25 +16,29 @@
   <h4>Ask a question to the expert contributors, also vote on questions you&rsquo;d like to see answered</h4>
 </div>
 
-<%= form_for [:community, @question], :html => { :honeypot => true } do |f| %>
+<% if current_user %>
+  <%= form_for [:community, @question], :html => { :honeypot => true } do |f| %>
 
-  <%= f.error_messages %>
+    <%= f.error_messages %>
 
-  <ol class='uniform'>
-    <li class="field">
-      <label>My Question is For:</label>
-      <%= f.collection_select :contributor_id, Contributor.visible, :id, :full_name, :include_blank => true %>
-    </li>
+    <ol class='uniform'>
+      <li class="field">
+        <label>My Question is For:</label>
+        <%= f.collection_select :contributor_id, Contributor.visible, :id, :full_name, :include_blank => true %>
+      </li>
 
-    <li class="field">
-      <label>My Question is:</label>
-      <%= f.text_area :body %>
-    </li>
+      <li class="field">
+        <label>My Question is:</label>
+        <%= f.text_area :body %>
+      </li>
 
-    <li class="field">
-      <label></label>
-      <%= f.submit "Submit" %>  
-    </li>
-  </ol>
+      <li class="field">
+        <label></label>
+        <%= f.submit "Submit" %>  
+      </li>
+    </ol>
   
+  <% end %>
+<% else %>
+  <%= render "suggest_signup" %>
 <% end %>
