@@ -5,6 +5,7 @@ class FeedEntry < ActiveRecord::Base
   scope :by_date, order("published_at desc")
   scope :recent, limit(10).by_date
   scope :paginated, lambda { |page| recent.offset(page.to_i * 10) }
+  validates_uniqueness_of :guid
   
   def self.update_from_feed(feed_url, feed_id)
     feed = Feedzirra::Feed.fetch_and_parse(feed_url)
@@ -34,7 +35,11 @@ class FeedEntry < ActiveRecord::Base
         :guid           => entry.id,
         :feed_id        => feed_id
       }
-      FeedEntry.find_or_create_by_guid(e)
+      begin
+        FeedEntry.find_or_create_by_guid(e)
+      rescue Exception => exception
+        Rails.logger.warn "Failed on adding FeedEntry : #{e}"
+      end
     end    
   end
 end
