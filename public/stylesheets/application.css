@@ -242,6 +242,7 @@ li.contributor_social a, .contributor_social_links li a {height:20px; width:20px
 li.contributor_social a.twitter_social, .contributor_social_links li a.twitter_social {background:url('/images/twitter.gif') top left no-repeat;}
 li.contributor_social a.github_social, .contributor_social_links li a.github_social {background:url('/images/git_icon.png') top left no-repeat;}
 li.contributor_social a.ask_contributor_question, .contributor_social_links li a.ask_contributor_question {background:url('/images/ask_question.gif') top left no-repeat;}
+li.contributor_social a.website, .website li a.website {background:url('/images/website_icon.gif') top left no-repeat;}
 
 ul.contributor_bio_info li.contributor_social {float:left; position:relative; top:-7px; right:-6px;}
 
