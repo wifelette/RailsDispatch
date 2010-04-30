@@ -25,6 +25,7 @@ xml.rss :version => "2.0" do
         xml.description textilize(post.body)
         xml.pubDate post.publish_date.to_s(:rfc822)
         xml.link post_url(post.slug)
+        xml.author post.contributor.full_name
       end
     end
   end
