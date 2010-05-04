@@ -14,7 +14,6 @@ module ApplicationHelper
   # Override textilize to syntax highlight code blocks in <pre>
   # TODO double check xss security of this
   def textilize(text)
-    text = text.gsub(/<script.+script>|<script[^>]+\/>|<script/, '')
     output, current = "", ""
     s = StringScanner.new(text)
 
