@@ -352,10 +352,20 @@ a#load_more.loading span {background:url('/images/small_loader.gif') right cente
 
 a#load_more {font:bold 14px/58px Helvetica, Arial, sans-serif; -webkit-text-stroke:1px transparent; text-shadow:0 1px 0 white; color:#333; text-decoration:none;}
 
+.post_small {float:left; clear:left;}
+.post_small h4 {float:left; color:green;}
+/*.post_small {float:left; clear:left;}*/
 
 /* REFACTOR THIS */
 section article {line-height:1.6em; font-size:14px; color:#333; margin-bottom:26px; display:block; position:relative; z-index:1;}
 section article h2 {font:bold 17px/1.2em "Museo Sans", Helvetica, Arial, sans-serif; margin-top:1.4em; margin-bottom:.5em; display:block;}
+#pages_page section article h2 {margin-top:0;}
+#pages_page section article p + h2 {margin-top:1.4em;}
+#pages_page section article img {border: 1px solid rgb(129, 129, 119);}
+
+#pages_page section article img.left {float: left; border: 1px solid rgb(129, 129, 119); margin:20px 20px 20px 0;}
+#pages_page section article img.right {float: right; border: 1px solid rgb(129, 129, 119); margin:20px 0 20px 20px;}
+
 
 section article .post_content  h1 {
 display:block;

@@ -6,5 +6,21 @@
 </nav>
 <% end %>
 
-<%# TODO: Create a design for rendering more than 1 post %>
-<%= render @body_posts %>
+<div id="page_additional">
+  <h3>All Posts</h3>
+  <h4>Posts from all past weeks</h4>
+</div>
+
+<% @posts.each do |post| %>
+<div class="popular_post">
+  <%= render :partial => 'contributors/contributor', :locals => { :contributor => post.contributor}  %>
+
+  <div class="post_abstract">
+    <div class="post_meta_title">
+      <h4><%= link_to post.title, post.slug %></h4>  
+      <h5><%= post.contributor.full_name %></h5>
+    </div>
+     <%= raw truncate(strip_tags(post.body), :length => 400) %>
+  </div>
+</div>
+<% end %>

@@ -1,0 +1,9 @@
+<% content_for :page_nav do %>
+<nav>
+  <%= render "layouts/shared/days_until" %>
+  <%= render "layouts/shared/posts_nav" %>
+  <%= render "layouts/shared/sidebar_social_links" %>
+</nav>
+<% end %>
+
+<%= render @post %>

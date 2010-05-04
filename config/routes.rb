@@ -1,10 +1,13 @@
 RailsDispatch::Application.routes.draw do |map|
 
-  root :to => "posts#index"
+  root :to => "posts#home"
   devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout', :sign_up => 'register' }
 
   # resources :posts, :only => [:welcome, :index]
-  match "/posts(/:slug)(/feed.:format)" => "posts#index", :as => :post
+  match "/posts" => "posts#index"
+  match "/posts/:slug" => "posts#show", :as => :post
+  
+  # match "/posts(/:slug)(/feed.:format)" => "posts#index", :as => :post
 
   match '/contributors/apply' => 'contributors#apply'
   resources :contributors, :only => [:index, :show]
