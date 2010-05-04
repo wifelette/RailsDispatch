@@ -5,6 +5,8 @@ class Admin::ContributorsController < ApplicationController
   
   def index
     @contributors = Contributor.all
+    @visible_contributors = Contributor.visible
+    @invisible_contributors = Contributor.invisible
   end
   
   def new

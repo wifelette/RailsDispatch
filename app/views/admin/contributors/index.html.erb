@@ -24,25 +24,55 @@
   </li>
 </ul>
 
+
+<h3 class="section_header">Visible Contributors</h3>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
   <th>Full Name</th>
   <th></th>
 </tr>
-<% @contributors.each_with_index do |contributor, i| %>
-<tr class="actionable" id="<%= controller.controller_name %>_<%= contributor.id %>">
-  <td><%= contributor.full_name %></td>
-  
-  <td class="actions">
-    <%= link_to admin_contributor_path(contributor), :method => :delete, :remote => true, :class => "simple_button" do %>
-      <span>Destroy</span>
-    <% end %>
+<% if @visible_contributors %>
+  <% @visible_contributors.each_with_index do |contributor, i| %>
+  <tr class="actionable" id="<%= controller.controller_name %>_<%= contributor.id %>">
+    <td><%= contributor.full_name %></td>
 
-    <%= link_to edit_admin_contributor_url(contributor), :class => "simple_button" do %>
-      <span>Edit</span>
-    <% end %>    
-  </td>
+    <td class="actions">
+      <%= link_to admin_contributor_path(contributor), :method => :delete, :remote => true, :class => "simple_button" do %>
+        <span>Destroy</span>
+      <% end %>
 
-</tr>
+      <%= link_to edit_admin_contributor_url(contributor), :class => "simple_button" do %>
+        <span>Edit</span>
+      <% end %>    
+    </td>
+  </tr>
+  <% end %>
 <% end %>
 </table>
+
+<h3 class="section_header">Invisible Contributors (thumbnail not on public contributors page)</h3>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+  <th>Full Name</th>
+  <th></th>
+</tr>
+<% if @invisible_contributors %>
+  <% @invisible_contributors.each_with_index do |contributor, i| %>
+  <tr class="actionable" id="<%= controller.controller_name %>_<%= contributor.id %>">
+    <td><%= contributor.full_name %></td>
+
+    <td class="actions">
+      <%= link_to admin_contributor_path(contributor), :method => :delete, :remote => true, :class => "simple_button" do %>
+        <span>Destroy</span>
+      <% end %>
+
+      <%= link_to edit_admin_contributor_url(contributor), :class => "simple_button" do %>
+        <span>Edit</span>
+      <% end %>    
+    </td>
+  </tr>
+  <% end %>
+<% end %>
+</table>
+
+
