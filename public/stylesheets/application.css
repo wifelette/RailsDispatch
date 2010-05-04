@@ -103,7 +103,7 @@ header nav ul li.current a {cursor:default;}
 /* main */
 section {width:960px; margin:0 auto; position:relative;}
 section nav {position:absolute; top:5px; left:0; width:220px; z-index:10;}
-section article {background:url('/images/page_background.png') top left no-repeat; width:670px; min-height:920px; padding:26px; margin-left:238px;}
+section article {background:url('/images/page_background.png') top left no-repeat; width:670px; min-height:1120px; padding:26px; margin-left:238px;}
 
 section nav ul#tab_nav {margin-top:145px; position:relative; left:-10px;}
 section nav ul#tab_nav li {}
