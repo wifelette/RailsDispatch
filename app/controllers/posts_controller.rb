@@ -6,6 +6,7 @@ class PostsController < ApplicationController
 
     @posts = Post.past
     @posts = @posts.slugged(params[:slug]) if params[:slug]
+    @upcoming = Post.next
   end
 
   def show
