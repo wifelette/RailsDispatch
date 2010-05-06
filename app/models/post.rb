@@ -4,8 +4,8 @@ class Post < ActiveRecord::Base
   scope :menu, where("published != ?", false).limit(4)
   scope :descending, order("publish_date desc")
   scope :ascending, order("publish_date asc")
-  scope :future, lambda { where('publish_date >= ?', Time.now)}
-  scope :past, lambda { where('publish_date < ?', Time.now).descending}
+  scope :future, lambda { where('publish_date > ?', Time.now)}
+  scope :past, lambda { where('publish_date <= ?', Time.now).descending}
   scope :recent, past.published.descending.limit(4)
   scope :upcoming, published.future.ascending.limit(1)
   scope :slugged, lambda {|name| past.published.where(:slug => name)}
