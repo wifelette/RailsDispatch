@@ -367,7 +367,7 @@ section article h2 {font:bold 17px/1.2em "Museo Sans", Helvetica, Arial, sans-se
 #pages_page section article img.right {float: right; border: 1px solid rgb(129, 129, 119); margin:20px 0 20px 20px;}
 
 
-section article .post_content  h1 {
+section article .post_content h1, section article #contributor_content h1 {
 display:block;
 font:bold 24px/1.2em Helvetica,Arial,sans-serif;
 margin-bottom:0.5em;
@@ -421,7 +421,7 @@ margin:5px 0 1.2em 0;
 .question_body, .answer .body {font-size:12px; width:520px; float:left; padding:26px 0 0 4px; line-height:20px; color:#626262;}
 .answer .body {padding:10px 140px 0 10px; background:#E1F4DB; margin-bottom:10px;}
 .question_meta {font-size:12px; width:117px; float:right;}
-.question_date {display:block; position:absolute; right:0; bottom:0; font-size:11px; color:#494949;}
+.question_date, .post_date {display:block; position:absolute; right:0; bottom:0; font-size:11px; color:#494949;}
 
 /* voting */
 .voting {display:block; text-align:center; margin-top:6px;}
@@ -493,13 +493,14 @@ a.simple_button.warning span {color:white; text-shadow:0 -1px 0 #270100; opacity
 
 a.simple_button.ask_question {position:absolute; right:40px;}
 
-
 tr.actionable td {vertical-align:middle;}
 td.actions {width:220px;}
 td.actions a.simple_button {float:right; margin:0 10px 0 10px; position:relative; top:0px;}
 td.actions a.simple_button {visibility:hidden;}
 tr.actionable:hover td.actions a.simple_button {visibility:visible;}
 tr.actionable.in_progress:hover a.simple_button {visibility:visible;}
+
+
 
 /* syntax coloring */
 .CodeRay .CodeRay {
@@ -548,3 +549,7 @@ section article#coming_soon {background:url('/images/page_background_full.png') 
 section article#coming_soon h4 {font:italic bold 32px georgia; text-align:center; margin-top:100px;}
 
 #tracking_code {position:absolute; bottom:0; right:0;}
+
+#contributor_content .answer, #contributor_content .answer .body {background:#F3FDEF;}
+#contributor_content .post {position:relative;border-bottom:1px solid #E3E3E3;padding:10px;margin-bottom:5px;}
+#contributor_content #posts:not(:empty), #contributor_content #questions:not(:empty) {padding-bottom:15px;}

@@ -10,6 +10,8 @@ class ContributorsController < ApplicationController
   
   def show
     @contributor = Contributor.find(params[:id])
+    @questions = @contributor.questions.answered.all
+    @posts = @contributor.posts.all
     
     respond_to do |format|
       format.js

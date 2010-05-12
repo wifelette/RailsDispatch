@@ -1,0 +1,22 @@
+<% if @questions.present? %>
+<h1>Questions Answered</h1>
+<% end %>
+<% @questions.each do |question| %>
+<div class="question">
+  <div class="question_details">
+    <span><%= question.user.name || "Anonymous" %> asked</span>
+  </div>
+  <div class="question_body">
+    <%= textilize(question.body) %>
+  </div>
+  <div class="question_date">Asked <%= question.created_at.strftime("%B %d, %Y") %></div>
+  <% unless question.answer.blank? %>
+  <div class='answer'>
+    <div class='meta'><span><%= question.answer.contributor.try(:full_name) || "Anonymous" %> answered</span></div>
+    <div class='body'>
+      <%= textilize(question.answer.body) %>
+    </div>
+  </div>
+  <% end %>
+</div>
+<% end %>

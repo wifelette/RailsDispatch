@@ -1,0 +1,9 @@
+<% if @posts.present? %>
+<h1>Content From</h1>
+<% end %>
+<% @posts.each do |post| %>
+<div class='post'>
+  <div class='title'><%= link_to post.title, post_url(post.slug) %></div>
+  <div class='post_date'>Published <%= post.publish_date.strftime("%B %d, %Y") %></div>
+</div>
+<% end %>
