@@ -15,18 +15,13 @@
     };
     </script>
     <script type="text/javascript">function mktoGetForm() {return document.getElementById('mktForm_1002'); }</script>
-
     <form class="lpeRegForm formNotEmpty" method="post" enctype="application/x-www-form-urlencoded" action="http://na-f.marketo.com/index.php/leadCapture/save" id="mktForm_1002" name="mktForm_1002">
 
       <span class="mktFormReq mktField">
         <input class='mktFormText mktFormEmail mktFReq' name="Email" id="Email" type='text' value=""  maxlength='255' tabIndex='2' />
-        <label class="inline-hints">Subscribe to our Newsletter</label>
+        <label class="inline-hints" style="left:10px !important;">Subscribe to our Newsletter</label>
         <div class='mktFormMsg'></div>
       </span>
-
-      <!-- <div id="mktFrmButtons">
-        <input id='mktFrmSubmit' type='submit' class="cta button" value='Subscribe' name='submitButton' onclick='formSubmit(document.getElementById("mktForm_1002")); return false;' />
-      </div> -->
 
       <input type="text" name="_marketo_comments" value="" class="hidden" />
 
@@ -42,6 +37,7 @@
       <input type="hidden" name="_mkt_disp" value="return" />
       <input type="hidden" name="_mkt_trk" value="%MC0%" />
     </form>
+    
     <script type="text/javascript" src="http://na-f.marketo.com/js/mktFormSupport.js"></script>
     <script type="text/javascript">
     function formSubmit(elt) {
