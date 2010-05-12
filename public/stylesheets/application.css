@@ -553,3 +553,4 @@ section article#coming_soon h4 {font:italic bold 32px georgia; text-align:center
 #contributor_content .answer, #contributor_content .answer .body {background:#F3FDEF;}
 #contributor_content .post {position:relative;border-bottom:1px solid #E3E3E3;padding:10px;margin-bottom:5px;}
 #contributor_content #posts:not(:empty), #contributor_content #questions:not(:empty) {padding-bottom:15px;}
+#contributor_content .post .title a, #contributor_content .post .title a:visited {color:#063A44;background:#F2F8F8;border-bottom: 1px solid #8FCBD3;text-decoration:none;}
