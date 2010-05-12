@@ -19,7 +19,7 @@ xml.rss :version => "2.0" do
     xml.description "Rails news delivered fresh"
     xml.link post_url
 
-    for post in @body_posts
+    for post in @posts
       xml.item do
         xml.title post.title
         xml.description textilize(post.body)

@@ -16,6 +16,9 @@ class PostsController < ApplicationController
   end
 
   def home
+    # @posts = Post.past
+    # @posts = @posts.slugged(params[:slug]) if params[:slug]
+
     @nav_posts = Post.recent
     @body_posts = Post.past
     @body_posts = @body_posts.slugged(params[:slug]) if params[:slug]
