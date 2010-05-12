@@ -162,7 +162,17 @@ var cookie;
 })(jQuery);
 
 $(document).ready(function () {
-    
+  
+  $('#Email').keypress(function(event) {
+    if (event.keyCode == '13') {
+      formSubmit(document.getElementById("mktForm_1002"));
+      this.blur();
+      return false;
+    } else {
+      return true;
+    }
+  });
+  
   if (window.location.pathname.match(/contributors/)) {
     contributor_id = window.location.hash.substr(1)
     $("a[href=/contributors/" + contributor_id + "]").addClass("loading")
