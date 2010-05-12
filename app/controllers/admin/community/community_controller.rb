@@ -1,4 +1,4 @@
-class Admin::CommunityController < ApplicationController
+class Admin::Community::CommunityController < ApplicationController
   before_filter :authenticate_user!, :authenticate_admin!
   
   def index
