@@ -4,7 +4,7 @@ RailsDispatch::Application.routes.draw do |map|
   devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout', :sign_up => 'register' }
 
   # resources :posts, :only => [:welcome, :index]
-  match "/posts" => "posts#index"
+  match "/posts" => "posts#index", :as => :posts
   match "/posts/:slug" => "posts#show", :as => :post
   match "/posts/feed.:format" => "posts#index"
   

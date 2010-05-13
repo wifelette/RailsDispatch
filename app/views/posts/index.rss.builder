@@ -17,7 +17,7 @@ xml.rss :version => "2.0" do
   xml.channel do
     xml.title "Rails Dispatch"
     xml.description "Rails news delivered fresh"
-    xml.link post_url
+    xml.link posts_url
 
     for post in @posts
       xml.item do
