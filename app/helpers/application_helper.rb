@@ -27,12 +27,7 @@ module ApplicationHelper
       end
     end
     output << super(current) unless current.blank?
-    output.html_safe
-  end
-  
-  def textilize_safe(text)
-    output = textilize(text)
-    output.gsub(/\<(\/?script[^\>]*?)\>/i) do
+    output.gsub(/\<([\s\/]*?script[^\>]*?)\>/i) do
       contents = "&lt;#{$1}&gt;"
     end.html_safe
   end
