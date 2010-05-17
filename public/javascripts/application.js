@@ -190,7 +190,7 @@ $(document).ready(function () {
   $("a.close_alert").notifications();
   
   // load bio
-  $(".person_thumb").load_bio();
+  // $(".person_thumb").load_bio();
   
   // load more style pagination
   $("#load_more").load_more();

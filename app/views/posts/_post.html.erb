@@ -1,6 +1,6 @@
 <div id="page_additional" class="with_contributor">
   
-  <% content_tag :a, :href => contributors_path(:anchor => post.contributor.id), :title => post.contributor.full_name, :class => "person_thumb small", :rel => 'tipsy' do -%>
+  <% content_tag :a, :href => contributor_path(post.contributor), :title => post.contributor.full_name, :class => "person_thumb small", :rel => 'tipsy' do -%>
     <%= image_tag post.contributor.photo.url(:thumb), :alt => post.contributor.full_name %>
     <%= content_tag(:span, "", :class => 'person_mask') %>
   <% end -%>
@@ -13,7 +13,7 @@
         <span class="topichost">Topic Host:</span>
       <% end %>
       
-      <%= link_to post.contributor.full_name, contributors_path(:anchor => post.contributor.id) %>
+      <%= link_to post.contributor.full_name, contributors_path(post.contributor) %>
     </h4>  
     
     <% unless post.skill_level.blank? %>

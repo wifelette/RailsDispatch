@@ -1,19 +1,17 @@
 class ContributorsController < ApplicationController
+  respond_to :html, :rss
+  
   def index
     @contributors = Contributor.visible
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @contributors }
-    end
+    respond_with @contributors
   end
   
   def show
     @contributor = Contributor.find(params[:id])
     
-    respond_to do |format|
-      format.js
-    end
+    @feed = Feed.where(:contributor_id => params[:id])
+    @entries = FeedEntry.where(:feed_id => @feed.id)
+    respond_with @contributor
   end
 
   def apply

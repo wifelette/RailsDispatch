@@ -9,6 +9,7 @@ class Contributor < ActiveRecord::Base
 
   has_many :posts
   has_many :questions
+  has_many :answers
 
   validates_presence_of :firstname, :lastname
 

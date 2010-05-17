@@ -1,14 +1,42 @@
-<div id="contributor_details">
-  <% content_tag :a, :href => url_for(@contributor), :title => @contributor.full_name, :class => "person_thumb large", :rel => 'tipsy' do -%>
-    <%= image_tag @contributor.photo.url(:large), :alt => @contributor.full_name %>
-    <%= content_tag(:span, "", :class => 'person_mask') %>
-  <% end -%>
+<% content_tag :a, :href => url_for(@contributor), :title => @contributor.full_name, :class => "person_thumb large", :rel => 'tipsy' do -%>
+  <%= image_tag @contributor.photo.url(:large), :alt => @contributor.full_name %>
+  <%= content_tag(:span, "", :class => 'person_mask') %>
+<% end -%>
 
+<div id="contributor_details">
   <ul class="contributor_bio_info">
     <li class="contributor_name"><%= @contributor.full_name %></li>
     <%= render "bio", :contributor => @contributor %>
   </ul>
 
   <p><%= raw markdown(@contributor.bio) %></p>
+</div>
 
+<div id="contributor_contributions">
+  <% unless @contributor.posts.blank? %>
+  <h3><span>Articles posted</span></h3>
+  <ul>
+    <% @contributor.posts.each do |post| %>
+      <li><%= link_to post.title, post %> <span>&mdash; posted on</span> <%= post.publish_date.strftime("%B %d, %Y") %></li>
+    <% end %>
+  </ul>
+  <% end %>
+
+  <% unless @contributor.answers.blank? %>
+  <h3><span>Questions answered</span></h3>
+  <ul>
+    <% @contributor.answers.each do |answer| %>
+      <li><%= link_to truncate(answer.body, 53), community_answers_path %> <span>&mdash; answered on</span> <%= answer.created_at.strftime("%B %d, %Y") %></li>
+    <% end %>
+  </ul>
+  <% end %>
+
+  <% unless @entries.blank? %>
+  <h3><span>Latest blog postings</span></h3>
+  <ul>
+    <% @entries.each do |entry| %>
+      <li><%= link_to truncate(entry.title, 53), entry.url %> <span>&mdash; blogged on</span> <%= entry.published_at.strftime("%B %d, %Y") %></li>
+    <% end %>
+  </ul>
+  <% end %>
 </div>

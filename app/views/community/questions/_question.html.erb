@@ -2,7 +2,7 @@
   <div class="question_details">
     <span><%= question.user.name %> asked <%= question.contributor.full_name if question.contributor %></span>
     <% if question.contributor %>
-      <%= content_tag :a, :href => contributors_path(:anchor => question.contributor.id), :title => question.contributor.full_name, :class => "person_thumb tiny inline", :rel => 'tipsy' do -%>
+      <%= content_tag :a, :href => contributor_path(question.contributor), :title => question.contributor.full_name, :class => "person_thumb tiny inline", :rel => 'tipsy' do -%>
         <%= image_tag question.contributor.photo.url(:tiny), :alt => question.contributor.full_name %>
         <%= content_tag(:span, "", :class => 'person_mask') %>
       <% end -%>    

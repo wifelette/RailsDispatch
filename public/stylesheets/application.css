@@ -189,19 +189,29 @@ a.person_thumb.loading img {opacity:.3;}
 
 .bio_loader {position:absolute; height:100%; width:100%; background:url('/images/loader.gif') center center no-repeat;}
 
-#person_bio {display:none; border-bottom:1px solid #F5F5F5; position:relative; top:-20px;}
+#person_bio {position:relative; top:-20px; float:left; clear:left;}
 #person_bio.loading {}
 #person_bio.loading .bio_loader {display:block; background:url('/images/loader.gif') left center no-repeat; height:100%; width:500px; margin:0 auto;}
 #person_bio.active {display:block;}
 
-.person_thumb.large {height:143px; width:143px; margin:0 20px 0 0;}
+.person_thumb.large {height:143px; width:143px; margin:20px 20px 0 0;}
 .person_thumb.large img {height:143px; width:143px;}
 .person_thumb.large span.person_mask {height:143px; width:143px; background:url('/images/user_mask_large.png');}
 
-#contributor_details {height:144px; padding:20px 0; position:relative;}
+#contributor_details {padding:20px 0 8px 0; position:relative; width:490px; float:right;}
 
 #contributor_details ul.contributor_social_links {position:absolute; top:12px; right:0; width:400px;}
 #contributor_details ul.contributor_social_links li {float:right;}
+
+#contributor_contributions {padding:0 0 8px 0; position:relative; width:490px; float:right; font-size:12px;}
+#contributor_contributions h3 {font:normal 14px/1.2em "Museo Sans", Helvetica, Arial, sans-serif; display:block; border-bottom:1px solid #EAEAEA; margin-bottom:1.25em;}
+#contributor_contributions h3 span {background:white; padding-right:10px; position:relative; bottom:-8px;}
+
+#contributor_contributions ul {margin-bottom:1em;}
+#contributor_contributions ul li {}
+#contributor_contributions ul li span {color:#717171;}
+#contributor_contributions ul li a {border-bottom:1px solid #8FCBD3; text-decoration:none; color:#063A44; background:#F2F8F8;}
+
 
 li.contributor_social {}
 
@@ -218,7 +228,7 @@ ul.contributor_bio_info li.contributor_name {font:18px/1.1em "Museo Sans", sans-
 .with_contributor a.person_thumb.small{position:absolute; bottom:-47px; left:20px;}
 .with_contributor a.person_thumb.small span.person_mask {background:url('/images/people/masks/content_header_masks.png');}
 
-a.person_thumb:nth-child(7n+2) {margin-right:0;}
+a.person_thumb:nth-child(7n) {margin-right:0;}
 
 a.person_thumb.tiny.inline {display:inline-block; float:none; position:relative; top:2px;}
 .question_details span {display:inline-block; float:left; margin-right:8px;}
@@ -259,6 +269,7 @@ span.skill_tag.intermediate span {background-position:right -42px;}
 
 span.skill_tag.expert {color:white; text-shadow:0 -1px 0 #380505; background-position:0 0px;}
 span.skill_tag.expert span {background-position:right 0px;}
+
 
 #person_bio p {font-size:12px;}
 
@@ -493,6 +504,9 @@ a.simple_button.warning span {color:white; text-shadow:0 -1px 0 #270100; opacity
 
 a.simple_button.ask_question {position:absolute; right:40px;}
 
+a#back_button {margin-bottom:20px;}
+
+#bio_photo_grid {float:left; clear:left;}
 
 tr.actionable td {vertical-align:middle;}
 td.actions {width:220px;}

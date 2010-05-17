@@ -33,7 +33,7 @@
 
 <% @posts.each do |post| %>
 <div class="popular_post">
-  <% content_tag :a, :href => contributors_path(:anchor => post.contributor.id), :title => post.contributor.full_name, :class => "person_thumb small", :rel => 'tipsy' do -%>
+  <% content_tag :a, :href => contributor_path(post.contributor), :title => post.contributor.full_name, :class => "person_thumb small", :rel => 'tipsy' do -%>
     <%= image_tag post.contributor.photo.url(:thumb), :alt => post.contributor.full_name %>
     <%= content_tag(:span, "", :class => 'person_mask') %>
   <% end -%>
