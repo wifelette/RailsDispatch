@@ -102,7 +102,7 @@ header nav ul li.current a {cursor:default;}
 
 /* main */
 section {width:960px; margin:0 auto; position:relative;}
-section nav {position:absolute; top:5px; left:0; width:220px; z-index:10;}
+section nav {position:absolute; top:5px; left:0; width:230px; z-index:10;}
 section article {background:url('/images/page_background.png') top left no-repeat; width:670px; min-height:1120px; padding:26px; margin-left:238px;}
 
 section nav ul#tab_nav {margin-top:145px; position:relative; left:-10px;}
@@ -125,21 +125,23 @@ section nav ul#tab_nav li.inactive a span {color:#494949;}
 section nav ul#tab_nav li.inactive a:hover, section nav ul#tab_nav li.inactive span.upcoming_placeholder {background:url('/images/tabs/past_tab.png') left bottom no-repeat;}
 section nav ul#tab_nav li.inactive a:hover span, section nav ul#tab_nav li.inactive span:hover.upcoming_placeholder span {color:#272727; text-shadow:0 1px 0 white;}
 
+.index_posts_menu_item {background:url('/images/tabs/past_tab.png') left bottom no-repeat;}
+
 ul#sidebar_more {margin-top:45px; position:relative;}
 /*ul#sidebar_more li:hover {background:url('/images/small_arrow.gif') right center no-repeat;} */
 ul#sidebar_more li a {border-top:1px solid #efefef; padding:10px 42px 8px 7px; height:auto; display:block; color:#08343B; text-decoration:none; font-weight:bold;}
 ul#sidebar_more li.podcast a {background:url('/images/podcast.png') 10px 10px no-repeat; height:40px; padding-left:65px; padding-top:16px;}
 
-ul#sidebar_more li a.ask_question {background:url('/images/ask_question.gif') right 10px no-repeat;}
-ul#sidebar_more li a.follow_ey {background:url('/images/twitter.gif') right 10px no-repeat;}
-ul#sidebar_more li a.follow_fb {background:url('/images/facebook.png') right 10px no-repeat;}
+ul#sidebar_more li a.ask_question {background:url('/images/ask_question.gif') 205px 10px no-repeat;}
+ul#sidebar_more li a.follow_ey {background:url('/images/twitter.gif') 205px 10px no-repeat;}
+ul#sidebar_more li a.follow_fb {background:url('/images/facebook.png') 205px 10px no-repeat;}
 
 ul#sidebar_more li.newsletter {position:relative; border-top:1px solid #efefef; padding:10px 42px 8px 7px; display:block; color:#08343B; text-decoration:none; font-weight:bold;}
 ul#sidebar_more li.newsletter span {margin-bottom:10px; display:block;}
-ul#sidebar_more li.newsletter form {background:url('/images/newsletter_signup.png') left top no-repeat; width:222px; height:25px; padding:4px 0 0 11px; position:relative; left:-11px;}
+ul#sidebar_more li.newsletter form {background:url('/images/newsletter_signup.png') left top no-repeat; width:222px; height:25px; padding:4px 0 0 11px; position:relative; left:-8px;}
 ul#sidebar_more li.newsletter form input {background:none; border:none; width:215px;}
 
-ul#sidebar_more li.newsletter span.mail_icon {margin:0; position:absolute; right:0; top:15px; z-index:999; background:url('/images/mail_input.png') right top no-repeat; width:20px; height:20px;}
+ul#sidebar_more li.newsletter span.mail_icon {margin:0; position:absolute; right:6px; top:15px; z-index:999; background:url('/images/mail_input.png') right top no-repeat; width:20px; height:20px;}
 
 ul#sidebar_more li.newsletter form {position:relative;}
 ul#sidebar_more li.newsletter form label {position:absolute; top:5px; left:12px; color:#999; text-shadow:0 1px 0 white; cursor: text;}

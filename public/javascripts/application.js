@@ -182,7 +182,7 @@ $(document).ready(function () {
   // confirm delete buttons
   $("a[data-method='delete'][data-remote='true']").confirmWith("Are you sure?");
   
-  $('#dhijjh-dhijjh').helper('inactive_class');
+  $('.mktFormEmail').helper('inactive_class');
   
   // tipsy tool tips
   $('[rel=tipsy]').tipsy({gravity: 's'});
