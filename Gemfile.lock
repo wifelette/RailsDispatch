@@ -1,32 +1,32 @@
 --- 
 dependencies: 
-  feedzirra: 
-    group: 
-    - :default
-    version: ">= 0"
   github-markup: 
     group: 
     - :default
     version: ">= 0"
     require: 
     - github/markup
+  feedzirra: 
+    group: 
+    - :default
+    version: ">= 0"
   honeypot-captcha: 
     group: 
     - :default
     version: ">= 0"
-  rails: 
-    group: 
-    - :default
-    version: = 3.0.0.beta3
   loofah: 
     group: 
     - :default
     version: = 0.4.7
-  bluecloth: 
+  rails: 
+    group: 
+    - :default
+    version: = 3.0.0.beta3
+  mysql: 
     group: 
     - :default
     version: ">= 0"
-  mysql: 
+  bluecloth: 
     group: 
     - :default
     version: ">= 0"
@@ -42,11 +42,7 @@ dependencies:
     group: 
     - :test
     version: ">= 0"
-  right_aws: 
-    group: 
-    - :default
-    version: = 1.10.0
-  devise: 
+  hirb: 
     group: 
     - :default
     version: ">= 0"
@@ -54,19 +50,23 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
-  hirb: 
+  devise: 
     group: 
     - :default
     version: ">= 0"
+  right_aws: 
+    group: 
+    - :default
+    version: = 1.10.0
   factory_girl: 
     group: 
     - :test
     version: ">= 0"
-  org-ruby: 
+  bundler: 
     group: 
     - :default
     version: ">= 0"
-  bundler: 
+  org-ruby: 
     group: 
     - :default
     version: ">= 0"
@@ -87,6 +87,10 @@ dependencies:
     require: 
     - aws/s3
   coderay: 
+    group: 
+    - :default
+    version: ">= 0"
+  twitter: 
     group: 
     - :default
     version: ">= 0"
@@ -157,13 +161,15 @@ specs:
     version: 0.2.3
 - coderay: 
     version: 0.9.3
+- crack: 
+    version: 0.1.6
 - curb: 
     version: 0.7.1
 - warden: 
     version: 0.10.4
 - devise: 
     version: 1.1.pre4
-    source: 5
+    source: 6
 - highline: 
     version: 1.5.2
 - json: 
@@ -179,32 +185,38 @@ specs:
     source: 0
 - loofah: 
     version: 0.4.7
-    source: 2
+    source: 3
 - nokogiri: 
     version: 1.4.1
 - sax-machine: 
     version: 0.0.15
 - feedzirra: 
     version: 0.0.23
-    source: 3
+    source: 4
 - github-markup: 
     version: 0.4.0
+- hashie: 
+    version: 0.2.0
 - hirb: 
     version: 0.3.1
 - honeypot-captcha: 
     version: 0.0.1
     source: 1
+- httparty: 
+    version: 0.5.2
 - mocha: 
     version: 0.9.8
 - mysql: 
     version: 2.8.1
+- oauth: 
+    version: 0.4.0
 - rubypants: 
     version: 0.2.0
 - org-ruby: 
     version: 0.5.3
 - paperclip: 
     version: 2.3.2
-    source: 4
+    source: 5
 - thor: 
     version: 0.13.6
 - railties: 
@@ -227,9 +239,14 @@ specs:
     version: 0.7.1
 - rspec-rails: 
     version: 2.0.0.beta.8
+- yajl-ruby: 
+    version: 0.7.6
+- twitter: 
+    version: 0.9.5
+    source: 2
 - whenever: 
     version: 0.4.2
-hash: b1c800014683082c65f93ab08a0fb1c286215db1
+hash: b43dcd6590226da1b652617de9943ee2d4e16487
 sources: 
 - Git: 
     uri: git://github.com/thoughtbot/factory_girl.git
@@ -240,6 +257,10 @@ sources:
     uri: git://github.com/curtis/honeypot-captcha.git
     git: git://github.com/curtis/honeypot-captcha.git
     ref: 067e25f73c888cf38a929109f84a08427e172d0c
+- Git: 
+    uri: git://github.com/jnunemaker/twitter.git
+    git: git://github.com/jnunemaker/twitter.git
+    ref: b87dc2dd47f01231e8ddbb26f6c52eb7a8a06c10
 - Git: 
     name: loofah
     uri: git://github.com/jpsilvashy/loofah.git

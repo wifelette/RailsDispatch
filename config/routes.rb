@@ -24,6 +24,7 @@ RailsDispatch::Application.routes.draw do |map|
     end
 
     resources :answers
+    resources :tweets, :only => [:index]
     
     resources :feeds do
       resources :feed_entries, :only => [:index, :show]

@@ -6,12 +6,16 @@
 <% end %>
 
 <div id="page_additional">
-  <h3>Blog postings</h3>
-  <h4>by popular Rails developers</h4>
+  <h3>Tweets about #railsdispatch, and more!</h3>
+  <h4>Have your message posted here too, just tweet with the hashtag #railsdispatch, or mention @railsdispatch</h4>
 </div>
 
-<%# @tweets.each do |tweet| %>
-  <%#= tweet %>
-<%# end %>
-
-<%= @tweets %>
+<% @tweets.each do |tweet| %>
+<div class="tweet">
+  <img class="twitter_profile_image" src='<%= tweet.profile_image_url %>' />
+  
+  <span class="twitter_username"><%= tweet.from_user %></span>
+  <%= raw twitter_auto_link(tweet.text) %>
+  <span class="tweet_time_ago"><%= time_ago_in_words(tweet.created_at) %> ago</span>
+</div>
+<% end %>

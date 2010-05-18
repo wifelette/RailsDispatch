@@ -7,6 +7,13 @@
   <% end %>
 <% end %>
 
+<%= content_tag :li, :class => ("active" if controller.controller_name == "tweets") do %>
+  <%= link_to community_tweets_path do %>
+    <span class="title">#railsdispatch</span>
+    <span class="details">tweets from the community</span>
+  <% end %>
+<% end %>
+
 <li class="inactive">
   <span class="upcoming_placeholder">
     <span class="title">More Resources</span>

@@ -25,6 +25,8 @@ gem 'github-markup', :require => 'github/markup'
 gem 'org-ruby'
 gem 'hirb'
 
+gem 'twitter', :git => 'git://github.com/jnunemaker/twitter.git'
+
 gem 'whenever'
 
 gem 'coderay'

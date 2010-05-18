@@ -36,7 +36,7 @@ article, aside, audio, bb, canvas, datagrid, datalist, details, dialog, eventsou
 
 /* -------------------------------------------------------------------------------------- */
 
-p a:link, p a:hover, p a:visited, p a:active {border-bottom:1px solid #8FCBD3; text-decoration:none; color:#063A44; background:#F2F8F8;}
+p a:link, p a:hover, p a:visited, p a:active, .tweet a {border-bottom:1px solid #8FCBD3; text-decoration:none; color:#063A44; background:#F2F8F8;}
 
 /* tipsy */
 .tipsy { padding: 5px; font-size: 10px; filter: alpha(opacity=84); background-repeat: no-repeat; background-image: url(/images/tipsy.gif); text-shadow:0 -1px 0 black;}
@@ -368,6 +368,11 @@ a#load_more {font:bold 14px/58px Helvetica, Arial, sans-serif; -webkit-text-stro
 .post_small {float:left; clear:left;}
 .post_small h4 {float:left; color:green;}
 /*.post_small {float:left; clear:left;}*/
+
+.tweet {float:left; clear:left; margin-bottom:20px; position:relative; padding-left:62px; min-height:50px; width:608px;}
+.twitter_profile_image {float:left; margin:0 15px 0 0; position:absolute; top:0; left:0;}
+.tweet span.twitter_username {font-weight:bold; margin-right:.18em;}
+.tweet_time_ago {position:absolute; bottom:0; right:0; font-size:10px; color:#848484;}
 
 /* REFACTOR THIS */
 section article {line-height:1.6em; font-size:14px; color:#333; margin-bottom:26px; display:block; position:relative; z-index:1;}
