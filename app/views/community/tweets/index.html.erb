@@ -1,0 +1,17 @@
+<% content_for :page_nav do %>
+<nav>
+  <%= render "layouts/shared/community_nav" %>
+  <%= render "layouts/shared/sidebar_social_links" %>
+</nav>
+<% end %>
+
+<div id="page_additional">
+  <h3>Blog postings</h3>
+  <h4>by popular Rails developers</h4>
+</div>
+
+<%# @tweets.each do |tweet| %>
+  <%#= tweet %>
+<%# end %>
+
+<%= @tweets %>
