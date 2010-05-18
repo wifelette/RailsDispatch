@@ -21,7 +21,7 @@ dependencies:
   rails: 
     group: 
     - :default
-    version: = 3.0.0.beta3
+    version: ">= 0"
   bluecloth: 
     group: 
     - :default
@@ -104,15 +104,17 @@ specs:
 - builder: 
     version: 2.1.2
 - i18n: 
-    version: 0.3.7
+    version: 0.4.0.beta1
 - memcache-client: 
     version: 1.8.3
 - tzinfo: 
     version: 0.3.20
 - activesupport: 
     version: 3.0.0.beta3
+    source: 7
 - activemodel: 
     version: 3.0.0.beta3
+    source: 7
 - erubis: 
     version: 2.6.5
 - rack: 
@@ -123,6 +125,7 @@ specs:
     version: 0.5.3
 - actionpack: 
     version: 3.0.0.beta3
+    source: 7
 - mime-types: 
     version: "1.16"
 - polyglot: 
@@ -137,12 +140,15 @@ specs:
     version: 1.0.0
 - actionmailer: 
     version: 3.0.0.beta3
+    source: 7
 - arel: 
     version: 0.3.3
 - activerecord: 
     version: 3.0.0.beta3
+    source: 7
 - activeresource: 
     version: 3.0.0.beta3
+    source: 7
 - xml-simple: 
     version: 1.0.12
 - aws-s3: 
@@ -221,8 +227,10 @@ specs:
     source: 5
 - railties: 
     version: 3.0.0.beta3
+    source: 7
 - rails: 
     version: 3.0.0.beta3
+    source: 7
 - right_http_connection: 
     version: 1.2.4
 - right_aws: 
@@ -246,7 +254,7 @@ specs:
     source: 2
 - whenever: 
     version: 0.4.2
-hash: 9adbf5bb064861a0a8d14ac28340e4c1c191885c
+hash: 946736f6a3501fa7ed361a221925da5758c86b92
 sources: 
 - Git: 
     uri: git://github.com/thoughtbot/factory_girl.git
@@ -280,5 +288,10 @@ sources:
     uri: git://github.com/plataformatec/devise.git
     git: git://github.com/plataformatec/devise.git
     ref: bff64a6291a3144047c6a642e76d15a53d402702
+- Git: 
+    uri: git://github.com/rails/rails.git
+    branch: master
+    git: git://github.com/rails/rails.git
+    ref: 8c5e1652c7d1343a4b4acbc10bbcb59e202bf37d
 - Rubygems: 
     uri: http://rubygems.org
