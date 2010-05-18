@@ -14,14 +14,14 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
-  loofah: 
-    group: 
-    - :default
-    version: = 0.4.7
   rails: 
     group: 
     - :default
     version: = 3.0.0.beta3
+  loofah: 
+    group: 
+    - :default
+    version: = 0.4.7
   mysql: 
     group: 
     - :default
@@ -31,6 +31,10 @@ dependencies:
     - :default
     version: ">= 0"
   whenever: 
+    group: 
+    - :default
+    version: ">= 0"
+  unicorn: 
     group: 
     - :default
     version: ">= 0"
@@ -46,18 +50,18 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
-  paperclip: 
-    group: 
-    - :default
-    version: ">= 0"
-  devise: 
-    group: 
-    - :default
-    version: ">= 0"
   right_aws: 
     group: 
     - :default
     version: = 1.10.0
+  devise: 
+    group: 
+    - :default
+    version: ">= 0"
+  paperclip: 
+    group: 
+    - :default
+    version: ">= 0"
   factory_girl: 
     group: 
     - :test
@@ -244,9 +248,11 @@ specs:
 - twitter: 
     version: 0.9.5
     source: 2
+- unicorn: 
+    version: 0.99.0
 - whenever: 
     version: 0.4.2
-hash: b43dcd6590226da1b652617de9943ee2d4e16487
+hash: 6187c33197e0679c5389ef069bb1fba05b8bee8a
 sources: 
 - Git: 
     uri: git://github.com/thoughtbot/factory_girl.git

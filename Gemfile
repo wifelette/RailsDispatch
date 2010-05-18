@@ -19,6 +19,8 @@ gem 'feedzirra', :git => 'git://github.com/pauldix/feedzirra.git'
 gem "loofah", "0.4.7", :git => 'git://github.com/jpsilvashy/loofah.git'
 # gem 'backup'
 
+gem 'unicorn'
+
 gem "bluecloth"
 
 gem 'github-markup', :require => 'github/markup'
