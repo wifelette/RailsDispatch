@@ -14,14 +14,14 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
-  rails: 
-    group: 
-    - :default
-    version: = 3.0.0.beta3
   loofah: 
     group: 
     - :default
     version: = 0.4.7
+  rails: 
+    group: 
+    - :default
+    version: = 3.0.0.beta3
   bluecloth: 
     group: 
     - :default
@@ -42,7 +42,7 @@ dependencies:
     group: 
     - :test
     version: ">= 0"
-  right_aws: 
+  paperclip: 
     group: 
     - :default
     version: ">= 0"
@@ -50,7 +50,7 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
-  paperclip: 
+  right_aws: 
     group: 
     - :default
     version: ">= 0"
@@ -73,7 +73,7 @@ dependencies:
   engineyard: 
     group: 
     - :default
-    version: = 0.2.7.pre
+    version: ">= 0"
   RedCloth: 
     group: 
     - :default
@@ -87,6 +87,10 @@ dependencies:
     require: 
     - aws/s3
   coderay: 
+    group: 
+    - :default
+    version: ">= 0"
+  twitter: 
     group: 
     - :default
     version: ">= 0"
@@ -126,7 +130,7 @@ specs:
 - treetop: 
     version: 1.4.5
 - mail: 
-    version: 2.2.0
+    version: 2.2.1
 - text-hyphen: 
     version: 1.0.0
 - text-format: 
@@ -148,7 +152,7 @@ specs:
 - bundler: 
     version: 0.9.24
 - json_pure: 
-    version: 1.4.2
+    version: 1.4.3
 - rubyforge: 
     version: 2.0.4
 - hoe: 
@@ -157,56 +161,64 @@ specs:
     version: 0.2.3
 - coderay: 
     version: 0.9.3
+- crack: 
+    version: 0.1.6
 - curb: 
     version: 0.7.1
 - warden: 
-    version: 0.10.3
+    version: 0.10.4
 - devise: 
-    version: 1.1.pre4
-    source: 5
+    version: 1.1.rc1
+    source: 6
 - highline: 
     version: 1.5.2
 - json: 
-    version: 1.4.2
+    version: 1.4.3
 - rest-client: 
-    version: 1.4.2
+    version: 1.5.1
 - termios: 
     version: 0.9.4
+- thor: 
+    version: 0.13.6
 - engineyard: 
-    version: 0.2.7.pre
+    version: 0.3.0
 - factory_girl: 
     version: 1.2.3
     source: 0
 - loofah: 
     version: 0.4.7
-    source: 2
+    source: 3
 - nokogiri: 
     version: 1.4.1
 - sax-machine: 
     version: 0.0.15
 - feedzirra: 
     version: 0.0.23
-    source: 3
+    source: 4
 - github-markup: 
     version: 0.4.0
+- hashie: 
+    version: 0.2.0
 - hirb: 
     version: 0.3.1
 - honeypot-captcha: 
     version: 0.0.1
     source: 1
+- httparty: 
+    version: 0.5.2
 - mocha: 
     version: 0.9.8
 - mysql: 
     version: 2.8.1
+- oauth: 
+    version: 0.4.0
 - rubypants: 
     version: 0.2.0
 - org-ruby: 
     version: 0.5.3
 - paperclip: 
-    version: 2.3.1.1
-    source: 4
-- thor: 
-    version: 0.13.4
+    version: 2.3.2
+    source: 5
 - railties: 
     version: 3.0.0.beta3
 - rails: 
@@ -214,7 +226,7 @@ specs:
 - right_http_connection: 
     version: 1.2.4
 - right_aws: 
-    version: 1.10.0
+    version: 2.0.0
 - rspec-core: 
     version: 2.0.0.beta.8
 - rspec-expectations: 
@@ -227,9 +239,14 @@ specs:
     version: 0.7.1
 - rspec-rails: 
     version: 2.0.0.beta.8
+- yajl-ruby: 
+    version: 0.7.6
+- twitter: 
+    version: 0.9.5
+    source: 2
 - whenever: 
     version: 0.4.2
-hash: 9b432f7f2f276a0afaad370324f2c69e76e60219
+hash: 9adbf5bb064861a0a8d14ac28340e4c1c191885c
 sources: 
 - Git: 
     uri: git://github.com/thoughtbot/factory_girl.git
@@ -241,6 +258,10 @@ sources:
     git: git://github.com/curtis/honeypot-captcha.git
     ref: 067e25f73c888cf38a929109f84a08427e172d0c
 - Git: 
+    uri: git://github.com/jnunemaker/twitter.git
+    git: git://github.com/jnunemaker/twitter.git
+    ref: b87dc2dd47f01231e8ddbb26f6c52eb7a8a06c10
+- Git: 
     name: loofah
     uri: git://github.com/jpsilvashy/loofah.git
     version: 0.4.7
@@ -251,12 +272,13 @@ sources:
     git: git://github.com/pauldix/feedzirra.git
     ref: 455e65b6d7cef1e55444a5795e19c36c876a13a9
 - Git: 
-    uri: git://github.com/JasonKing/paperclip.git
-    git: git://github.com/JasonKing/paperclip.git
-    ref: 9c9082814f628a618f625158fc8507ef1578dacc
+    uri: git://github.com/thoughtbot/paperclip.git
+    branch: rails3
+    git: git://github.com/thoughtbot/paperclip.git
+    ref: 7c3dd0f0b754aed4aaf4ecc67d7888f5b0bb1233
 - Git: 
     uri: git://github.com/plataformatec/devise.git
     git: git://github.com/plataformatec/devise.git
-    ref: 22e1fa0cb99faeddf5602cd8007547764ee883e5
+    ref: bff64a6291a3144047c6a642e76d15a53d402702
 - Rubygems: 
     uri: http://rubygems.org
