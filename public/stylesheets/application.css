@@ -176,6 +176,9 @@ div#engineyard_photo h6 {margin-top:10px; width:124px; height:24px; background:u
 #copyrights h5 {display:block; background:url('/images/engineyard_footer_logo.png') no-repeat; width:66px; height:103px; text-indent:-9999px; float:left; margin:18px 18px 0 0;}
 #copyrights p {color:white; margin:30px 0 0 0; float:left; width:165px;}
 
+#copyrights h5.newgoldleaf_footer {background:none; width:173px; height:32px; margin:0; padding:0;}
+#copyrights h5.newgoldleaf_footer a {display:block; background:url('/images/newgoldleaf_footer.png') no-repeat; width:173px; height:32px; text-indent:-9999px; float:left; margin:18px 18px 0 0;}
+
 /* page details */
 #page_additional {width:664px; position:relative; top:-21px; left:-21px; background:#FFF9EB; border-bottom:1px solid #F5EDD2; padding:22px 22px 10px 26px;}
 #page_additional h4 {margin:0;}

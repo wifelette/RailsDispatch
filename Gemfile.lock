@@ -168,7 +168,7 @@ specs:
 - crack: 
     version: 0.1.6
 - curb: 
-    version: 0.7.1
+    version: 0.7.3
 - warden: 
     version: 0.10.4
 - devise: 
@@ -202,7 +202,7 @@ specs:
 - hashie: 
     version: 0.2.0
 - hirb: 
-    version: 0.3.1
+    version: 0.3.2
 - honeypot-captcha: 
     version: 0.0.1
     source: 1
@@ -281,7 +281,7 @@ sources:
     uri: git://github.com/jpsilvashy/paperclip.git
     branch: rails3
     git: git://github.com/jpsilvashy/paperclip.git
-    ref: bdc48fca6326fbfb6db0fcaa7ee56a989560482e
+    ref: 4025174d1db09037d1a3b894f6014ad641b21e37
 - Git: 
     uri: git://github.com/plataformatec/devise.git
     git: git://github.com/plataformatec/devise.git
