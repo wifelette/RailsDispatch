@@ -170,7 +170,7 @@ specs:
 - curb: 
     version: 0.7.3
 - warden: 
-    version: 0.10.4
+    version: 0.10.5
 - devise: 
     version: 1.1.pre4
     source: 6
@@ -219,7 +219,7 @@ specs:
 - org-ruby: 
     version: 0.5.3
 - paperclip: 
-    version: 2.3.2
+    version: 2.3.1.1
     source: 5
 - thor: 
     version: 0.13.6
@@ -281,7 +281,7 @@ sources:
     uri: git://github.com/jpsilvashy/paperclip.git
     branch: rails3
     git: git://github.com/jpsilvashy/paperclip.git
-    ref: 4025174d1db09037d1a3b894f6014ad641b21e37
+    ref: de2dda795fb70b1cfe92959cbae5a3e877b6cf6e
 - Git: 
     uri: git://github.com/plataformatec/devise.git
     git: git://github.com/plataformatec/devise.git
