@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100426172317) do
+ActiveRecord::Schema.define(:version => 20100602212242) do
 
   create_table "answers", :force => true do |t|
     t.integer  "contributor_id"
@@ -132,6 +132,19 @@ ActiveRecord::Schema.define(:version => 20100426172317) do
   create_table "settings", :force => true do |t|
     t.string   "setting_name"
     t.text     "setting_value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "taggings", :force => true do |t|
+    t.integer  "answer_id"
+    t.integer  "tag_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tags", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

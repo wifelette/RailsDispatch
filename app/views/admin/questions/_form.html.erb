@@ -33,6 +33,13 @@
       <label>Answer</label>
       <%= answer.text_area :body %>
     </li>
+    
+    <li class='field'>
+      <label>Tags</label>
+      <%= answer.text_field :tag_names %>
+      <span class="hint">Separate tags with spaces, and multi-word-tags with hyphens.</span>
+    </li>
+    
     <% end %>
             
     <li class="submit">
