@@ -13,7 +13,7 @@
         <span class="topichost">Topic Host:</span>
       <% end %>
       
-      <%= link_to post.contributor.full_name, contributors_path(post.contributor) %>
+      <%= link_to post.contributor.full_name, contributor_path(post.contributor) %>
     </h4>  
     
     <% unless post.skill_level.blank? %>
