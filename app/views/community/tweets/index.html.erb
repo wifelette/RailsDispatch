@@ -12,7 +12,7 @@
 
 <% @tweets.each do |tweet| %>
 <div class="tweet">
-  <img class="twitter_profile_image" src='<%= tweet.profile_image_url %>' />
+  <img height="48" width="48" class="twitter_profile_image" src='<%= tweet.profile_image_url %>' />
   
   <span class="twitter_username"><%= tweet.from_user %></span>
   <%= raw twitter_auto_link(tweet.text) %>

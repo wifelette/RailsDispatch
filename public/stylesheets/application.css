@@ -73,7 +73,7 @@ div.alert.notice span {color:white;}
 div.notice {padding:8px 15px; margin-bottom:1em; background:#333; color:white; text-shadow:0 -1px 0 black; -moz-border-radius: 5px; -webkit-border-radius: 5px;}
 
 #messages div.notice {background:#F6BCBC; color:#300509; text-shadow:0 1px 0 white; -moz-border-radius: 0px; -webkit-border-radius: 0px; border-bottom:1px solid #EE9095; border-top:1px solid #EE9095;}
-div#signup_message {background:#E1F4DB; color:#300509; text-shadow:0 1px 0 white; -moz-border-radius: 0px; -webkit-border-radius: 0px; border-bottom:1px solid #ABD7AA; border-top:1px solid #ABD7AA; padding:8px 15px; margin-bottom:1em; position:relative;}
+div#signup_message {background:#E1F4DB; color:#300509; text-shadow:0 1px 0 white; -moz-border-radius: 0px; -webkit-border-radius: 0px; border-bottom:1px solid #ABD7AA; border-top:1px solid #ABD7AA; padding:8px 15px; margin-bottom:2em; position:relative;}
 
 .signup_button {position:absolute; right:20px; top:3px;}
 
@@ -186,7 +186,7 @@ div#engineyard_photo h6 {margin-top:10px; width:124px; height:24px; background:u
 #page_additional.settings {padding-bottom:0;}
 #page_additional.settings nav {}
 
-a.person_thumb, span.person_thumb {height:79px; width:79px; display:block; margin:0 19px 19px 0; position:relative; float:left;}
+a.person_thumb, span.person_thumb {height:79px; width:79px; display:block; margin:0 19px 19px 5px; position:relative; float:left;}
 a.person_thumb.last_in_row {margin-right:0;}
 a.person_thumb img, span.person_thumb img {position:absolute; top:0; left:0;}
 span.person_mask {height:79px; width:79px; display:block; position:absolute; top:0; left:0; background:url('/images/user_mask_small.png');}
@@ -235,8 +235,7 @@ ul.contributor_bio_info li.contributor_name {font:18px/1.1em "Museo Sans", sans-
 
 a.person_thumb:nth-child(7n) {margin-right:0;}
 
-a.person_thumb.tiny.inline {display:inline-block; float:none; position:relative; top:2px;}
-.question_details span {display:inline-block; float:left; margin-right:8px;}
+a.person_thumb.tiny.inline {float:left; position:relative; top:2px;}
 a.person_thumb.tiny.inline {height:18px; width:18px;}
 a.person_thumb.tiny.inline img {height:18px; width:18px;}
 a.person_thumb.tiny.inline .person_mask {height:18px; width:18px; background:url('/images/user_mask_tiny.png');}
@@ -436,26 +435,38 @@ margin:5px 0 1.2em 0;
 
 .question {padding-bottom:1em; margin-bottom:1em; border-bottom:1px solid #E3E3E3; clear:both; overflow:hidden; position:relative;}
 
-.answer {clear:both;margin-top:10px; border-top:1px solid #e3e3e3; padding-top:10px; background:#E1F4DB;}
-.answer .meta {font-size:12px; font-weight:bold; color:#2f2f2f; padding-left:10px;}
-.question_details {position:absolute; top:0; left:0; font-size:12px; font-weight:bold; color:#2F2F2F; padding:0 0 0 4px;}
+.answer {clear:both; float:left; margin-top:10px; border-top:1px solid #e3e3e3; padding-top:10px; background:url('/images/answer_header.png') left top repeat-x; position:relative;}
+.answer .meta {font-size:12px; font-weight:bold; color:#2f2f2f; padding-left:10px; width:500px; position:relative; text-shadow:0 1px 0 white;}
+.question_details {position:absolute; font-size:12px; font-weight:bold; color:#2F2F2F; padding:0 0 0 4px;}
 .question_body, .answer .body {font-size:12px; width:520px; float:left; padding:26px 0 0 4px; line-height:20px; color:#626262;}
-.answer .body {padding:10px 140px 0 10px; background:#E1F4DB; margin-bottom:10px;}
+.answer .body {padding:10px 140px 0 10px; margin-bottom:10px;}
 .question_meta {font-size:12px; width:117px; float:right;}
-.question_date {display:block; position:absolute; right:0; bottom:0; font-size:11px; color:#494949;}
+.question_date, .answer_date {display:block; position:absolute; right:0; bottom:0; font-size:11px; color:#494949;}
+
+.question_additional_details, .answer_additional_details {width:100%; clear:left; position:relative;}
+
+.answer_details {position:absolute; top:0; right:0;}
+.answer_details h5 {position:absolute; top:12px; right:8px; background:url('/images/icons/tick.png') right top no-repeat; width:100px; color:#183E13; text-shadow:0 1px 0 white; text-align:right; padding-right:24px; font:bold 12px/1.5em "Helvetica";}
+
+/*.question_details span {float:left;}*/
+.question_title {float:left;}
+.question_details .question_title a {color:#780000; text-decoration:none;}
+.question_details .question_title a span {font:italic 13px/.8em georgia, serif; margin-bottom:12px; color:#595959;}
+
+
 
 /* voting */
 .voting {display:block; text-align:center; margin-top:6px;}
 .voting.voted {}
-.vote_count {display:inline; font-size:18px; font-weight:bold; color:#EBA600; padding:7px 0; position:relative; top:6px;}
+.vote_count {display:inline; font-size:18px; font-weight:bold; color:#EBA600; padding:7px 0; position:relative; top:6px; clear:none;}
 
 .vote_count.is_zero {color:#868686;}
 
 .vote.up {background:url('/images/icons/vote.png') -28px -31px no-repeat; display:inline-block; height:31px; width:25px; margin:0 5px; text-indent:-9999px; position:relative; top:3px;}
-.vote.down {background:url('/images/icons/vote.png') 0 -31px no-repeat; display:inline-block; height:31px; width:25px; margin:0 5px; text-indent:-9999px;}
+.vote.down {background:url('/images/icons/vote.png') 0 -32px no-repeat; display:inline-block; height:31px; width:25px; margin:0 5px; text-indent:-9999px;}
 
 .vote.up:hover, .voting.up .vote.up {background-position:-28px 0;}
-.vote.down:hover, .voting.down .vote.down {background-position:0 0;}
+.vote.down:hover, .voting.down .vote.down {background-position:0 -2px;}
 
 .CodeRay > br {display:none;}
 br:first-child {display:none;}

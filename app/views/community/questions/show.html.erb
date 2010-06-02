@@ -1,0 +1,24 @@
+<%# add these to the head only for the public pages with forms %>
+<% content_for :head do %>
+  <%= javascript_include_tag "jquery.uniform" %>
+  <%= javascript_include_tag 'app/questions', 'app/questions.run' if user_signed_in? %>
+  <%= stylesheet_link_tag "uniform.default" %>
+<% end %>
+
+<% content_for :page_nav do %>
+<nav>
+  <%= render "layouts/shared/questions_nav" %>
+  <%= render "layouts/shared/sidebar_social_links" %>
+</nav>
+<% end %>
+
+<div id="page_additional">
+  <h3>View Question</h3>
+  <h4>Vote on questions you&rsquo;d like to see answered by the expert contributors</h4>
+</div>
+
+<%= render "suggest_signup" %>
+
+<div id="messages"></div>
+
+<%= render @question %> 

@@ -1,6 +1,13 @@
 <div class="question">
   <div class="question_details">
-    <span><%= question.user.name %> asked <%= question.contributor.full_name if question.contributor %></span>
+    <div class="question_title">
+      <span>
+        <%= link_to community_question_path(question) do %>
+          <%= question.user.name %> asked <%= question.contributor.full_name if question.contributor %>
+        <% end %>
+      </span>      
+    </div>
+
     <% if question.contributor %>
       <%= content_tag :a, :href => contributor_path(question.contributor), :title => question.contributor.full_name, :class => "person_thumb tiny inline", :rel => 'tipsy' do -%>
         <%= image_tag question.contributor.photo.url(:tiny), :alt => question.contributor.full_name %>
@@ -18,17 +25,28 @@
       <%= link_to 'vote down', vote_community_question_url(question, :down => true), :class => "vote down", :method => :put %>
       <span class="vote_count <%= 'is_zero' if question.points.to_i==0 %>"><%= question.points.to_i %></span>
       <%= link_to 'vote up', vote_community_question_url(question, :up => true), :class => "vote up", :method => :put, :onclick => 'return false;' %>
-    </div><!-- vote_community_question_url(question, :up => true) -->
+    </div>
   </div>
-  
-  <div class="question_date">Asked <%= question.created_at.strftime("%B %d, %Y") %></div>
+
+  <div class="question_additional_details">
+    <div class="question_date">Asked <%= question.created_at.strftime("%B %d, %Y") %></div>
+  </div>
 
   <% unless question.answer.blank? %>
   <div class='answer'>
     <div class='meta'><span><%= question.answer.contributor.try(:full_name) || "Anonymous" %> answered</span></div>
+    
+    <div class="answer_details">
+      <h5>Answered</h5>
+    </div>
+    
     <div class='body'>
       <%= textilize(question.answer.body) %>
     </div>
+  </div>
+  
+  <div class="answer_additional_details">
+    <div class="answer_date">Answered <%= question.answer.created_at.strftime("%B %d, %Y") %></div>
   </div>
   <% end %>
 </div>
