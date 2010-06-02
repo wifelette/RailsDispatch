@@ -443,7 +443,7 @@ margin:5px 0 1.2em 0;
 .question_meta {font-size:12px; width:117px; float:right;}
 .question_date, .answer_date {display:block; position:absolute; right:0; bottom:0; font-size:11px; color:#494949;}
 
-.question_additional_details, .answer_additional_details {width:100%; clear:left; position:relative;}
+.question_additional_details, .answer_additional_details {width:100%; clear:left; position:relative; bottom:-10px;}
 
 .answer_details {position:absolute; top:0; right:0;}
 .answer_details h5 {position:absolute; top:12px; right:8px; background:url('/images/icons/tick.png') right top no-repeat; width:100px; color:#183E13; text-shadow:0 1px 0 white; text-align:right; padding-right:24px; font:bold 12px/1.5em "Helvetica";}
