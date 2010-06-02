@@ -233,7 +233,7 @@ ul.contributor_bio_info li.contributor_name {font:18px/1.1em "Museo Sans", sans-
 .with_contributor a.person_thumb.small{position:absolute; bottom:-47px; left:20px;}
 .with_contributor a.person_thumb.small span.person_mask {background:url('/images/people/masks/content_header_masks.png');}
 
-a.person_thumb:nth-child(7n) {margin-right:0;}
+/*a.person_thumb:nth-child(7n-1) {margin-right:0;}*/
 
 a.person_thumb.tiny.inline {float:left; position:relative; top:2px;}
 a.person_thumb.tiny.inline {height:18px; width:18px;}

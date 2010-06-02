@@ -13,11 +13,11 @@
 </div>
 
 <div id="contributor_contributions">
-  <% unless @contributor.posts.blank? %>
+  <% unless @contributor.posts.published.blank? %>
   <h3><span>Articles posted</span></h3>
   <ul>
-    <% @contributor.posts.each do |post| %>
-      <li><%= link_to post.title, post %> <span>&mdash; posted on</span> <%= post.publish_date.strftime("%B %d, %Y") %></li>
+    <% @contributor.posts.published.each do |post| %>
+      <li><%= link_to post.title, post_path(post.slug) %> <span>&mdash; posted on</span> <%= post.publish_date.strftime("%B %d, %Y") %></li>
     <% end %>
   </ul>
   <% end %>

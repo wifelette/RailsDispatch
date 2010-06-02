@@ -41,7 +41,7 @@
   <div class="post_abstract">
     <div class="post_meta_title">
       <h4><%= link_to post.title, post_url(post.slug) %></h4>  
-      <h5><%= post.contributor.full_name %></h5>
+      <h5><%= post.contributor.full_name %> posted <%= link_to post.created_at.strftime("%B %d, %Y"), post_path(post.slug) %></h5>
     </div>
      <%= raw truncate(strip_tags(post.body), :length => 400) %>
   </div>
