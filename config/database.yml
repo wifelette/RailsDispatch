@@ -44,7 +44,7 @@ staging:
   database: rails_dispatch_staging
   pool: 5
   username: root
-  password: jsilvash2
+  password: 
   socket: /var/run/mysqld/mysqld.sock
 
 production:
