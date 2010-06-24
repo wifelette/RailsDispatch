@@ -56,7 +56,7 @@ module ApplicationHelper
     weeks_ago = (Time.now - from_time) / 1.week
     ["this week", "last week", "two weeks ago",
      "three weeks ago", "four weeks ago",
-     "one month ago", "about one month ago"][weeks_ago] || super
+     "one month ago", "about one month ago"][weeks_ago] || "more than a month ago"
   end
 
   # def weeks_until_in_words(from_time, include_seconds = false)

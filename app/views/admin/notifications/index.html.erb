@@ -24,7 +24,6 @@
   </li>
 </ul>
 
-
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
   <th>Message</th>
@@ -33,7 +32,7 @@
   <th>Duration</th>
   <th></th>
 </tr>
-<% @notifications.each_with_index do |notification, i| %>
+<% @notifications.reverse.each_with_index do |notification, i| %>
   <tr class="actionable" id="<%= controller.controller_name %>_<%= notification.id %>">
     <td><%= truncate(notification.message, 35) %></td>
     <td><%= notification.starts_at.strftime("%m/%d/%Y") %></td>

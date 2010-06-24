@@ -70,7 +70,7 @@
 <% if @past_posts %>
 <% @past_posts.each_with_index do |post, i| %>
 <tr class="actionable" id="<%= controller.controller_name %>_<%= post.id %>">
-  <td><%= content_tag(:span, "", :class => "status_icon", :title => "published", :rel => 'tipsy') if Post.recent.include?(post) %></td>
+  <td><%= content_tag(:span, "", :class => "status_icon", :title => "appears in sidebar", :rel => 'tipsy') if Post.recent.include?(post) %></td>
   <td><%= post.contributor.full_name if post.contributor %></td>
   <td><%= truncate(post.title, 35) if post.title %></td>
   <td><%= post.publish_date.strftime("%m/%d/%Y") %></td>

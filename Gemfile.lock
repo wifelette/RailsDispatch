@@ -17,7 +17,7 @@ dependencies:
   rails: 
     group: 
     - :default
-    version: = 3.0.0.beta3
+    version: = 3.0.0.beta4
   loofah: 
     group: 
     - :default
@@ -105,18 +105,14 @@ specs:
     version: 4.2.3
 - abstract: 
     version: 1.0.0
+- activesupport: 
+    version: 3.0.0.beta4
 - builder: 
     version: 2.1.2
 - i18n: 
-    version: 0.3.7
-- memcache-client: 
-    version: 1.8.3
-- tzinfo: 
-    version: 0.3.22
-- activesupport: 
-    version: 3.0.0.beta3
+    version: 0.4.1
 - activemodel: 
-    version: 3.0.0.beta3
+    version: 3.0.0.beta4
 - erubis: 
     version: 2.6.5
 - rack: 
@@ -125,8 +121,10 @@ specs:
     version: 0.6.6
 - rack-test: 
     version: 0.5.4
+- tzinfo: 
+    version: 0.3.22
 - actionpack: 
-    version: 3.0.0.beta3
+    version: 3.0.0.beta4
 - mime-types: 
     version: "1.16"
 - polyglot: 
@@ -135,18 +133,14 @@ specs:
     version: 1.4.8
 - mail: 
     version: 2.2.5
-- text-hyphen: 
-    version: 1.0.0
-- text-format: 
-    version: 1.0.0
 - actionmailer: 
-    version: 3.0.0.beta3
+    version: 3.0.0.beta4
 - arel: 
-    version: 0.3.3
+    version: 0.4.0
 - activerecord: 
-    version: 3.0.0.beta3
+    version: 3.0.0.beta4
 - activeresource: 
-    version: 3.0.0.beta3
+    version: 3.0.0.beta4
 - xml-simple: 
     version: 1.0.12
 - aws-s3: 
@@ -227,9 +221,9 @@ specs:
 - paperclip: 
     version: 2.3.3
 - railties: 
-    version: 3.0.0.beta3
+    version: 3.0.0.beta4
 - rails: 
-    version: 3.0.0.beta3
+    version: 3.0.0.beta4
 - right_http_connection: 
     version: 1.2.4
 - right_aws: 
@@ -254,7 +248,7 @@ specs:
     version: 1.0.0
 - whenever: 
     version: 0.4.2
-hash: c0a04af83fc39672fb5d6d68148b062328eaeea1
+hash: 08793448265254b1884e457f4b50e411d6fb3a12
 sources: 
 - Git: 
     uri: git://github.com/thoughtbot/factory_girl.git
