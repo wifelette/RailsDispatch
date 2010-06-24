@@ -446,7 +446,7 @@ margin:5px 0 1.2em 0;
 .question_date, .answer_date {display:block; position:absolute; right:0; bottom:3px; font-size:11px; color:#494949;}
 
 .tags {display:block; position:absolute; left:10px; bottom:3px; font-size:11px; color:#8B8B8B;}
-.tags span.tag {background:#B2B3B2; padding:3px 13px; color:white; text-shadow:0 -1px 0 #505050; -webkit-text-stroke:1px transparent; -moz-border-radius:8px; -webkit-border-radius:8px; border-radius:8px; height:15px; margin-left:5px;}
+.tags span.tag {background:#C2C3C2; padding:3px 13px; color:white; text-shadow:0 1px 0 #929292; -moz-border-radius:8px; -webkit-border-radius:8px; border-radius:8px; height:15px; margin-left:5px;}
 
 .question_additional_details, .answer_additional_details {width:100%; clear:left; position:relative; bottom:-10px;}
 

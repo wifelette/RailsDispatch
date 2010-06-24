@@ -9,10 +9,10 @@ gem 'mysql'
 
 gem 'bundler'
 
-gem 'engineyard', '0.2.7.pre'
+gem 'engineyard'
 
 gem "devise", :git => 'git://github.com/plataformatec/devise.git', :ref => '22e1fa0cb99faeddf5602cd8007547764ee883e5'
-gem 'paperclip', :git => 'git://github.com/jpsilvashy/paperclip.git', :branch => 'rails3'
+gem 'paperclip'
 gem 'right_aws', '1.10.0' 
 gem 'aws-s3', :require => 'aws/s3'
 gem 'feedzirra', :git => 'git://github.com/pauldix/feedzirra.git'
@@ -27,7 +27,7 @@ gem 'github-markup', :require => 'github/markup'
 gem 'org-ruby'
 gem 'hirb'
 
-gem 'twitter', :git => 'git://github.com/jnunemaker/twitter.git'
+gem 'twitter'
 
 gem 'whenever'
 

@@ -49,7 +49,6 @@
 
     <nav>
       <ul>
-
         <%= content_tag :li, :class => on_posts? && "current" do %>
           <%= link_to "Posts", root_path %>
         <% end %>
@@ -71,17 +70,13 @@
             <%= link_to "About", "/about/#{Page.published.first.slug}" %>
           <% end %>
         <% end %>
-
       </ul>
     </nav>
   </header>
 
   <section>
-
     <%= yield :page_nav -%>
-
     <%= content_tag :article, yield -%>
-
   </section>
 
   <footer>
