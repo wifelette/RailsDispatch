@@ -15,15 +15,8 @@ class Question < ActiveRecord::Base
   scope :by_date, order("questions.created_at desc")
   scope :recent, limit(10).by_date
   scope :paginated, lambda { |page| recent.offset(page.to_i * 10) }
-  scope :answered, lambda {
-    joins(:answer).
-    group('questions.id')
-  }
-  scope :unanswered, lambda {
-    joins('LEFT OUTER JOIN answers ON answers.question_id = questions.id').
-    where('answers.id IS NULL').
-    group('questions.id')
-  }
+  scope :answered, joins(:answer).group('questions.id')
+  scope :unanswered, includes(:answers).where('answers.id IS NULL').group('questions.id')
   
   def vote(up, user)
     if self.user == user
